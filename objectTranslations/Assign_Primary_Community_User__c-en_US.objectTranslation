@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Assign Primary Community User</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Assign Primary Community User</value>
+    </caseValues>
+    <fields>
+        <label><!-- Disable Account --></label>
+        <name>Disable_Account__c</name>
+    </fields>
+    <fields>
+        <label><!-- Disable Campaign --></label>
+        <name>Disable_Campaign__c</name>
+    </fields>
+    <fields>
+        <label><!-- Disable Lead Profiles --></label>
+        <name>Disable_Lead_Profiles__c</name>
+    </fields>
+    <fields>
+        <label><!-- Disable Lead --></label>
+        <name>Disable_Lead__c</name>
+    </fields>
+    <fields>
+        <label><!-- Disable Opportunity --></label>
+        <name>Disable_Opportunity__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

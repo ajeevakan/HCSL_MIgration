@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Transaction</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Transactions</value>
+    </caseValues>
+    <fields>
+        <label><!-- Amount --></label>
+        <name>Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Comments --></label>
+        <name>Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Expected Move In Date --></label>
+        <name>Expected_Move_In_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Legacy Id --></label>
+        <name>Legacy_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Legacy Prospect Id --></label>
+        <name>Legacy_Prospect_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Legacy Type --></label>
+        <name>Legacy_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunity --></label>
+        <name>Opportunity__c</name>
+        <relationshipLabel><!-- Transactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Reserved Apartment --></label>
+        <name>Reserved_Apartment__c</name>
+        <relationshipLabel><!-- Transactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Transaction Date --></label>
+        <name>Transaction_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>Type__c</name>
+        <picklistValues>
+            <masterLabel>10% Deposit</masterLabel>
+            <translation><!-- 10% Deposit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>100% Deposit</masterLabel>
+            <translation><!-- 100% Deposit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pet Deposit</masterLabel>
+            <translation><!-- Pet Deposit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Refund</masterLabel>
+            <translation><!-- Refund --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Remaining Amount</masterLabel>
+            <translation><!-- Remaining Amount --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rent started w/o move in</masterLabel>
+            <translation><!-- Rent started w/o move in --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reservation Deposit</masterLabel>
+            <translation><!-- Reservation Deposit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Respite Days set</masterLabel>
+            <translation><!-- Respite Days set --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Transaction Layout</layout>
+        <sections>
+            <label><!-- Cancellation information --></label>
+            <section>Cancellation information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Reservation Deposit Information --></label>
+            <section>Reservation Deposit Information</section>
+        </sections>
+        <sections>
+            <label><!-- Waitlist Information --></label>
+            <section>Waitlist Information</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

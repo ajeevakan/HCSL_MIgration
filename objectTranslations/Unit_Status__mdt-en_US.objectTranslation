@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Unit Status</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Unit Statuses</value>
+    </caseValues>
+    <fields>
+        <label><!-- Scenario --></label>
+        <name>Scenario__c</name>
+        <picklistValues>
+            <masterLabel>Ignore</masterLabel>
+            <translation><!-- Ignore --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Occupied</masterLabel>
+            <translation><!-- Occupied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>On Notice</masterLabel>
+            <translation><!-- On Notice --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>On Notice - Reserved</masterLabel>
+            <translation><!-- On Notice - Reserved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reserved</masterLabel>
+            <translation><!-- Reserved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vacant</masterLabel>
+            <translation><!-- Vacant --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Valid Previous Statuses --></label>
+        <name>Valid_Previous_Statuses__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

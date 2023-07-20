@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Unique Email Relationships</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Unique Email Relationships</value>
+    </caseValues>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>Contact__c</name>
+        <relationshipLabel><!-- Unique Email Relationships --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Email Out of Sync --></label>
+        <name>Email_Out_of_Sync__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unique Email --></label>
+        <name>Unique_Email__c</name>
+        <relationshipLabel><!-- Unique Email Relationships --></relationshipLabel>
+    </fields>
+    <startsWith>Vowel</startsWith>
+</CustomObjectTranslation>

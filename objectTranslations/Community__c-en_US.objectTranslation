@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Community</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Communities</value>
+    </caseValues>
+    <fields>
+        <help><!-- Use this to lookup Community name for Lead object community field --></help>
+        <label><!-- Allscripts Id --></label>
+        <name>Allscripts_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Annual Attrition Budget --></label>
+        <name>Annual_Attrition_Budget__c</name>
+    </fields>
+    <fields>
+        <label><!-- Annual Occupancy Budget --></label>
+        <name>Annual_Occupancy_Budget__c</name>
+    </fields>
+    <fields>
+        <label><!-- Annual Sales Goal --></label>
+        <name>Annual_Sales_Goal__c</name>
+    </fields>
+    <fields>
+        <label><!-- ApfmPropertyId --></label>
+        <name>ApfmPropertyId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Community Long Name --></label>
+        <name>Community_Long_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Community URL Name --></label>
+        <name>Community_URL_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Inactive --></label>
+        <name>Inactive__c</name>
+    </fields>
+    <fields>
+        <label><!-- Monthly Attrition Budget --></label>
+        <name>Monthly_Attrition_Budget__c</name>
+    </fields>
+    <fields>
+        <label><!-- Monthly Call Goal --></label>
+        <name>Monthly_Call_Goal__c</name>
+    </fields>
+    <fields>
+        <label><!-- Monthly Sales Goal --></label>
+        <name>Monthly_Sales_Goal__c</name>
+    </fields>
+    <fields>
+        <label><!-- Navihealth Id --></label>
+        <name>Navihealth_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- PCC Facility Id --></label>
+        <name>PCC_Facility_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- PartnerPropertyId --></label>
+        <name>PartnerPropertyId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Phone Number --></label>
+        <name>Phone_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Primary User for Community --></label>
+        <name>Primary_User_for_Community__c</name>
+        <relationshipLabel><!-- Communities --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Base starting rate for AL, used in ChatBot conversations --></help>
+        <label><!-- Starting Rate AL --></label>
+        <name>Starting_Rate_AL__c</name>
+    </fields>
+    <fields>
+        <help><!-- Base starting rate for IL, used in ChatBot conversations --></help>
+        <label><!-- Starting Rate IL --></label>
+        <name>Starting_Rate_IL__c</name>
+    </fields>
+    <fields>
+        <help><!-- Base starting rate for MC, used in ChatBot conversations --></help>
+        <label><!-- Starting Rate MC --></label>
+        <name>Starting_Rate_MC__c</name>
+    </fields>
+    <layouts>
+        <layout>Community Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

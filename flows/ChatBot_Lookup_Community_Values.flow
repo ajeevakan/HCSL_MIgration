@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>56.0</apiVersion>
+    <assignments>
+        <name>Append_AL</name>
+        <label>Append AL</label>
+        <locationX>50</locationX>
+        <locationY>1586</locationY>
+        <assignmentItems>
+            <assignToReference>varOUT_LevelOfCareList</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>Assisted Living</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Add_Care_Level_MC</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Append_IL</name>
+        <label>Append IL</label>
+        <locationX>50</locationX>
+        <locationY>1250</locationY>
+        <assignmentItems>
+            <assignToReference>varOUT_LevelOfCareList</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>Independent Living</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Add_Care_Level_AL</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Append_MC</name>
+        <label>Append MC</label>
+        <locationX>50</locationX>
+        <locationY>1922</locationY>
+        <assignmentItems>
+            <assignToReference>varOUT_LevelOfCareList</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>Memory Care</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Store_Community_Values</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Used when we cannot find a Community for some reason</description>
+        <name>Generic_Community_Values</name>
+        <label>Generic Community Values</label>
+        <locationX>490</locationX>
+        <locationY>1130</locationY>
+        <assignmentItems>
+            <assignToReference>varOUT_Phone</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>520-797-4000</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varOUT_Rate</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>5,000</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varOUT_CommunityLongName</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>varCommunityURL</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varOUT_LevelOfCareList</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>Independent Living</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varOUT_RateIL</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>5,000</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>Store_Community_Code_an_ID</name>
+        <label>Store Community Code an ID</label>
+        <locationX>424</locationX>
+        <locationY>518</locationY>
+        <assignmentItems>
+            <assignToReference>varCommunityCode</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Loop_to_Find_Matching_URL_Segment.Name</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCommunityID</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Loop_to_Find_Matching_URL_Segment.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Get_Community_Details</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Store_Community_Values</name>
+        <label>Store Community Values</label>
+        <locationX>182</locationX>
+        <locationY>2138</locationY>
+        <assignmentItems>
+            <assignToReference>varOUT_Phone</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Get_Community_Details.Phone_Number__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varOUT_Rate</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Get_Community_Details.Starting_Rate_IL__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varOUT_CommunityLongName</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Get_Community_Details.Community_Long_Name__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varOUT_RateAL</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Get_Community_Details.Starting_Rate_AL__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varOUT_RateIL</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Get_Community_Details.Starting_Rate_IL__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varOUT_RateMC</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Get_Community_Details.Starting_Rate_MC__c</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <constants>
+        <name>ScrippsRanch</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Scripps Ranch</stringValue>
+        </value>
+    </constants>
+    <constants>
+        <name>TBD</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>TBD</stringValue>
+        </value>
+    </constants>
+    <decisions>
+        <description>Does the community have any AL rooms?</description>
+        <name>Add_Care_Level_AL</name>
+        <label>Add Care Level - AL</label>
+        <locationX>182</locationX>
+        <locationY>1466</locationY>
+        <defaultConnector>
+            <targetReference>Add_Care_Level_MC</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No AL</defaultConnectorLabel>
+        <rules>
+            <name>Add_AL</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Community_Details.Starting_Rate_AL__c</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <numberValue>0.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Append_AL</targetReference>
+            </connector>
+            <label>Add AL</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Does the community have any IL rooms?</description>
+        <name>Add_Care_Level_IL</name>
+        <label>Add Care Level - IL</label>
+        <locationX>182</locationX>
+        <locationY>1130</locationY>
+        <defaultConnector>
+            <targetReference>Add_Care_Level_AL</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No IL</defaultConnectorLabel>
+        <rules>
+            <name>Add_IL</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Community_Details.Starting_Rate_IL__c</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <numberValue>0.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Append_IL</targetReference>
+            </connector>
+            <label>Add IL</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Does the community have any MC rooms?</description>
+        <name>Add_Care_Level_MC</name>
+        <label>Add Care Level - MC</label>
+        <locationX>182</locationX>
+        <locationY>1802</locationY>
+        <defaultConnector>
+            <targetReference>Store_Community_Values</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No MC</defaultConnectorLabel>
+        <rules>
+            <name>Add_MC</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Community_Details.Starting_Rate_MC__c</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <numberValue>0.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Append_MC</targetReference>
+            </connector>
+            <label>Add MC</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Check the incoming URL against each Community until we find a match</description>
+        <name>Check_Incoming_URL</name>
+        <label>Check Incoming URL</label>
+        <locationX>556</locationX>
+        <locationY>398</locationY>
+        <defaultConnector>
+            <targetReference>Loop_to_Find_Matching_URL_Segment</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No Match</defaultConnectorLabel>
+        <rules>
+            <name>URL_Matched</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>TBD</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <elementReference>Loop_to_Find_Matching_URL_Segment.Community_URL_Name__c</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Store_Community_Code_an_ID</targetReference>
+            </connector>
+            <label>URL Matched</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Community_Found</name>
+        <label>Community Found</label>
+        <locationX>336</locationX>
+        <locationY>1010</locationY>
+        <defaultConnector>
+            <targetReference>Generic_Community_Values</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>NO</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Community_Found</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Community_Details.Community_Long_Name__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Add_Care_Level_IL</targetReference>
+            </connector>
+            <label>Yes - Community Found</label>
+        </rules>
+    </decisions>
+    <description>Pass a URL and return some values, used in a ChatBot
+v14 - refactored to get Starting Rates from new Starting Rate fields on Community
+v11- Redesigned for real Website URL logic
+v9 Added HWH for EBiz testing
+v8 - Added Private Studio Rates per LoC
+v7 - Added IL as a default option in case there are no other choices (i.e. no Community is found)
+v6 - Testing with ALB for NONE
+v4 - Adding Level of Care List variable
+v3 - Added default values for no Community found</description>
+    <environments>Default</environments>
+    <interviewLabel>ChatBot - Lookup Community Values {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>ChatBot - Lookup Community Values</label>
+    <loops>
+        <description>Loop through the entire list of Communities to find the matching URL</description>
+        <name>Loop_to_Find_Matching_URL_Segment</name>
+        <label>Loop to Find Matching URL Segment</label>
+        <locationX>336</locationX>
+        <locationY>278</locationY>
+        <collectionReference>Load_Community_URL_Names</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>Check_Incoming_URL</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>Community_Found</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Get_Community_Details</name>
+        <label>Get Community Details</label>
+        <locationX>424</locationX>
+        <locationY>638</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <isGoTo>true</isGoTo>
+            <targetReference>Community_Found</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>varCommunityID</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Community__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Load_Community_URL_Names</name>
+        <label>Load Community URL Names</label>
+        <locationX>336</locationX>
+        <locationY>158</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Loop_to_Find_Matching_URL_Segment</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Inactive__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>Community__c</object>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>Community_URL_Name__c</queriedFields>
+        <queriedFields>Name</queriedFields>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>210</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Load_Community_URL_Names</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>varCommunityCode</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <name>varCommunityID</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>varCommunityURL</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>varOUT_CommunityLongName</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <description>List of the Levels of Care supported by this Community, passed back to a ChatBot. This is calculated based on the number of Rooms of each care type that are available within the Community.</description>
+        <name>varOUT_LevelOfCareList</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <name>varOUT_Phone</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <name>varOUT_Rate</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <name>varOUT_RateAL</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <description>Basic Studio IL Monthly Rate</description>
+        <name>varOUT_RateIL</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <name>varOUT_RateMC</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+</Flow>

@@ -1,0 +1,2936 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>AddInfluence</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>AddInfluence</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>AddInfluence</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Opportunity_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Opportunity_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <externalSharingModel>Private</externalSharingModel>
+    <recordTypeTrackFeedHistory>false</recordTypeTrackFeedHistory>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <searchLayouts>
+        <customTabListAdditionalFields>OPPORTUNITY.NAME</customTabListAdditionalFields>
+        <customTabListAdditionalFields>ACCOUNT.NAME</customTabListAdditionalFields>
+        <customTabListAdditionalFields>OPPORTUNITY.CLOSE_DATE</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>OPPORTUNITY.NAME</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>ACCOUNT.NAME</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>ACCOUNT.SITE</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>OPPORTUNITY.NAME</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>ACCOUNT.NAME</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>ACCOUNT.SITE</lookupPhoneDialogsAdditionalFields>
+        <searchResultsAdditionalFields>OPPORTUNITY.NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Status__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Primary_Contact_Email__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Primary_Contact_Phone__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Primary_Contact_City__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Primary_Contact_State__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Opportunity_Inquiry_Date__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>Private</sharingModel>
+    <businessProcesses>
+        <fullName>SP Senior Living</fullName>
+        <isActive>true</isActive>
+        <values>
+            <fullName>Depositor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lost</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending Qualification</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Resident</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Visit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waitlist</fullName>
+            <default>false</default>
+        </values>
+    </businessProcesses>
+    <businessProcesses>
+        <fullName>SP Skilled Nursing</fullName>
+        <isActive>true</isActive>
+        <values>
+            <fullName>Accepted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Admitted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Denied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lost</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Resident</fullName>
+            <default>false</default>
+        </values>
+    </businessProcesses>
+    <compactLayouts>
+        <fullName>Senior_Living</fullName>
+        <fields>Name</fields>
+        <fields>Status__c</fields>
+        <fields>OwnerId</fields>
+        <fields>Opportunity_Inquiry_Date__c</fields>
+        <fields>Last_Completed_Activity_Date__c</fields>
+        <fields>First_Connected_Conversation_Date__c</fields>
+        <fields>Next_Scheduled_Activity_Date__c</fields>
+        <fields>Community__c</fields>
+        <fields>Service_Type__c</fields>
+        <fields>Sales_Enagement_Score__c</fields>
+        <label>Senior Living</label>
+    </compactLayouts>
+    <compactLayouts>
+        <fullName>Skilled_Nursing</fullName>
+        <fields>Name</fields>
+        <fields>Opportunity_Inquiry_Date__c</fields>
+        <fields>Housing_Type__c</fields>
+        <fields>StageName</fields>
+        <fields>OwnerId</fields>
+        <label>Skilled Nursing</label>
+    </compactLayouts>
+    <fields>
+        <fullName>Unit__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Apartment</label>
+        <referenceTo>Unit__c</referenceTo>
+        <relationshipLabel>Opportunities</relationshipLabel>
+        <relationshipName>Opportunities</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <externalId>false</externalId>
+        <formula>if (
+(TEXT(StageName ) = &apos;New&apos; || TEXT(StageName ) = &apos;Pending Qualification&apos; || TEXT(StageName ) = &apos;Visit&apos; )
+&amp;&amp;
+NOT(ISBLANK( TEXT(Lead_Score__c) ))
+, TEXT(Lead_Score__c), TEXT(StageName ))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Top_10__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Top 10</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Lost_To__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Lost To</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Opportunities (Lost To)</relationshipLabel>
+        <relationshipName>Opportunities1</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Community__c</fullName>
+        <externalId>false</externalId>
+        <label>Community</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Community_Picklist</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Is_Active__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF (ISPICKVAL( StageName , &apos;Pending&apos;) || ISPICKVAL( StageName , &apos;Not Yet Classified&apos;) || ISPICKVAL( StageName , &apos;Future Lead Email&apos;) || ISPICKVAL( StageName , &apos;Future Lead-Mailings Only&apos;) || ISPICKVAL( StageName , &apos;Future Lead (beyond 6 months)&apos;) || ISPICKVAL( StageName , &apos;Cool Lead (91 days - 6 months)&apos;) || ISPICKVAL( StageName , &apos;Warm Lead (31 - 90 days)&apos;) || ISPICKVAL( StageName , &apos;Hot Lead (8-30 days)&apos;) || ISPICKVAL( StageName , &apos;Ready Immediately (within 7 days)&apos;) || ISPICKVAL( StageName , &apos;Assessment&apos;) || ISPICKVAL( StageName , &apos;Accepted&apos;) || ISPICKVAL( StageName , &apos;Waitlist&apos;) || ISPICKVAL( StageName , &apos;Courtesy Hold&apos;) || ISPICKVAL( StageName , &apos;Depositor&apos;) || ISPICKVAL( StageName , &apos;Cancelled Deposit&apos;), true, false)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Is Active</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Lost_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Lost Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Lead_Score__c</fullName>
+        <externalId>false</externalId>
+        <label>Lead Temperature</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Hot</fullName>
+                    <default>false</default>
+                    <label>Hot</label>
+                </value>
+                <value>
+                    <fullName>Warm</fullName>
+                    <default>false</default>
+                    <label>Warm</label>
+                </value>
+                <value>
+                    <fullName>Cold</fullName>
+                    <default>false</default>
+                    <label>Cold</label>
+                </value>
+                <value>
+                    <fullName>Not Yet Classified</fullName>
+                    <default>false</default>
+                    <label>Not Yet Classified</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>DepositDate__c</fullName>
+        <externalId>false</externalId>
+        <label>Deposit Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Lead_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Lead Status</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Lead_Status</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Lost_Reason__c</fullName>
+        <externalId>false</externalId>
+        <label>Lost Reason</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Lost_Reason</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>OrderNumber__c</fullName>
+        <externalId>false</externalId>
+        <label>Order Number</label>
+        <length>8</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Deposit_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Deposit Date (Transaction)</label>
+        <summarizedField>Transaction__c.Transaction_Date__c</summarizedField>
+        <summaryFilterItems>
+            <field>Transaction__c.Type__c</field>
+            <operation>equals</operation>
+            <value>Deposit</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Transaction__c.Opportunity__c</summaryForeignKey>
+        <summaryOperation>max</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Housing_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Level of Care</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Independent Living</fullName>
+                    <default>false</default>
+                    <label>Independent Living</label>
+                </value>
+                <value>
+                    <fullName>Assisted Living</fullName>
+                    <default>false</default>
+                    <label>Assisted Living</label>
+                </value>
+                <value>
+                    <fullName>Memory Care</fullName>
+                    <default>false</default>
+                    <label>Memory Care</label>
+                </value>
+                <value>
+                    <fullName>Skilled Nursing</fullName>
+                    <default>false</default>
+                    <label>Skilled Nursing</label>
+                </value>
+                <value>
+                    <fullName>Active Adult</fullName>
+                    <default>false</default>
+                    <label>Active Adult</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Move_In_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Move In Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Service_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Service Type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Housing_Type</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Temp_Display__c</fullName>
+        <externalId>false</externalId>
+        <label>Temp Display</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Accepted_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Accepted Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Contract_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Contract Type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Traditional</fullName>
+                    <default>false</default>
+                    <label>Traditional</label>
+                </value>
+                <value>
+                    <fullName>50% ROC</fullName>
+                    <default>false</default>
+                    <label>50% ROC</label>
+                </value>
+                <value>
+                    <fullName>90% ROC</fullName>
+                    <default>false</default>
+                    <label>90% ROC</label>
+                </value>
+                <value>
+                    <fullName>ROC I</fullName>
+                    <default>false</default>
+                    <label>ROC I</label>
+                </value>
+                <value>
+                    <fullName>ROC II</fullName>
+                    <default>false</default>
+                    <label>ROC II</label>
+                </value>
+                <value>
+                    <fullName>Unbundled</fullName>
+                    <default>false</default>
+                    <label>Unbundled</label>
+                </value>
+                <value>
+                    <fullName>75% ROC</fullName>
+                    <default>false</default>
+                    <label>75% ROC</label>
+                </value>
+                <value>
+                    <fullName>Type A Traditional</fullName>
+                    <default>false</default>
+                    <label>Type A Traditional</label>
+                </value>
+                <value>
+                    <fullName>Type A 90% ROC</fullName>
+                    <default>false</default>
+                    <label>Type A 90% ROC</label>
+                </value>
+                <value>
+                    <fullName>Type A 50% ROC</fullName>
+                    <default>false</default>
+                    <label>Type A 50% ROC</label>
+                </value>
+                <value>
+                    <fullName>Type B 90% ROC</fullName>
+                    <default>false</default>
+                    <label>Type B 90% ROC</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Senior_Living__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Senior Living</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>TypeOfService__c</fullName>
+        <description>Type of service requested.</description>
+        <externalId>false</externalId>
+        <label>Type of Service</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Consultation</fullName>
+                    <default>false</default>
+                    <label>Consultation</label>
+                </value>
+                <value>
+                    <fullName>2nd Opinion</fullName>
+                    <default>false</default>
+                    <label>2nd Opinion</label>
+                </value>
+                <value>
+                    <fullName>Radiology Services</fullName>
+                    <default>false</default>
+                    <label>Radiology Services</label>
+                </value>
+                <value>
+                    <fullName>Lab Services</fullName>
+                    <default>false</default>
+                    <label>Lab Services</label>
+                </value>
+                <value>
+                    <fullName>Follow up</fullName>
+                    <default>false</default>
+                    <label>Follow up</label>
+                </value>
+                <value>
+                    <fullName>Surgery</fullName>
+                    <default>false</default>
+                    <label>Surgery</label>
+                </value>
+                <value>
+                    <fullName>Other (please specify in comments)</fullName>
+                    <default>false</default>
+                    <label>Other (please specify in comments)</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>TrackingNumber__c</fullName>
+        <externalId>false</externalId>
+        <label>Tracking Number</label>
+        <length>12</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Visit_No_Visit__c</fullName>
+        <externalId>false</externalId>
+        <formula>if ( isblank(Number_of_Appointments__c ), &apos;No Visit Yet&apos;,
+   if ( Number_of_Appointments__c = 0 , &apos;0 - No Visit Yet&apos;,
+         if ( Number_of_Appointments__c = 1 , &apos;1 - One Visit&apos;, &apos;M - Multiple Visits&apos;)
+   )
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Visit /No Visit</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Assessment_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Assessment Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>First_Tour_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Initial Tour Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>MainCompetitors__c</fullName>
+        <externalId>false</externalId>
+        <label>Main Competitor(s)</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Move_Out_Reason__c</fullName>
+        <externalId>false</externalId>
+        <label>Move Out Reason</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Competitor</fullName>
+                    <default>false</default>
+                    <label>Competitor</label>
+                </value>
+                <value>
+                    <fullName>Cost</fullName>
+                    <default>false</default>
+                    <label>Cost</label>
+                </value>
+                <value>
+                    <fullName>Death</fullName>
+                    <default>false</default>
+                    <label>Death</label>
+                </value>
+                <value>
+                    <fullName>Move Closer to Family</fullName>
+                    <default>false</default>
+                    <label>Move Closer to Family</label>
+                </value>
+                <value>
+                    <fullName>Move in with Family</fullName>
+                    <default>false</default>
+                    <label>Move in with Family</label>
+                </value>
+                <value>
+                    <fullName>Move to Health Center</fullName>
+                    <default>false</default>
+                    <label>Move to Health Center</label>
+                </value>
+                <value>
+                    <fullName>No Availability</fullName>
+                    <default>false</default>
+                    <label>No Availability</label>
+                </value>
+                <value>
+                    <fullName>Prospect Decision</fullName>
+                    <default>false</default>
+                    <label>Prospect Decision</label>
+                </value>
+                <value>
+                    <fullName>Satisfaction Guarantee</fullName>
+                    <default>false</default>
+                    <label>Satisfaction Guarantee</label>
+                </value>
+                <value>
+                    <fullName>Unqualified Medically</fullName>
+                    <default>false</default>
+                    <label>Unqualified Medically</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Primary_Contact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Primary Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Opportunities (Primary Contact)</relationshipLabel>
+        <relationshipName>Opportunities2</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Second_Resident__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Second Resident</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Opportunities (Second Resident)</relationshipLabel>
+        <relationshipName>Opportunities1</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Skilled_Nursing__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Skilled Nursing</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Assigned_Floater__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Assigned Floater</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Opportunities</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Create_Occupancy__c</fullName>
+        <externalId>false</externalId>
+        <formula>true</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Create Occupancy</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Primary_Resident__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Primary Resident</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Opportunities (Primary Resident)</relationshipLabel>
+        <relationshipName>Opportunities</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CurrentGenerators__c</fullName>
+        <externalId>false</externalId>
+        <label>Current Generator(s)</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Primary_Household__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Primary Household</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Opportunities (Primary Household)</relationshipLabel>
+        <relationshipName>Opportunities</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Primary_Insurance__c</fullName>
+        <externalId>false</externalId>
+        <label>Primary Insurance</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>AARP</fullName>
+                    <default>false</default>
+                    <label>AARP</label>
+                </value>
+                <value>
+                    <fullName>Aetna</fullName>
+                    <default>false</default>
+                    <label>Aetna</label>
+                </value>
+                <value>
+                    <fullName>Aetna MMAI</fullName>
+                    <default>false</default>
+                    <label>Aetna MMAI</label>
+                </value>
+                <value>
+                    <fullName>Anthem</fullName>
+                    <default>false</default>
+                    <label>Anthem</label>
+                </value>
+                <value>
+                    <fullName>Blue Cross Blue Shield</fullName>
+                    <default>false</default>
+                    <label>Blue Cross Blue Shield</label>
+                </value>
+                <value>
+                    <fullName>Bright Health</fullName>
+                    <default>false</default>
+                    <label>Bright Health</label>
+                </value>
+                <value>
+                    <fullName>Bright Health MMAI</fullName>
+                    <default>false</default>
+                    <label>Bright Health MMAI</label>
+                </value>
+                <value>
+                    <fullName>Cigna</fullName>
+                    <default>false</default>
+                    <label>Cigna</label>
+                </value>
+                <value>
+                    <fullName>Cigna MMAI</fullName>
+                    <default>false</default>
+                    <label>Cigna MMAI</label>
+                </value>
+                <value>
+                    <fullName>Health Alliance</fullName>
+                    <default>false</default>
+                    <label>Health Alliance</label>
+                </value>
+                <value>
+                    <fullName>Humana</fullName>
+                    <default>false</default>
+                    <label>Humana</label>
+                </value>
+                <value>
+                    <fullName>Humana MMAI</fullName>
+                    <default>false</default>
+                    <label>Humana MMAI</label>
+                </value>
+                <value>
+                    <fullName>Optum</fullName>
+                    <default>false</default>
+                    <label>Optum</label>
+                </value>
+                <value>
+                    <fullName>PACE</fullName>
+                    <default>false</default>
+                    <label>PACE</label>
+                </value>
+                <value>
+                    <fullName>UHC</fullName>
+                    <default>false</default>
+                    <label>UHC</label>
+                </value>
+                <value>
+                    <fullName>UHC MMAI</fullName>
+                    <default>false</default>
+                    <label>UHC MMAI</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Reporting_Community__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Reporting Community</label>
+        <referenceTo>Community__c</referenceTo>
+        <relationshipLabel>Opportunities</relationshipLabel>
+        <relationshipName>Opportunities</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Internet_Lead_Source__c</fullName>
+        <externalId>false</externalId>
+        <label>Internet Lead Source</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Lead_Source_Campaign__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Campaign</label>
+        <referenceTo>Campaign</referenceTo>
+        <relationshipLabel>Opportunities</relationshipLabel>
+        <relationshipName>Opportunities</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Next_Activity_Status__c</fullName>
+        <externalId>false</externalId>
+        <formula>If ( Past_Due_Active_Prospect__c , If(ISBLANK( Next_Scheduled_Activity_Date__c ), &apos;No Scheduled Follow Up&apos;, &apos;Past Due&apos;) ,&apos;Current&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Next Activity Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Primary_Contact_City__c</fullName>
+        <externalId>false</externalId>
+        <formula>Primary_Contact__r.MailingCity</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Primary Contact City</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Days_to_Initial_Visit__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF (ISBLANK( Initial_Appointment_Date__c ) &amp;&amp; NOT(ISBLANK(Opportunity_Inquiry_Date__c )),0, Initial_Appointment_Date__c - Opportunity_Inquiry_Date__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Days to Initial Visit</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Expected_Move_In_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Expected Move In Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Initial_Activity_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Initial Activity Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Last_Appointment_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Last Appointment Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Primary_Contact_Email__c</fullName>
+        <externalId>false</externalId>
+        <formula>Primary_Contact__r.Email</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Primary Contact Email</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Primary_Contact_Phone__c</fullName>
+        <externalId>false</externalId>
+        <formula>Primary_Contact__r.Phone</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Primary Contact Phone</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Primary_Contact_State__c</fullName>
+        <externalId>false</externalId>
+        <formula>Primary_Contact__r.MailingState</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Primary Contact State</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sales_Enagement_Score__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF (ISPICKVAL( StageName, &apos;Waitlist&apos;), &apos;Waitlist&apos;,
+IF (ISPICKVAL( StageName, &apos;Depositor&apos;), &apos;Depositor&apos;,
+IF (ISPICKVAL( StageName, &apos;Lost&apos;), &apos;Lost&apos;,
+IF (ISPICKVAL( StageName, &apos;Move Out&apos;), &apos;Move Out - Former Resident&apos;,
+IF (ISPICKVAL( StageName, &apos;Resident&apos;), &apos;Resident&apos;,
+
+IF (NOT(ISnull( 	Days_Since_Last_Contact__c)) &amp;&amp; 	Days_Since_Last_Contact__c  &lt;= 90,
+
+IF( NOT(ISBLANK(Last_Appointment_Date__c)), &apos;01-Contact Last 90 Days-Has a Visit&apos;, &apos;02-Contact Last 90 Days-No Visit Yet&apos;),
+
+
+IF (NOT(ISBLANK(Last_Appointment_Date__c)), &apos;03-No Contact Last 90 Days-Has a Visit&apos;,
+IF (ISBLANK(Last_Appointment_Date__c) &amp;&amp; Number_Of_Completed_Activities__c &gt; 10, &apos;04-No Contact Last 90 Days-No Visit Yet-More Than 10 Activities&apos;,
+IF ( ISBLANK(Last_Appointment_Date__c) &amp;&amp; Number_Of_Completed_Activities__c &lt;= 10, &apos;05-No Contact Last 90 Days-No Visit Yet-Some Activity&apos;, &apos;06-No Activity&apos;)
+
+)))
+
+))
+))
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Sales Enagement Score</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>eReferral_Facility_Id__c</fullName>
+        <description>The receiving facility name.</description>
+        <externalId>false</externalId>
+        <label>eReferral Facility Id</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Create_OCR_for_Account__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Create OCR for Account</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Deposit_Cancelled_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Deposit Cancelled Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Number_of_Appointments__c</fullName>
+        <externalId>false</externalId>
+        <label>Number of Appointments</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Second_Resident_Exists__c</fullName>
+        <externalId>false</externalId>
+        <formula>if (isblank( Second_Resident__c ), false, true)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Second Resident Exists</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Counter_Stage_MI_and_MO__c</fullName>
+        <externalId>false</externalId>
+        <formula>if ( text(StageName) = &apos;Admitted&apos; ||text(StageName) = &apos;Resident&apos; || text(StageName) = &apos;Move Out&apos;, 1, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Counter Stage MI and MO</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Days_Since_Last_Contact__c</fullName>
+        <externalId>false</externalId>
+        <formula>If ( Last_Completed_Activity_Date__c = null, null, today() - Last_Completed_Activity_Date__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Days Since Last Contact</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Force_Occupancy_Trigger__c</fullName>
+        <externalId>false</externalId>
+        <formula>Toggle_Occupancy_Trigger__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Force Occupancy Trigger</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LOC_Different_from_Room__c</fullName>
+        <externalId>false</externalId>
+        <formula>if (ISBLANK(Unit__c), false,
+if ( Unit__r.Level_of_Care_formula__c = TEXT( Housing_Type__c ), false, true)
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>LOC Different from Room</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Move_Out_Discharge_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Move Out Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Primary_Resident_Exists__c</fullName>
+        <externalId>false</externalId>
+        <formula>if(isblank( Primary_Resident__c ), false, true)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Primary Resident Exists</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Web_Requested_Tour_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Web Req. Tour Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Initial_Appointment_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Initial Appointment Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Inquiry_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Inquiry Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Name_Formula__c</fullName>
+        <externalId>false</externalId>
+        <formula>if (Status__c = &apos;Not Yet Classified&apos; &amp;&amp; text(StageName) = &apos;New&apos;, Account.FirstName + &apos; &apos; + Account.LastName,
+
+
+IF(NOT(ISBLANK(Primary_Resident__c )) &amp;&amp; NOT( Primary_Resident__r.Deceased__c ) &amp;&amp; ISBLANK( Second_Resident__c ), Primary_Resident__r.FirstName + &apos; &apos; + Primary_Resident__r.LastName + &apos; - &apos; +   Status__c,
+
+IF( NOT(ISBLANK(Primary_Resident__c ))&amp;&amp; NOT( Primary_Resident__r.Deceased__c ) &amp;&amp; NOT(ISBLANK( Second_Resident__c )) &amp;&amp; NOT( Second_Resident__r.Deceased__c ), Primary_Resident__r.FirstName + &apos; &apos; + Primary_Resident__r.LastName + &apos; &amp; &apos; + Second_Resident__r.FirstName + &apos; &apos; + Second_Resident__r.LastName + &apos; - &apos; +  Status__c,
+
+IF( NOT(ISBLANK(Primary_Resident__c ))&amp;&amp; NOT( Primary_Resident__r.Deceased__c ) &amp;&amp; NOT(ISBLANK( Second_Resident__c )) &amp;&amp; Second_Resident__r.Deceased__c , Primary_Resident__r.FirstName + &apos; &apos; + Primary_Resident__r.LastName + &apos; - &apos; + Status__c,
+
+IF( NOT(ISBLANK(Primary_Resident__c ))&amp;&amp; Primary_Resident__r.Deceased__c &amp;&amp; NOT(ISBLANK( Second_Resident__c )) &amp;&amp; NOT(Second_Resident__r.Deceased__c) , Second_Resident__r.FirstName + &apos; &apos; + Second_Resident__r.LastName + &apos; - &apos; +  Status__c,
+
+Account.FirstName + &apos; &apos; + Account.LastName+ &apos; - &apos; + Status__c))))
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Opportunity Name Formula</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Past_Due_Active_Prospect__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF ( Is_Active__c,
+
+IF ( ISBLANK(Next_Scheduled_Activity_Date__c), True,
+IF (Next_Scheduled_Activity_Date__c &lt; TODAY(), true, false)
+)
+
+, False)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Past Due Active Prospect</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Toggle_Occupancy_Trigger__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Toggle Occupancy Trigger</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Lost_Denied_Reason_Detail__c</fullName>
+        <externalId>false</externalId>
+        <label>Lost Lead Details</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>All_Inquiries_with_a_Visit__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF (NOT(ISBLANK( Initial_Appointment_Date__c )) &amp;&amp; NOT(ISBLANK(Opportunity_Inquiry_Date__c )),1, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>All Inquiries with a Visit</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DeliveryInstallationStatus__c</fullName>
+        <externalId>false</externalId>
+        <label>Delivery/Installation Status</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>In progress</fullName>
+                    <default>false</default>
+                    <label>In progress</label>
+                </value>
+                <value>
+                    <fullName>Yet to begin</fullName>
+                    <default>false</default>
+                    <label>Yet to begin</label>
+                </value>
+                <value>
+                    <fullName>Completed</fullName>
+                    <default>false</default>
+                    <label>Completed</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Room_Vacant_Before_Move_In__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Room Vacant Before Move In</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Inquiries_with_No_Visit_Yet__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF (ISBLANK( Initial_Appointment_Date__c ) &amp;&amp; NOT(ISBLANK(Opportunity_Inquiry_Date__c )),1,  0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Inquiries with No Visit Yet</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Information_Packet_Sent_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Information Packet Sent Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Last_Completed_Activity_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Last Completed Activity Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Last_Completed_Activity_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Last Completed Activity Type</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Next_Scheduled_Activity_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Next Scheduled Activity Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Next_Scheduled_Activity_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Next Scheduled Activity Type</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Counter_Stage_Lost_and_Denied__c</fullName>
+        <externalId>false</externalId>
+        <formula>if ( text(StageName) = &apos;Lost Lead&apos; ||text(StageName) = &apos;Denied&apos; , 1, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Counter Stage Lost and Denied</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Insurance_Plan_Denial_Details__c</fullName>
+        <externalId>false</externalId>
+        <label>Insurance Plan Denial Details</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Number_Of_Completed_Activities__c</fullName>
+        <externalId>false</externalId>
+        <label>Number of Completed Activities</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Web_Requested_Tour_Time_of_Day__c</fullName>
+        <externalId>false</externalId>
+        <label>Web Req. Tour Time</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Next_Scheduled_Appointment_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Next Scheduled Appointment Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Not_Opened_After_Conversion_Yet__c</fullName>
+        <defaultValue>true</defaultValue>
+        <externalId>false</externalId>
+        <label>Not Opened After Conversion Yet</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Assign_Original_Owner_as_Floater__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Assign Original Owner as Floater</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Counter_Has_Referring_Practioner__c</fullName>
+        <externalId>false</externalId>
+        <formula>if (ISBLANK( HealthCloudGA__ReferringPractitioner__c ), 0, 1)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Counter Has Referring Practioner</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Information_Packet_Returned_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Information Packet Returned Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>First_Connected_Conversation_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>First Connected Conversation Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Clinical_Capability_Denial_Details__c</fullName>
+        <externalId>false</externalId>
+        <label>Clinical Capability Denial Details</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Not_Contacted_in_Designated_Candence__c</fullName>
+        <externalId>false</externalId>
+        <formula>if ( 
+
+ispickval(Lead_Score__c , &apos;Hot&apos;) &amp;&amp;  (Days_Since_Last_Contact__c = null || Days_Since_Last_Contact__c &gt; 30),
+true, 
+  if (ispickval(Lead_Score__c , &apos;Warm&apos;) &amp;&amp;  (Days_Since_Last_Contact__c = null || Days_Since_Last_Contact__c &gt; 60), true,
+ if (ispickval(Lead_Score__c , &apos;Cold&apos;) &amp;&amp;  (Days_Since_Last_Contact__c = null || Days_Since_Last_Contact__c &gt; 90),
+true, false)))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Not Contacted in Designated Cadence</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Toggle_Create_System_Activities_Trigger__c</fullName>
+        <externalId>false</externalId>
+        <label>Toggle Create System Activities Trigger</label>
+        <length>20</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <recordTypes>
+        <fullName>Senior_Living</fullName>
+        <active>true</active>
+        <businessProcess>SP Senior Living</businessProcess>
+        <compactLayoutAssignment>Senior_Living</compactLayoutAssignment>
+        <label>Senior Living</label>
+        <picklistValues>
+            <picklist>Community__c</picklist>
+            <values>
+                <fullName>ALB</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>APT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BAK</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Birdwood</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CAB</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DTT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EAA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GDD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lutheran Home</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TBD</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Contract_Type__c</picklist>
+            <values>
+                <fullName>50%25 ROC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>75%25 ROC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>90%25 ROC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ROC I</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ROC II</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Traditional</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Type A 50%25 ROC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Type A 90%25 ROC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Type A Traditional</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Type B 90%25 ROC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unbundled</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>DeliveryInstallationStatus__c</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yet to begin</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>ForecastCategoryName</picklist>
+            <values>
+                <fullName>Best Case</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Omitted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pipeline</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>HealthCloudGA__InsuranceType__c</picklist>
+            <values>
+                <fullName>Commercial</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medicaid</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medicare</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Self-pay</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>HealthCloudGA__Priority__c</picklist>
+            <values>
+                <fullName>Emergent</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Routine</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Urgent</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>HealthCloudGA__ReasonForOutOfNetworkReferral__c</picklist>
+            <values>
+                <fullName>Insurance Not Accepted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Limited Provider Availability</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Patient Preference</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Provider Preference</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Service Not Offered</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>HealthCloudGA__Specialty__c</picklist>
+            <values>
+                <fullName>Cardiology</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Neurosurgery</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Oncology</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Orthopedics</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>HealthCloudGA__TypeOfService__c</picklist>
+            <values>
+                <fullName>2nd Opinion</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Consultation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Follow up</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lab Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other %28please specify in comments%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Radiology Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Surgery</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Housing_Type__c</picklist>
+            <values>
+                <fullName>Active Adult</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Assisted Living</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Independent Living</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Memory Care</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Skilled Nursing</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>LeadSource</picklist>
+            <values>
+                <fullName>Advertising</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Direct Mail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Lead_Score__c</picklist>
+            <values>
+                <fullName>Cold</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hot</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Yet Classified</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Warm</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Lead_Status__c</picklist>
+            <values>
+                <fullName>Cold</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hot</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Yet Classified</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Warm</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Lost_Reason__c</picklist>
+            <values>
+                <fullName>Age Criteria</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Behavior</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Competitor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cost</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Death</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Duplicate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lack of Assisted Living</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lack of Memory Care</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Location</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Move in with family</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Moved to Another Facility</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Longer Interested</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No availability</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not a Lead %28Employment%2C spam%2C etc%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not a sales lead</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pet Policy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Smoking Policy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Staying Home</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unable to Reach</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unqualified FIN and MED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unqualified Financially</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unqualified Medically</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Move_Out_Reason__c</picklist>
+            <values>
+                <fullName>Competitor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cost</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Death</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Move Closer to Family</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Move in with Family</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Move to Health Center</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Availability</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prospect Decision</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Satisfaction Guarantee</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unqualified Medically</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Primary_Insurance__c</picklist>
+            <values>
+                <fullName>AARP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Aetna</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Aetna MMAI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Anthem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Blue Cross Blue Shield</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bright Health</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bright Health MMAI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cigna</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cigna MMAI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Health Alliance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Humana</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Humana MMAI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Optum</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PACE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>UHC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>UHC MMAI</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Service_Type__c</picklist>
+            <values>
+                <fullName>Adult Day Club</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Assisted Living</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Assisted Living Memory Support</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Assisted Living Respite</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hospice</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Independent Living</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Memory Support</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Residential Healthcare</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Residential Living</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Respite</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Short Term Rehab</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Social</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unknown</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Existing Customer - Downgrade</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Existing Customer - Replacement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Existing Customer - Upgrade</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Customer</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>TypeOfService__c</picklist>
+            <values>
+                <fullName>2nd Opinion</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Consultation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Follow up</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lab Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other %28please specify in comments%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Radiology Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Surgery</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Skilled_Nursing</fullName>
+        <active>true</active>
+        <businessProcess>SP Skilled Nursing</businessProcess>
+        <compactLayoutAssignment>Skilled_Nursing</compactLayoutAssignment>
+        <label>Skilled Nursing</label>
+        <picklistValues>
+            <picklist>Community__c</picklist>
+            <values>
+                <fullName>ALB</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>APT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BAK</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Birdwood</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CAB</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DTT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EAA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GDD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lutheran Home</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TBD</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Contract_Type__c</picklist>
+            <values>
+                <fullName>50%25 ROC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>75%25 ROC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>90%25 ROC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ROC I</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ROC II</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Traditional</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Type A 50%25 ROC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Type A 90%25 ROC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Type A Traditional</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Type B 90%25 ROC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unbundled</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>DeliveryInstallationStatus__c</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yet to begin</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>ForecastCategoryName</picklist>
+            <values>
+                <fullName>Best Case</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Omitted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pipeline</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>HealthCloudGA__InsuranceType__c</picklist>
+            <values>
+                <fullName>Commercial</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medicaid</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medicare</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Self-pay</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>HealthCloudGA__Priority__c</picklist>
+            <values>
+                <fullName>Emergent</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Routine</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Urgent</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>HealthCloudGA__ReasonForOutOfNetworkReferral__c</picklist>
+            <values>
+                <fullName>Insurance Not Accepted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Limited Provider Availability</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Patient Preference</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Provider Preference</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Service Not Offered</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>HealthCloudGA__Specialty__c</picklist>
+            <values>
+                <fullName>Cardiology</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Neurosurgery</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Oncology</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Orthopedics</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>HealthCloudGA__TypeOfService__c</picklist>
+            <values>
+                <fullName>2nd Opinion</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Consultation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Follow up</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lab Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other %28please specify in comments%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Radiology Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Surgery</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Housing_Type__c</picklist>
+            <values>
+                <fullName>Active Adult</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Assisted Living</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Independent Living</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Memory Care</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Skilled Nursing</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>LeadSource</picklist>
+            <values>
+                <fullName>Advertising</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Direct Mail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Lead_Score__c</picklist>
+            <values>
+                <fullName>Not Yet Classified</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Lead_Status__c</picklist>
+            <values>
+                <fullName>Cold</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hot</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Yet Classified</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Warm</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Lost_Reason__c</picklist>
+            <values>
+                <fullName>Age Criteria</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Behavior</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Competitor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cost</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Death</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Duplicate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lack of Assisted Living</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lack of Memory Care</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Location</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Move in with family</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Moved to Another Facility</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Longer Interested</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No availability</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not a Lead %28Employment%2C spam%2C etc%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not a sales lead</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pet Policy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Smoking Policy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Staying Home</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unable to Reach</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unqualified FIN and MED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unqualified Financially</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unqualified Medically</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Move_Out_Reason__c</picklist>
+            <values>
+                <fullName>Competitor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cost</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Death</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Move Closer to Family</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Move in with Family</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Move to Health Center</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Availability</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prospect Decision</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Satisfaction Guarantee</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unqualified Medically</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Primary_Insurance__c</picklist>
+            <values>
+                <fullName>AARP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Aetna</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Aetna MMAI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Anthem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Blue Cross Blue Shield</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bright Health</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bright Health MMAI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cigna</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cigna MMAI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Health Alliance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Humana</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Humana MMAI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Optum</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PACE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>UHC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>UHC MMAI</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Service_Type__c</picklist>
+            <values>
+                <fullName>Adult Day Club</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Assisted Living</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Assisted Living Memory Support</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Assisted Living Respite</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hospice</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Independent Living</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Memory Support</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Residential Healthcare</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Residential Living</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Respite</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Short Term Rehab</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Social</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unknown</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Existing Customer - Downgrade</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Existing Customer - Replacement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Existing Customer - Upgrade</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Customer</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>TypeOfService__c</picklist>
+            <values>
+                <fullName>2nd Opinion</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Consultation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Follow up</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lab Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other %28please specify in comments%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Radiology Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Surgery</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <webLinks>
+        <fullName>DeliveryStatus</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>true</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>true</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Delivery Status</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>true</showsLocation>
+        <showsStatus>true</showsStatus>
+        <url>http://www.fedex.com/cgi-bin/tracking?tracknumbers={!Opportunity_Tracking_Number}&amp;action=track&amp;language=english&amp;cntry_code=us</url>
+    </webLinks>
+</CustomObject>

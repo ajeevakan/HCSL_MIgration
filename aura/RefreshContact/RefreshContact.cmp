@@ -1,0 +1,11 @@
+<aura:component controller="refreshContactController" implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId"  >
+<aura:handler name="init" value="{!this}" action="{!c.myAction}" />
+  RefreshContact
+<aura:attribute name="recordId" type="Id" />
+<aura:attribute name="Account" type="Account" />
+    <aura:attribute name="oppId" type="Id" />
+  <force:recordData aura:id="forceRecord"
+    recordId="{!v.recordId}" 
+    layoutType="FULL"
+ />
+</aura:component>

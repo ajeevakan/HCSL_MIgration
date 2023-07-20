@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Reassignment Log</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Reassignment Logs</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account --></label>
+        <name>Account__c</name>
+        <relationshipLabel><!-- Reassignment Logs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- New Owner --></label>
+        <name>New_Owner__c</name>
+        <relationshipLabel><!-- Reassignment Logs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Old Owner Id --></label>
+        <name>Old_Owner_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunity --></label>
+        <name>Opportunity__c</name>
+        <relationshipLabel><!-- Reassignment Logs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Reassignment Batch --></label>
+        <name>Reassignment_Batch__c</name>
+        <relationshipLabel><!-- Reassignment Logs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Record Id --></label>
+        <name>Record_Id__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

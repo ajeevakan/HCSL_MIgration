@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Opp Activity Rollup</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Opp Activity Rollups</value>
+    </caseValues>
+    <fields>
+        <label><!-- Activity Sort Field --></label>
+        <name>Activity_Sort_Field__c</name>
+    </fields>
+    <fields>
+        <label><!-- Activity Summary Field --></label>
+        <name>Activity_Summary_Field__c</name>
+    </fields>
+    <fields>
+        <label><!-- Completed Activity False --></label>
+        <name>Completed_Activity_False__c</name>
+    </fields>
+    <fields>
+        <label><!-- Completed Activity Only --></label>
+        <name>Completed_Activity_Only__c</name>
+    </fields>
+    <fields>
+        <label><!-- Extra Conditions Field Names --></label>
+        <name>Extra_Conditions_Field_Names__c</name>
+    </fields>
+    <fields>
+        <label><!-- Extra Conditions Field Values --></label>
+        <name>Extra_Conditions_Field_Values__c</name>
+    </fields>
+    <fields>
+        <label><!-- Inactive --></label>
+        <name>Inactive__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunity Field --></label>
+        <name>Opportunity_Field__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pending Activity False --></label>
+        <name>Pending_Activity_False__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pending Activity Only --></label>
+        <name>Pending_Activity_Only__c</name>
+    </fields>
+    <fields>
+        <label><!-- Summary Type --></label>
+        <name>Summary_Type__c</name>
+        <picklistValues>
+            <masterLabel>Count</masterLabel>
+            <translation><!-- Count --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Max</masterLabel>
+            <translation><!-- Max --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Min</masterLabel>
+            <translation><!-- Min --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>Type__c</name>
+    </fields>
+    <layouts>
+        <layout>Opp Activity Rollup Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Vowel</startsWith>
+</CustomObjectTranslation>

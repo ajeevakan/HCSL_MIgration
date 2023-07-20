@@ -1,0 +1,14 @@
+<aura:component implements="force:lightningQuickAction,force:hasRecordId">
+	<aura:handler name="init" value="{!this}" action="{!c.myAction}" />
+    <aura:handler name="render" value="{!this}" action="{!c.newAccountMerge}"/>
+        <aura:attribute name="recordId" type="Id" />
+        <aura:attribute name="record" type="Opportunity" />
+        <aura:attribute name="simpleRecord" type="Opportunity" />
+    
+        <force:recordData aura:id="opportunityRecord"
+                  recordId="{!v.recordId}"
+                  targetRecord="{!v.record}"
+                  targetFields="{!v.simpleRecord}"
+                  layoutType="FULL"
+                  />
+</aura:component>

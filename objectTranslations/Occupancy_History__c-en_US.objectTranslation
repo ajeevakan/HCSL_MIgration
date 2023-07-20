@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Occupancy History</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Occupancy Histories</value>
+    </caseValues>
+    <fields>
+        <label><!-- Apartment --></label>
+        <name>Apartment__c</name>
+        <relationshipLabel><!-- Occupancy Histories --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Move In Date --></label>
+        <name>Move_In_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Primary Resident --></label>
+        <name>Primary_Resident__c</name>
+        <relationshipLabel><!-- Occupancy Histories --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Second Resident --></label>
+        <name>Second_Resident__c</name>
+        <relationshipLabel><!-- Occupancy Histories (Second Resident) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Snapshot Date --></label>
+        <name>Snapshot_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Occupied</masterLabel>
+            <translation><!-- Occupied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>On Notice</masterLabel>
+            <translation><!-- On Notice --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reserved</masterLabel>
+            <translation><!-- Reserved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unavailable</masterLabel>
+            <translation><!-- Unavailable --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vacant</masterLabel>
+            <translation><!-- Vacant --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Occupancy History Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Vowel</startsWith>
+</CustomObjectTranslation>

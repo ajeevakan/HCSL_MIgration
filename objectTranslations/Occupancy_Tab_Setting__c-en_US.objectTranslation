@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Occupancy Tab Setting</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Occupancy Tab Setting</value>
+    </caseValues>
+    <fields>
+        <label><!-- Add Missing Resident User Names --></label>
+        <name>Add_Missing_Resident_User_Names__c</name>
+    </fields>
+    <fields>
+        <label><!-- Add Temporary Respite Stay User Names --></label>
+        <name>Add_Temporary_Respite_Stay_User_Names__c</name>
+    </fields>
+    <fields>
+        <label><!-- Add Temporary SNF Stay User Names --></label>
+        <name>Add_Temporary_SNF_Stay_User_Names__c</name>
+    </fields>
+    <fields>
+        <label><!-- Enable Add Missing Resident --></label>
+        <name>Enable_Add_Missing_Resident__c</name>
+    </fields>
+    <fields>
+        <label><!-- Enable Add Temporary Respite Stay --></label>
+        <name>Enable_Add_Temporary_Respite_Stay__c</name>
+    </fields>
+    <fields>
+        <label><!-- Enable Add Temporary SNF Stay --></label>
+        <name>Enable_Add_Temporary_SNF_Stay__c</name>
+    </fields>
+    <fields>
+        <label><!-- Enable Remove Prospect --></label>
+        <name>Enable_Remove_Prospect__c</name>
+    </fields>
+    <fields>
+        <label><!-- Enable Reset Deposit --></label>
+        <name>Enable_Reset_Deposit__c</name>
+    </fields>
+    <fields>
+        <label><!-- Enable Reverse Move-Out --></label>
+        <name>Enable_Reverse_Move_Out__c</name>
+    </fields>
+    <fields>
+        <label><!-- Remove Prospect User Names --></label>
+        <name>Remove_Prospect_User_Names__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reset Deposit User Names --></label>
+        <name>Reset_Deposit_User_Names__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reverse Move-Out User Names --></label>
+        <name>Reverse_Move_Out_User_Names__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

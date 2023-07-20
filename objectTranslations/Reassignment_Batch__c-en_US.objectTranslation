@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Reassignment Batch</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Reassignment Batches</value>
+    </caseValues>
+    <fields>
+        <label><!-- Campaign --></label>
+        <name>Campaign__c</name>
+        <relationshipLabel><!-- Reassignment Batches --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Community --></label>
+        <name>Community__c</name>
+        <relationshipLabel><!-- Reassignment Batches --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Current Owner --></label>
+        <name>Current_Owner__c</name>
+        <relationshipLabel><!-- Reassignment Batches (Current Owner) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Message --></label>
+        <name>Message__c</name>
+    </fields>
+    <fields>
+        <label><!-- Object Name --></label>
+        <name>Object_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reassign Activities Only --></label>
+        <name>Reassign_Activities_Only__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reassign To --></label>
+        <name>Reassign_To__c</name>
+        <relationshipLabel><!-- Reassignment Batches (Reassign To) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Search Name --></label>
+        <name>Search_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Where Condition --></label>
+        <name>Where_Condition__c</name>
+    </fields>
+    <layouts>
+        <layout>Reassignment Batch Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

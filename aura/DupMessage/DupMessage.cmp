@@ -1,0 +1,11 @@
+<aura:component controller="OppDupContactListController" implements="flexipage:availableForAllPageTypes,force:hasRecordId" access="global" >
+	<aura:handler name="init" value="{!this}" action="{!c.do_init}" />
+    <aura:attribute name="recordId" type="Id" />
+    <aura:attribute name="DupInfo" type="OppDupContactListController.DupInfo" />
+    
+    <aura:if isTrue="{!not(empty(v.DupInfo.lstContactsInfo))}">
+        <Div class="slds-align_absolute-center" >
+        <b>Duplicates Found</b>
+            </Div>
+    </aura:if>
+    </aura:component>

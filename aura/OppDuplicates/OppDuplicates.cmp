@@ -1,0 +1,61 @@
+<aura:component controller="OppDupContactListController" implements="flexipage:availableForAllPageTypes,force:hasRecordId" access="global" >
+	<aura:handler name="init" value="{!this}" action="{!c.do_init}" />
+    <aura:attribute name="recordId" type="Id" />
+    <aura:attribute name="DupInfo" type="OppDupContactListController.DupInfo" />
+    
+    <aura:iteration items="{!v.DupInfo.lstContactsInfo}" var="ContactInfo">
+        <lightning:card  >
+            <aura:set attribute="title">
+                Potential Duplicates of Contact: <lightning:icon iconName="standard:contact" size="small"/>&nbsp;
+                <a value="{!ContactInfo.objContact.Id}" Id="{!ContactInfo.objContact.Id}" onclick="{!c.goToContact}">{!ContactInfo.objContact.Name}</a>
+            </aura:set>
+            <aura:iteration items="{!ContactInfo.lstDupContacts}" var="DupContact">
+                <ul class="slds-list--vertical slds-has-cards--space has-selections">
+                <li class="slds-list__item slds-m-around--x-small">
+                    <p class="slds-tile__title slds-truncate slds-text-heading--medium"><a value="{!DupContact.Id}" Id="{!DupContact.Id}" onclick="{!c.goToContact}">{!DupContact.Name}</a></p>
+                    <div class="slds-tile__detail">
+                        <table><td >
+                            <p class="slds-truncate">Phone: <lightning:formattedPhone value="{!DupContact.Phone}"></lightning:formattedPhone></p>
+                             <p class="slds-truncate">Email: <lightning:formattedEmail value="{!DupContact.Email}" /> </p>
+                        </td></table>
+                    </div>
+                    <lightning:button value="{!ContactInfo.objContact.Id +','+DupContact.Id}" label="Merge Contact" onclick="{!c.mergeContact }" />
+                </li>
+                </ul>
+            </aura:iteration>
+        </lightning:card>
+    </aura:iteration>
+    <aura:iteration items="{!v.DupInfo.lstHouseholdsInfo}" var="HouseholdInfo">
+        <lightning:card >
+            <aura:set attribute="title">
+                Potential Duplicates of Household: <lightning:icon iconName="standard:account" size="small"/>&nbsp;
+                <a value="{!HouseholdInfo.objHousehold.Id}" Id="{!HouseholdInfo.objHousehold.Id}" onclick="{!c.goToContact}">{!HouseholdInfo.objHousehold.Name}</a>
+            </aura:set>
+            <aura:iteration items="{!HouseholdInfo.lstDupHouseholds}" var="DupHousehold">
+                <ul class="slds-list--vertical slds-has-cards--space has-selections">
+                <li class="slds-list__item slds-m-around--x-small">
+                    <p class="slds-tile__title slds-truncate slds-text-heading--medium"><a value="{!DupHousehold.Id}" Id="{!DupHousehold.Id}" onclick="{!c.goToContact}">{!DupHousehold.Name}</a></p>
+                    <lightning:button value="{!HouseholdInfo.objHousehold.Id +','+DupHousehold.Id}" label="Merge Household" onclick="{!c.mergeHousehold }" />
+                </li>
+                </ul>
+            </aura:iteration>
+        </lightning:card>
+    </aura:iteration>
+    <aura:if isTrue="{!not(empty(v.DupInfo.lstDupOpportunities))}">
+    	<lightning:card >
+            <aura:set attribute="title">
+                Potential Duplicates of Opportunity: <lightning:icon iconName="standard:opportunity" size="small"/>&nbsp;
+               {!v.DupInfo.objOpportunity.Name}
+            </aura:set>
+            <aura:iteration items="{!v.DupInfo.lstDupOpportunities}" var="DupOpp">
+                <ul class="slds-list--vertical slds-has-cards--space has-selections">
+                <li class="slds-list__item slds-m-around--x-small">
+                    <p class="slds-tile__title slds-truncate slds-text-heading--medium"><a value="{!DupOpp.Id}" Id="{!DupOpp.Id}" onclick="{!c.goToContact}">{!DupOpp.Name}</a></p>
+                    <lightning:button value="{!v.DupInfo.objOpportunity.Id +','+DupOpp.Id}" label="Merge Opportunity" onclick="{!c.mergeOpp }" />
+                </li>
+                </ul>
+    		</aura:iteration>
+        </lightning:card>
+    
+    </aura:if>
+</aura:component>

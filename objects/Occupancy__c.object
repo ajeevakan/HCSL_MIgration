@@ -1,0 +1,1058 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <label>Occupancy</label>
+    <nameField>
+        <label>Occupancy Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Occupancies</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
+    <fields>
+        <fullName>Bed__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Bed</label>
+        <referenceTo>Bed__c</referenceTo>
+        <relationshipLabel>Occupancies</relationshipLabel>
+        <relationshipName>Occupancies</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Resident__c</fullName>
+        <externalId>false</externalId>
+        <label>Resident</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Occupancies</relationshipLabel>
+        <relationshipName>Occupancies</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Apartment__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Current Apartment/Room</label>
+        <referenceTo>Unit__c</referenceTo>
+        <relationshipLabel>Occupancies</relationshipLabel>
+        <relationshipName>Occupancies</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Community__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Source_Opportunity__r.Community__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Community</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Is_Primary__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Is Primary</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Move_In_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Move In Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Transfer_Bed__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Transfer Bed</label>
+        <referenceTo>Bed__c</referenceTo>
+        <relationshipLabel>Occupancies (Transfer Bed)</relationshipLabel>
+        <relationshipName>Occupancies1</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Count_Primary__c</fullName>
+        <externalId>false</externalId>
+        <formula>if ( Is_Primary__c , 1, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Count Primary</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Level_of_Care__c</fullName>
+        <externalId>false</externalId>
+        <label>Level of Care</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Housing_Type</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Move_Out_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Move Out Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Move_Out_Reason__c</fullName>
+        <externalId>false</externalId>
+        <label>Move Out Reason</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Asked to leave: Behavioral</fullName>
+                    <default>false</default>
+                    <label>Asked to leave: Behavioral</label>
+                </value>
+                <value>
+                    <fullName>Asked to leave: Non-payment</fullName>
+                    <default>false</default>
+                    <label>Asked to leave: Non-payment</label>
+                </value>
+                <value>
+                    <fullName>Care level not available</fullName>
+                    <default>false</default>
+                    <label>Care level not available</label>
+                </value>
+                <value>
+                    <fullName>Death</fullName>
+                    <default>false</default>
+                    <label>Death</label>
+                </value>
+                <value>
+                    <fullName>Distance from family</fullName>
+                    <default>false</default>
+                    <label>Distance from family</label>
+                </value>
+                <value>
+                    <fullName>Not able to afford any longer</fullName>
+                    <default>false</default>
+                    <label>Not able to afford any longer</label>
+                </value>
+                <value>
+                    <fullName>Rehab</fullName>
+                    <default>false</default>
+                    <label>Rehab</label>
+                </value>
+                <value>
+                    <fullName>Short-term stay</fullName>
+                    <default>false</default>
+                    <label>Short-term stay</label>
+                </value>
+                <value>
+                    <fullName>Unhappy: Care issues</fullName>
+                    <default>false</default>
+                    <label>Unhappy: Care issues</label>
+                </value>
+                <value>
+                    <fullName>Unhappy: Management</fullName>
+                    <default>false</default>
+                    <label>Unhappy: Management</label>
+                </value>
+                <value>
+                    <fullName>Unhappy: Programming</fullName>
+                    <default>false</default>
+                    <label>Unhappy: Programming</label>
+                </value>
+                <value>
+                    <fullName>Value does not justify price</fullName>
+                    <default>false</default>
+                    <label>Value does not justify price</label>
+                </value>
+                <value>
+                    <fullName>Went to Another Community</fullName>
+                    <default>false</default>
+                    <label>Went to Another Community</label>
+                </value>
+                <value>
+                    <fullName>Went to Another Watermark Community</fullName>
+                    <default>false</default>
+                    <label>Went to Another Watermark Community</label>
+                </value>
+                <value>
+                    <fullName>Discharge Home</fullName>
+                    <default>false</default>
+                    <label>Discharge Home</label>
+                </value>
+                <value>
+                    <fullName>Discharge to Hospital</fullName>
+                    <default>false</default>
+                    <label>Discharge to Hospital</label>
+                </value>
+                <value>
+                    <fullName>Discharge to Another SNF</fullName>
+                    <default>false</default>
+                    <label>Discharge to Another SNF</label>
+                </value>
+                <value>
+                    <fullName>Discharge to Hospice</fullName>
+                    <default>false</default>
+                    <label>Discharge to Hospice</label>
+                </value>
+                <value>
+                    <fullName>Discharge to Acute Rehab</fullName>
+                    <default>false</default>
+                    <label>Discharge to Acute Rehab</label>
+                </value>
+                <value>
+                    <fullName>Discharge Against Medical Advice</fullName>
+                    <default>false</default>
+                    <label>Discharge Against Medical Advice</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Pending_Move_In__c</fullName>
+        <externalId>false</externalId>
+        <formula>If (ISBLANK( Scheduled_Move_In_Date__c ), false,
+
+IF (ISBLANK( Move_In_Date__c ) , true, false)
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Pending Move In</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Last_Change_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Transfer Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Occupancy_Status__c</fullName>
+        <externalId>false</externalId>
+        <formula>if (isblank( Move_In_Date__c ), &apos;Pending Move In&apos;,
+if (isblank( Move_Out_Date__c ), &apos;Active&apos;, &apos;Move Out&apos;)
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Occupancy Status</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Pending_Move_Out__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF (ISBLANK( Cancel_Scheduled_Move_Out__c ), false,
+IF (Isblank( Move_Out_Date__c ), true, false)
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Pending Move Out</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Net_Pending_MI_MO__c</fullName>
+        <externalId>false</externalId>
+        <formula>Count_Pending_Move_In__c - Count_Pending_Move_Out_Room__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Net Pending MI/MO</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Last_Transfer_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Last Transfer Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Pending_MI_MO_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>if (ISnull( Cancel_Scheduled_Move_Out__c ),IF ( ISnull( Move_In_Date__c ), Scheduled_Move_In_Date__c , null), Cancel_Scheduled_Move_Out__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Pending MI/MO Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Source_Opportunity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Source Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Occupancies</relationshipLabel>
+        <relationshipName>Occupancies</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Transfer_Apartment__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Transfer Apartment/Room</label>
+        <referenceTo>Unit__c</referenceTo>
+        <relationshipLabel>Occupancies (Transfer Apartment/Room)</relationshipLabel>
+        <relationshipName>Occupancies1</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Move_In_or_Move_Out__c</fullName>
+        <externalId>false</externalId>
+        <formula>if (ISBLANK(Move_Out_Date__c), &apos;Move In&apos;, &apos;Move Out&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Move In or Move Out</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Resident_Account_Id__c</fullName>
+        <externalId>false</externalId>
+        <formula>casesafeid( Resident__r.AccountId )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Resident Account Id</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Move_In_Date_Display__c</fullName>
+        <externalId>false</externalId>
+        <formula>Move_In_Date__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Move In Date Display</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Count_Pending_Move_In__c</fullName>
+        <externalId>false</externalId>
+        <formula>If ( Pending_Move_In__c &amp;&amp; Primary_Next_Resident_of_Room__c , 1, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Pending Move Ins</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Move_In_Transfer_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>If (ISBLANK(Last_Change_Date__c ), Scheduled_Move_In_Date__c , Last_Change_Date__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Move In/Transfer Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Apply_Change_to_Couple__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Apply Change to Couple</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Move_Out_Transfer_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Move Out / Transfer Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Primary Resident</fullName>
+                    <default>false</default>
+                    <label>Primary Resident</label>
+                </value>
+                <value>
+                    <fullName>Second Resident</fullName>
+                    <default>false</default>
+                    <label>Second Resident</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Occupancy_Status_Label__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(OR(ISBLANK(Move_Out_Date__c),ISNULL(Move_Out_Date__c)),
+IF(OR(ISBLANK(Cancel_Scheduled_Move_Out__c),ISNULL(Cancel_Scheduled_Move_Out__c)),
+IF(OR(ISBLANK(Scheduled_Move_Out_or_Transfer_Date__c),ISNULL(Scheduled_Move_Out_or_Transfer_Date__c))
+,&apos;Current Resident&apos;
+,&apos;Current Resident - Transfer Scheduled &apos;+ TEXT(Scheduled_Move_Out_or_Transfer_Date__c)
+)
+,&apos;Current Resident - Move Out Scheduled &apos;+ TEXT(Cancel_Scheduled_Move_Out__c)
+)
+,&apos;Former Resident - Move Out &apos;+ TEXT(Move_Out_Date__c) )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Occupancy Status Label</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Scheduled_Move_In_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Scheduled Move In Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Transfer_Level_of_Care__c</fullName>
+        <externalId>false</externalId>
+        <label>Transfer Level of Care</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Housing_Type</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Out_of_Sync__c</fullName>
+        <externalId>false</externalId>
+        <formula>if (ISBLANK( Move_Out_Date__c ), false,
+
+if ( Is_Primary__c &amp;&amp; ISBLANK(Source_Opportunity__r.Move_Out_Discharge_Date__c ), true, false)
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Opportunity Out of Sync?</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Scheduled_Move_Out_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Scheduled Move Out Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Cancel_Scheduled_Move_Out__c</fullName>
+        <externalId>false</externalId>
+        <label>Cancel Scheduled Move Out</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Cancel_Scheduled_Transfer__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Cancel Scheduled Transfer</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Resident_is_not_a_Prospect__c</fullName>
+        <externalId>false</externalId>
+        <formula>NOT(Resident__r.Prospect__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Resident is not a Prospect</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Scheduled_Occupancy_Change__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF (ISBLANK( Transfer_Apartment__c ),
+
+IF (ISBLANK( Cancel_Scheduled_Move_Out__c ),
+
+IF (ISBLANK( Move_In_Date__c ), &apos;Move In Scheduled for &apos; + TEXT(Scheduled_Move_In_Date__c ),
+If ( Isblank(Move_Out_Date__c), &apos;No Planned Occupancy Changes&apos; , &apos;Prior Resident Moved Out on &apos; + TEXT(Move_Out_Date__c)) )
+
+,
+If ( Isblank(Move_Out_Date__c), &apos;Move Out Scheduled for &apos; + TEXT(Cancel_Scheduled_Move_Out__c), &apos;Prior Resident Moved Out on &apos; + TEXT(Move_Out_Date__c)) )
+
+, &apos;Transfer Scheduled for &apos; + TEXT(Last_Change_Date__c) + &apos; to &apos; + Transfer_Apartment__r.Name + &apos; &apos; + TEXT( Transfer_Level_of_Care__c) )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Scheduled Occupancy Change</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Count_Pending_Move_Out_Room__c</fullName>
+        <externalId>false</externalId>
+        <formula>If ( Pending_Move_Out__c &amp;&amp; Primary_Current_Occupancy_for_Room__c, 1, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Pending Move Outs</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Primary_Next_Resident_of_Room__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF ( Id = Apartment__r.Next_Primary_Occupancy_Id__c, true, false)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Primary Next Resident of Room</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Current_Occ_Room_Same_Opp_Room__c</fullName>
+        <externalId>false</externalId>
+        <formula>if ( isblank(Apartment__c ) || isblank(Source_Opportunity__r.Unit__c ), false,
+if ( Apartment__c != Source_Opportunity__r.Unit__c , false, true))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Current Occ Room Same Opp Room</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Pending_Scheduled_Move_In_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>If (ISnull( Scheduled_Move_In_Date__c ), null ,
+
+IF (ISnull( Move_In_Date__c ) &amp;&amp; ISnull( Move_Out_Date__c ) &amp;&amp; ISnull( Scheduled_Move_Out_or_Transfer_Date__c ) , Scheduled_Move_In_Date__c , null)
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Pending Scheduled Move In Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Current_Apartment_Level_of_Care__c</fullName>
+        <externalId>false</externalId>
+        <formula>Apartment__r.Level_of_Care_formula__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Current Apartment Level of Care</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opp_LOC_Different_and_Same_Unit__c</fullName>
+        <externalId>false</externalId>
+        <formula>if (isblank( Apartment__c ), false,
+
+Source_Opportunity__r.LOC_Different_from_Room__c &amp;&amp; Apartment__c = Source_Opportunity__r.Unit__c
+
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Opp LOC Different and Same Unit</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Potential_Missing_Move_Out_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>if (isblank( Resident__c ) || isblank(Apartment__c), false,
+
+if ( ISBLANK( Move_In_Date__c ), false,
+if (ISBLANK( Move_Out_Date__c ),
+if ( Apartment__r.Current_Occupant_Move_In_Date__c &gt; Move_In_Date__c &amp;&amp; ((Apartment__r.Current_Resident_Occupancy_1__c != Id &amp;&amp; Apartment__r.Current_Resident_Occupancy_2__c != Id) ||
+(Apartment__r.Current_Resident_Occupancy_1__c != Id &amp;&amp; Apartment__r.Current_Resident_Occupancy_2__c = null) ||
+
+(Apartment__r.Current_Resident_Occupancy_1__c = null &amp;&amp; Apartment__r.Current_Resident_Occupancy_2__c != Id) )
+, true, false), false)
+
+)
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Potential Missing Move Out Date</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Change_to_Fire_Occupancy_Trigger__c</fullName>
+        <externalId>false</externalId>
+        <label>Change to Fire Occupancy Trigger</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Selected_Room_in_Wrong_Community__c</fullName>
+        <externalId>false</externalId>
+        <formula>if (ISBLANK( Source_Opportunity__c ), false,
+(
+IF (ISBLANK( Apartment__c ), false, if ( Apartment__r.Community_Id__r.Name != Community__c , true, false))
+||
+IF (ISBLANK( Transfer_Apartment__c ), false, if ( Transfer_Apartment__r.Community_Id__r.Name != Community__c , true, false))
+)
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Selected Room in Wrong Community</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Primary_Current_Occupancy_for_Room__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF ( Id = Apartment__r.Primary_Current_Occupancy_Id__c , true, false)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Primary Current Occupancy for Room</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Move_Out_or_Scheduled_Move_Out_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF (ISBLANK( Move_Out_Date__c ), Cancel_Scheduled_Move_Out__c , Move_Out_Date__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Move Out or Scheduled Move Out Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Scheduled_Move_Out_or_Transfer_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF (ISBLANK( Cancel_Scheduled_Move_Out__c), IF(ISBLANK( Transfer_Apartment__c ), null, Last_Change_Date__c ), Cancel_Scheduled_Move_Out__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Scheduled Move Out or Transfer Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Is_Primary_Calculation_Sort_Priority__c</fullName>
+        <externalId>false</externalId>
+        <formula>(if (ISBLANK(Move_Out_or_Scheduled_Move_Out_Date__c), 10000000000 * (if ( Resident__c = Source_Opportunity__r.Primary_Resident__c ,2, 0)),
+100000000 * (if ( Resident__c = Source_Opportunity__r.Primary_Resident__c ,2, 0))
+) )
++
+if (ISBLANK(Move_Out_or_Scheduled_Move_Out_Date__c), 0, (Year(Move_Out_or_Scheduled_Move_Out_Date__c) * 10000) + (Month(Move_Out_or_Scheduled_Move_Out_Date__c) * 100) + Day(Move_Out_or_Scheduled_Move_Out_Date__c) )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Is Primary Calculation Sort Priority</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Scheduled_Move_In_or_Transfer_In_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(ISBLANK( Transfer_Apartment__c ),
+IF (ISBLANK( Scheduled_Move_In_Date__c), null, Scheduled_Move_In_Date__c)
+, Last_Change_Date__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Scheduled Move In or Transfer In Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <recordTypes>
+        <fullName>Initial_Occupancy</fullName>
+        <active>true</active>
+        <label>Initial Occupancy</label>
+        <picklistValues>
+            <picklist>Level_of_Care__c</picklist>
+            <values>
+                <fullName>Adult Day Club</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Assisted Living</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Assisted Living Memory Support</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Assisted Living Respite</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hospice</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Independent Living</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Memory Support</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Residential Healthcare</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Residential Living</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Respite</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Short Term Rehab</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Social</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unknown</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Move_Out_Reason__c</picklist>
+            <values>
+                <fullName>Asked to leave%3A Behavioral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Asked to leave%3A Non-payment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Care level not available</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Death</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Discharge Against Medical Advice</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Discharge Home</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Discharge to Acute Rehab</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Discharge to Another SNF</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Discharge to Hospice</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Discharge to Hospital</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Distance from family</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not able to afford any longer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rehab</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Short-term stay</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unhappy%3A Care issues</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unhappy%3A Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unhappy%3A Programming</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Value does not justify price</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Went to Another Community</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Went to Another Watermark Community</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Move_Out_Transfer_Type__c</picklist>
+            <values>
+                <fullName>Primary Resident</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Second Resident</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Transfer_Level_of_Care__c</picklist>
+            <values>
+                <fullName>Adult Day Club</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Assisted Living</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Assisted Living Memory Support</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Assisted Living Respite</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hospice</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Independent Living</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Memory Support</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Residential Healthcare</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Residential Living</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Respite</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Short Term Rehab</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Social</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unknown</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+</CustomObject>

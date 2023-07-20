@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>Calls</name>
+    <queueMembers>
+        <users>
+            <user>manjaka.andriamasinoro@tlghctf.com</user>
+        </users>
+    </queueMembers>
+    <queueRoutingConfig>Calls</queueRoutingConfig>
+    <queueSobject>
+        <sobjectType>amazonconnect__AC_PhoneCall__c</sobjectType>
+    </queueSobject>
+</Queue>

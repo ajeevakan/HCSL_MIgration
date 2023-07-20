@@ -1,0 +1,10 @@
+<aura:component controller="NOTUSEDrefreshLeadController" implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+	LeadNavigatetoOpp
+    	<force:recordData aura:id="forceRecord"
+    recordId="{!v.recordId}" 
+    layoutType="FULL"
+    targetRecord="{!v._record}"
+    targetFields="{!v.simpleRecord}"
+    targetError="{!v._error}"
+    recordUpdated="{!c.recordUpdated}" />
+</aura:component>

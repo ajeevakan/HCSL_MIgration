@@ -1,0 +1,200 @@
+<aura:component controller="Opportunity360" implements="flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" access="global" >
+<aura:handler name="init" value="{!this}" action="{!c.myAction}" />
+    <aura:dependency resource="markup://force:editRecord" type="EVENT" />
+    
+    <aura:handler event="force:refreshView" action="{!c.myAction}" />    
+
+<aura:attribute name="recordId" type="Id" />
+<aura:attribute name="Task" type="Task" />
+<aura:attribute name="Contacts" type="Contact" />
+<aura:attribute name="Columns" type="List" />
+<aura:attribute name="ActivityList" type="wrapActivity" />
+    <aura:attribute name="activity" type="Task"/>
+     <aura:attribute name="opportunity" type="Opportunity"/>
+
+<force:recordData aura:id="taskRecord"
+                  recordId="{!v.recordId}"
+                  targetFields="{!v.Task}"
+                  layoutType="FULL"
+                  recordUpdated="{!c.myAction}"
+                  />
+    
+
+               <ul class="slds-list--vertical slds-has-cards--space has-selections">
+        <li class="slds-list__item slds-m-around--x-small">
+          <div class="slds-tile slds-tile--board">
+          
+              
+                      <div class="slds-tile__detail slds-p-bottom_xx-small slds-p-top_xx-small slds-text-body--regular ">
+                    <div class="slds-grid slds-wrap">
+      
+                <div class="slds-col slds-grow-none slds-max-small-size_1-of-1">
+                &nbsp;<lightning:button value="{!v.opportunity.Id}" onclick="{!c.myAction}" name="{!v.opportunity.Id+'Refresh'}" label="{!'Refresh'}" />
+                </div> 
+                <div class="slds-col slds-grow-none slds-max-small-size_1-of-1">
+                &nbsp;<lightning:button value="{!v.opportunity.Id}" onclick="{!c.newContact}" name="{!v.opportunity.Id+'NewContact'}" label="{!'Add Contact'}" />
+                </div> 
+              </div>
+             </div>  
+  
+      
+            
+                </div>
+                 
+        </li>
+      </ul>
+
+<!--  -->
+
+	<ul class="slds-list--vertical slds-has-cards--space has-selections">
+		<li class="slds-list__item slds-m-around--x-small">
+			<div class="slds-tile slds-tile--board">
+				<div class="slds-tile__detail">
+					<div class="slds-col slds-grow-none slds-max-small-size_1-of-1 slds-text-heading_medium">
+						<b>Opportunity Details</b>
+					</div>
+					<Table class="slds-border_top">
+					<tr>
+						<td>
+						<!-- check the code from humangood sandbox for the below code -->
+						<!--<p class="slds-text-body regular slds-cell-wrap"><b>Apartment Preference: </b>{!v.opportunity.Temp_Display__c}</p>     
+						<p class="slds-text-body regular slds-cell-wrap"><b>Care Level: </b>{!v.opportunity.Care_Level__c}</p>
+						<p class="slds-text-body regular slds-cell-wrap"><b>Location Preference: </b>{!v.opportunity.Location_Preference__c}</p>
+						<p class="slds-text-body regular slds-cell-wrap"><b>Prospect Qualified: </b>{!v.opportunity.Prospect_Qualified__c}</p> -->
+						</td>    
+					</tr>
+					</Table>
+				</div>      
+			</div>
+		</li>
+	</ul>
+
+
+<!--  -->         
+    
+<!--
+<lightning:card iconName="standard:contact" title="{! 'Thrive and Activities for ' + v.Account.Name}">
+-->
+    
+    
+     <aura:iteration items="{!v.Contacts}" var="ContactCard" >
+         
+               <ul class="slds-list--vertical slds-has-cards--space has-selections">
+        <li class="slds-list__item slds-m-around--x-small">
+          <div class="slds-tile slds-tile--board">
+            <span class="slds-tile__title slds-truncate ">
+             
+ 
+     <div class="slds-tile__detail">
+                <div class="slds-grid slds-wrap">
+      <div class="slds-col slds-grow-none slds-max-small-size_1-of-1 slds-text-heading_medium">
+          <table>
+          <tr>
+          <td>
+          <a value = "{!ContactCard.Id}" Id =  "{!ContactCard.Id}" onclick="{!c.goToContact}">{!ContactCard.Name} </a> - {!ContactCard.Relationship_to_Prospect__c}  
+          </td>
+          <!--<td>
+           {!ContactCard.Buying_Styles_Display__c} 
+          </td>-->
+          </tr>
+          </table>
+     </div>
+                     </div>
+          </div>
+       </span>
+              
+        <div class="slds-tile__detail slds-p-bottom_xx-small slds-p-top_xx-small slds-text-body--regular ">
+                <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-grow-none slds-max-small-size_1-of-1">
+               <lightning:button value="{!ContactCard.Id}" onclick="{!c.editContact}" name="{!ContactCard.Id+'edit'}" label="{!'  Edit  '}" /> 
+                </div> 
+                    <div class="slds-col slds-grow-none slds-max-small-size_1-of-1">
+                &nbsp;<lightning:button value="{!ContactCard.Id}" onclick="{!c.myAction}" name="{!ContactCard.Id+'Refresh'}" label="{!' Refresh '}" />
+                 </div> 
+                    <div class="slds-col slds-grow-none slds-max-small-size_1-of-1">
+                        &nbsp;<lightning:button value="{!ContactCard.Id}" onclick="{!c.newOppTask}" name="{!ContactCard.Id+'task'}" label="{!'New Task'}" />
+                                      </div>
+                        <div class="slds-col slds-grow-none slds-max-small-size_1-of-1">        
+                &nbsp;<lightning:button value="{!ContactCard.Id}" onclick="{!c.newOppEvent}" name="{!ContactCard.Id+'event'}" label="{!'New Event'}" />
+                      </div>
+              </div>
+             </div>
+  
+      
+            <div class="slds-tile__detail slds-border_top">
+                <div class="slds-grid slds-wrap">
+             
+                     <div class="slds-col slds-size_1-of-2 slds-max-small-size_1-of-1">
+                    <Table>
+                        <tr><b>First Name: </b><lightning:formattedPhone value="{!ContactCard.FirstName}"/></tr>
+                        <tr><b>Home Phone: </b><lightning:formattedPhone value="{!ContactCard.HomePhone}"/></tr>
+                    <tr><b>Mobile Phone: </b><lightning:formattedPhone value="{!ContactCard.MobilePhone}"/></tr>
+                        <!--<tr><b>Work Phone: </b><lightning:formattedPhone value="{!ContactCard.Work_Phone__c}"/></tr>-->
+                        <tr><b>Email: </b><lightning:formattedEmail value="{!ContactCard.Email}" /> </tr>
+                    </Table>
+                    </div>
+ 
+                    <div class="slds-col slds-size_1-of-2 slds-max-small-size_1-of-1">
+                        <Table>
+                        <tr><b>Street : </b>{!ContactCard.MailingStreet}</tr>
+                        <tr><b>City : </b>{!ContactCard.MailingCity}</tr>       
+                        <tr><b>State : </b>{!ContactCard.MailingState}</tr>
+                        <tr><b>Zip : </b>{!ContactCard.MailingPostalCode}</tr> 
+                        </Table>
+                    
+                    </div>
+                    
+                   
+                    </div>
+                 <div class="slds-tile slds-tile--board">
+                <div class="slds-tile__detail">
+                    <Table class="slds-border_top">
+
+                        <tr>
+                                            <td>
+                       <p class="slds-text-body--regular slds-cell-wrap"><b>Description: </b>{!ContactCard.Description}</p> 
+                       </td>
+                         
+                   </tr>
+                    </Table>
+                     
+                     </div>
+                </div>
+                 </div>
+          </div>
+        </li>
+      </ul>
+
+       </aura:iteration>
+    
+    
+       
+    
+    <div class="slds-box">
+     <span class="slds-tile__title slds-truncate slds-text-heading--medium">
+         Activity Notes
+    </span>
+
+    <div class="slds-grid slds-wrap " >
+                <aura:iteration items="{!v.ActivityList}" var ="aList">
+                       
+                      <div class="slds-col slds-size_1-of-6 slds-max-small-size_1-of-1 slds-border_top ">
+                      <b><div class="slds-truncate" title="">{!aList.ActivityDate}</div></b>
+                     </div>
+                    <div class="slds-col slds-size_1-of-6 slds-max-small-size_1-of-1 slds-border_top">
+                     <div class="slds-truncate" title="">{!aList.Subject}</div>
+                    </div>
+                    <div class="slds-col slds-size_1-of-6 slds-max-small-size_1-of-1 slds-border_top ">
+                     <div class="slds-truncate" title="">{!aList.WhoName}</div>
+                    </div>
+                    <div class="slds-col slds-size_3-of-6 slds-max-small-size_1-of-1 slds-border_top">
+                  <div class="slds-text-body--regular slds-cell-wrap" title="">{!aList.Description}</div>
+                    </div>
+               
+           </aura:iteration> 
+    </div>
+        </div>
+ <!--   
+</lightning:card>
+-->
+</aura:component>

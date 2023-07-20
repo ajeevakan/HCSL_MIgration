@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldSets>
+        <label><!-- HcCarePlanTaskFields --></label>
+        <name>HealthCloudGA__HcCarePlanTaskFields</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- HC Task List --></label>
+        <name>HealthCloudGA__HcTaskList</name>
+    </fieldSets>
+    <fields>
+        <label><!-- Activity Complete Date --></label>
+        <name>Activity_Complete_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sales Activity Type --></label>
+        <name>Activity_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Appointment --></label>
+        <name>Appointment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Community --></label>
+        <name>Community__c</name>
+    </fields>
+    <fields>
+        <label><!-- Connected Conversation --></label>
+        <name>Connected_Conversation__c</name>
+    </fields>
+    <fields>
+        <label><!-- Deposits --></label>
+        <name>Deposits__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fire Task Roll Up Trigger --></label>
+        <name>Fire_Task_Roll_Up_Trigger__c</name>
+    </fields>
+    <fields>
+        <label><!-- Form utm campaign --></label>
+        <name>Form_utm_campaign__c</name>
+    </fields>
+    <fields>
+        <label><!-- Form utm content --></label>
+        <name>Form_utm_content__c</name>
+    </fields>
+    <fields>
+        <label><!-- Form utm medium --></label>
+        <name>Form_utm_medium__c</name>
+    </fields>
+    <fields>
+        <label><!-- Form utm source --></label>
+        <name>Form_utm_source__c</name>
+    </fields>
+    <fields>
+        <label><!-- Form utm term --></label>
+        <name>Form_utm_term__c</name>
+    </fields>
+    <fields>
+        <label><!-- Age --></label>
+        <name>HealthCloudGA__Age__c</name>
+    </fields>
+    <fields>
+        <help><!-- Goal this task is meant to address --></help>
+        <label><!-- Goal --></label>
+        <name>HealthCloudGA__CarePlanGoal__c</name>
+        <relationshipLabel><!-- Activities --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Problem this task is mean to address --></help>
+        <label><!-- Problem --></label>
+        <name>HealthCloudGA__CarePlanProblem__c</name>
+        <relationshipLabel><!-- Activities --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Care Plan Template --></label>
+        <name>HealthCloudGA__CarePlanTemplate__c</name>
+        <relationshipLabel><!-- Activities --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Category --></label>
+        <name>HealthCloudGA__Category__c</name>
+    </fields>
+    <fields>
+        <label><!-- Condition Status --></label>
+        <name>HealthCloudGA__Conditions_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contract Tracing Status --></label>
+        <name>HealthCloudGA__Contract_Tracing_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Gender --></label>
+        <name>HealthCloudGA__Gender__c</name>
+    </fields>
+    <fields>
+        <label><!-- Monitored at Home --></label>
+        <name>HealthCloudGA__Monitored_at_Home__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sort Order --></label>
+        <name>HealthCloudGA__SortOrder__c</name>
+    </fields>
+    <fields>
+        <label><!-- TaskType --></label>
+        <name>HealthCloudGA__TaskType__c</name>
+    </fields>
+    <fields>
+        <label><!-- Testing Status --></label>
+        <name>HealthCloudGA__Testing_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Initial Appointments --></label>
+        <name>Initial_Appointments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Initial Inquiries --></label>
+        <name>Initial_Inquiries__c</name>
+    </fields>
+    <fields>
+        <label><!-- Initial Tours --></label>
+        <name>Initial_Tours__c</name>
+    </fields>
+    <fields>
+        <label><!-- Internet Lead Source --></label>
+        <name>Internet_Lead_Source__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Complete --></label>
+        <name>Is_Complete__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Pending --></label>
+        <name>Is_Pending__c</name>
+    </fields>
+    <fields>
+        <label><!-- Campaign --></label>
+        <name>Lead_Source_Campaign__c</name>
+        <relationshipLabel><!-- Activities --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Move Ins --></label>
+        <name>Move_Ins__c</name>
+    </fields>
+    <fields>
+        <label><!-- Inquiry Source --></label>
+        <name>Re_Inquiry_Source__c</name>
+    </fields>
+    <fields>
+        <label><!-- Referral Contact --></label>
+        <name>Referral_Contact__c</name>
+        <relationshipLabel><!-- Activities --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Referral Organization --></label>
+        <name>Referral_Organization__c</name>
+        <relationshipLabel><!-- Activities --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Report Month --></label>
+        <name>Report_Month__c</name>
+    </fields>
+    <fields>
+        <label><!-- Report Year --></label>
+        <name>Report_Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Result Code --></label>
+        <name>Result_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- System --></label>
+        <name>System__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Appointments --></label>
+        <name>Total_Appointments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Tours --></label>
+        <name>Total_Tours__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tour --></label>
+        <name>Tour__c</name>
+    </fields>
+    <fields>
+        <help><!-- CSS color code for event background color in calendar view --></help>
+        <label><!-- Calendar Background Color --></label>
+        <name>cccalendar__Calendar_Background_Color__c</name>
+    </fields>
+    <fields>
+        <help><!-- CSS color code for event border color in calendar view --></help>
+        <label><!-- Calendar Border Color --></label>
+        <name>cccalendar__Calendar_Border_Color__c</name>
+    </fields>
+    <fields>
+        <help><!-- Mode to render event with on Calendar: The rendering type of this event. Can be empty (normal rendering), &quot;background&quot;, or &quot;inverse-background&quot; --></help>
+        <label><!-- Calendar Rendering --></label>
+        <name>cccalendar__Calendar_Rendering__c</name>
+    </fields>
+    <fields>
+        <help><!-- CSS color code for event text color in calendar view --></help>
+        <label><!-- Calendar Text Color --></label>
+        <name>cccalendar__Calendar_Text_Color__c</name>
+    </fields>
+    <fields>
+        <help><!-- Check to display event&apos;s local timezone in event details --></help>
+        <label><!-- Display Event&apos;s Local Timezone --></label>
+        <name>cccalendar__Display_Events_Local_Timezone__c</name>
+    </fields>
+    <fields>
+        <help><!-- SLDS icon name for the event, from http://www.lightningdesignsystem.com/icons/. Example: utility:events --></help>
+        <label><!-- Event Icon Name --></label>
+        <name>cccalendar__Event_Icon_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Event URL 2 Open in Same Tab --></label>
+        <name>cccalendar__Event_URL_2_Open_in_Same_Tab__c</name>
+    </fields>
+    <fields>
+        <help><!-- Button link on Event --></help>
+        <label><!-- Event URL 2 --></label>
+        <name>cccalendar__Event_URL_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Event URL Open in Same Tab --></label>
+        <name>cccalendar__Event_URL_Open_in_Same_Tab__c</name>
+    </fields>
+    <fields>
+        <help><!-- Text to display on button linking to event URL field --></help>
+        <label><!-- Event URL Text 2 --></label>
+        <name>cccalendar__Event_URL_Text_2__c</name>
+    </fields>
+    <fields>
+        <help><!-- Text to display on button linking to event URL field --></help>
+        <label><!-- Event URL Text --></label>
+        <name>cccalendar__Event_URL_Text__c</name>
+    </fields>
+    <fields>
+        <help><!-- Button link on Event --></help>
+        <label><!-- Event URL --></label>
+        <name>cccalendar__Event_URL__c</name>
+    </fields>
+    <fields>
+        <help><!-- URL for Event Image, to be used for Tile Display --></help>
+        <label><!-- Image URL --></label>
+        <name>cccalendar__Image_URL__c</name>
+    </fields>
+    <fields>
+        <help><!-- Specify event&apos;s local timezone. Required if Display event&apos;s local timezone is checked --></help>
+        <label><!-- Local Timezone --></label>
+        <name>cccalendar__Local_Timezone__c</name>
+    </fields>
+    <layouts>
+        <layout>SL Task</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Description --></label>
+            <section>Description</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label><!-- Inbound Source (Select one of these.  If non-Prof Ref, also select Lead Src) --></label>
+            <section>Inbound Source (Select one of these.  If non-Prof Ref, also select Lead Src)</section>
+        </sections>
+        <sections>
+            <label><!-- Re-Inquire Source Information --></label>
+            <section>Re-Inquire Source Information</section>
+        </sections>
+        <sections>
+            <label><!-- System Informtion (Do Not Edit) --></label>
+            <section>System Informtion (Do Not Edit)</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Task Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Complete Task --></label>
+        <name>Complete_Task</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Defer --></label>
+        <name>Defer</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Defer_0 --></label>
+        <name>Defer_0</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Defer_1 --></label>
+        <name>Defer_1</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Defer_2 --></label>
+        <name>Defer_2</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- EditDescription --></label>
+        <name>EditDescription</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- EditDescription_0 --></label>
+        <name>EditDescription_0</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- EditDescription_1 --></label>
+        <name>EditDescription_1</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- EditDescription_2 --></label>
+        <name>EditDescription_2</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Log a Call --></label>
+        <name>Log_a_Call2</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Schedule Follow Up --></label>
+        <name>New_Follow_Up_Task</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- UpdatePriority --></label>
+        <name>UpdatePriority</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- UpdatePriority_0 --></label>
+        <name>UpdatePriority_0</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- UpdatePriority_1 --></label>
+        <name>UpdatePriority_1</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- UpdatePriority_2 --></label>
+        <name>UpdatePriority_2</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- UpdateStatus --></label>
+        <name>UpdateStatus</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- UpdateStatus_0 --></label>
+        <name>UpdateStatus_0</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- UpdateStatus_1 --></label>
+        <name>UpdateStatus_1</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- UpdateStatus_2 --></label>
+        <name>UpdateStatus_2</name>
+    </quickActions>
+    <recordTypes>
+        <label><!-- Consumer Marketing --></label>
+        <name>Consumer_Marketing</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Task related to healthcare plan --></description>
+        <label><!-- Care Plan Task --></label>
+        <name>HealthCloudGA__CarePlanTask</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Outreach Marketing --></label>
+        <name>Outreach_Marketing</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Tasks for Employee Contact Tracing --></description>
+        <label><!-- Employee Contact Tracing --></label>
+        <name>emptracing__Employee_ContactTracing</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- External Contact Tracing Records --></description>
+        <label><!-- External Contact Tracing --></label>
+        <name>emptracing__External_ContactTracing</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- You have assigned this Activity to a Campaign. The activity must also be assigned to a specific Contact. --></errorMessage>
+        <name>Campaign_requires_contact</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You must specify a relationship in either the Related To or Name field of the Task. --></errorMessage>
+        <name>Must_be_Related_to_an_Object</name>
+    </validationRules>
+</CustomObjectTranslation>
