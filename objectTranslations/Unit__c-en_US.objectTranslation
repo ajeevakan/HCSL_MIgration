@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Apartment</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Apartments</value>
+    </caseValues>
+    <fields>
+        <label><!-- Apartment Note --></label>
+        <name>Apartment_Note__c</name>
+    </fields>
+    <fields>
+        <label><!-- Apartment Status --></label>
+        <name>Apartment_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Apartment Type Category --></label>
+        <name>Apartment_Type_Category__c</name>
+        <picklistValues>
+            <masterLabel>1BD</masterLabel>
+            <translation><!-- 1BD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2BD</masterLabel>
+            <translation><!-- 2BD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3BD</masterLabel>
+            <translation><!-- 3BD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Alcove/Studio</masterLabel>
+            <translation><!-- Alcove/Studio --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TH/Villa</masterLabel>
+            <translation><!-- TH/Villa --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Apartment Type --></label>
+        <name>Apartment_Type__c</name>
+        <picklistValues>
+            <masterLabel>1 Bed</masterLabel>
+            <translation><!-- 1 Bed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2 Bed</masterLabel>
+            <translation><!-- 2 Bed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Studio</masterLabel>
+            <translation><!-- Studio --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Base Entrance Fee --></label>
+        <name>Base_Entrance_Fee__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Monthly --></label>
+        <name>Base_Monthly__c</name>
+    </fields>
+    <fields>
+        <label><!-- Casesafe ID --></label>
+        <name>Casesafe_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Community --></label>
+        <name>Community_Id__c</name>
+        <relationshipLabel><!-- Apartments --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Community --></label>
+        <name>Community__c</name>
+    </fields>
+    <fields>
+        <label><!-- Current Occupant Move In Date --></label>
+        <name>Current_Occupant_Move_In_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Current Resident 1 First Name --></label>
+        <name>Current_Resident_1_First_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Current Resident 1 Last Name --></label>
+        <name>Current_Resident_1_Last_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Current Resident Move In Date --></label>
+        <name>Current_Resident_Move_In_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Current Resident Move Out Date --></label>
+        <name>Current_Resident_Move_Out_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Current Resident Occupancy 1 --></label>
+        <name>Current_Resident_Occupancy_1__c</name>
+        <relationshipLabel><!-- Apartments --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Current Resident Occupancy 2 --></label>
+        <name>Current_Resident_Occupancy_2__c</name>
+        <relationshipLabel><!-- Apartments (Current Resident Occupancy 2) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Current User Community --></label>
+        <name>Current_User_Community__c</name>
+    </fields>
+    <fields>
+        <label><!-- Floor Plan --></label>
+        <name>Floor_Plan__c</name>
+    </fields>
+    <fields>
+        <label><!-- Housing Type --></label>
+        <name>Housing_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- IL --></label>
+        <name>IL__c</name>
+    </fields>
+    <fields>
+        <label><!-- IsActive --></label>
+        <name>IsActive__c</name>
+    </fields>
+    <fields>
+        <label><!-- Transfer Date --></label>
+        <name>Last_Change_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Modified Date Time --></label>
+        <name>Last_Modified_Date_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- LegacyId --></label>
+        <name>LegacyId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Legacy Floor Plan --></label>
+        <name>Legacy_Floor_Plan__c</name>
+    </fields>
+    <fields>
+        <label><!-- Legacy Housing Type --></label>
+        <name>Legacy_Housing_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Legacy Name --></label>
+        <name>Legacy_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Level of Care formula --></label>
+        <name>Level_of_Care_formula__c</name>
+    </fields>
+    <fields>
+        <label><!-- Move In/Transfer Date --></label>
+        <name>Move_In_Transfer_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Next Primary Occupancy Id --></label>
+        <name>Next_Primary_Occupancy_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Next Resident Move In or Transfe Date --></label>
+        <name>Next_Resident_Move_In_or_Transfe_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Next Resident Occupancy 1 --></label>
+        <name>Next_Resident_Occupancy_1__c</name>
+        <relationshipLabel><!-- Apartments (Next Resident Occupancy 1) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Next Resident Occupancy 2 --></label>
+        <name>Next_Resident_Occupancy_2__c</name>
+        <relationshipLabel><!-- Apartments (Next Resident Occupancy 2) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Occupied --></label>
+        <name>Occupied__c</name>
+    </fields>
+    <fields>
+        <label><!-- Primary Current Occupancy Id --></label>
+        <name>Primary_Current_Occupancy_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prior Resident Move Out Date --></label>
+        <name>Prior_Resident_Move_Out_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Scheduled Move In Date --></label>
+        <name>Scheduled_Move_In_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Scheduled Move Out Date --></label>
+        <name>Scheduled_Move_Out_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sqft --></label>
+        <name>Sqft__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Occupied</masterLabel>
+            <translation><!-- Occupied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reserved</masterLabel>
+            <translation><!-- Reserved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unavailable</masterLabel>
+            <translation><!-- Unavailable --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vacant</masterLabel>
+            <translation><!-- Vacant --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Apartment Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Notes --></label>
+            <section>Notes</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,952 @@
+<aura:component  implements="flexipage:availableForRecordHome,force:hasRecordId" controller="ManageOccupancyController">
+	<aura:attribute name="recordId" type="Id"/>
+    <aura:attribute name="lstButtons" type="String[]" />
+    <aura:attribute name="lstOccupancy" type="List" />
+    <aura:attribute name="ActionType" type="String" />
+    <aura:attribute name="MoveInFormParams" type="object" />
+    <aura:attribute name="Spinner" type="boolean" default="false"/>
+    <aura:attribute name="ShowAddCol" type="boolean" default="false"/>
+    <aura:attribute name="MoveInUnitDisable" type="boolean" default="false"/>
+    <aura:attribute name="dblAmount" type="Decimal" />
+    <aura:attribute name="dblAddEntranceFee" type="Decimal" />
+    <aura:attribute name="showAddEntranceFee" type="Boolean" default="false"/>
+    <aura:attribute name="MoveOutFormParams" type="object" />
+    <aura:attribute name="dtMoveOut" type="Date" />
+    <aura:attribute name="strMoveOutReason" type="String" />
+    <aura:attribute name="checkedRes1" type="Boolean" default="false"/>
+    <aura:attribute name="checkedRes2" type="Boolean" default="false"/>
+    <aura:attribute name="showRes1" type="Boolean" default="false"/>
+    <aura:attribute name="showRes2" type="Boolean" default="false"/>
+    <!--<aura:attribute name="showRebatableRefund" type="Boolean" default="false"/>-->
+    <aura:attribute name="lstPendingChange" type="List" />
+    <aura:attribute name="TransferFormParams" type="object" />
+    <!--<aura:attribute name="RebatableRefundParams" type="object" />-->
+    <aura:attribute name="dtTransfer" type="Date" />
+    <aura:attribute name="strLevelofCare" type="String" />
+    <aura:attribute name="lstApartment" type="List" />
+    <aura:attribute name="idApartment" type="String" />
+    <!--<aura:attribute name="dblPNoteAmount" type="Decimal" />-->
+    <!--<aura:attribute name="strPNoteDate" type="String" />-->
+    
+    <aura:attribute name="CancelScheduledMoveOutFormParams" type="object" />
+    <aura:attribute name="CancelScheduledTransferFormParams" type="object" />
+    
+    <aura:attribute name="CancelDepositFormParams" type="object" />
+    <aura:attribute name="AddSecondResidentFormParams" type="object" />
+    <aura:attribute name="RemoveProspectFormParams" type="object" />
+    <aura:attribute name="ReverseMoveOutFormParams" type="object" />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.do_Init}" />
+    <aura:handler event="force:refreshView" action="{!c.do_Refresh}" />
+    <aura:if isTrue="{!empty(v.ActionType)}">
+        <lightning:layout multipleRows="true">
+            <lightning:layoutItem padding="around-xx-small" size="12">
+                <lightning:buttonGroup>
+                    <aura:iteration items="{!v.lstButtons}" var="strBtn">
+                        <lightning:button label="{!strBtn}" onclick="{!c.do_Btn}"/>&nbsp;
+                    </aura:iteration>
+                </lightning:buttonGroup>
+            </lightning:layoutItem>
+        </lightning:layout>
+        <aura:if isTrue="{!not(empty(v.lstOccupancy))}">
+            
+            <div class="page-section page-header slds-align_absolute-center slds-border_bottom slds-m-top_xx-small slds-text-heading_medium">
+            	Occupancies
+            </div>
+            
+            <ui:scrollerWrapper>
+            <div class="slds-scrollable_x">
+            <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_striped">
+              <thead>
+                <tr class="slds-line-height_reset">
+                  <th class="" scope="col">
+                    <div class="slds-truncate" title="Resident">Resident</div>
+                  </th>
+                  <th class="" scope="col">
+                    <div class="slds-truncate" title="Level of Care">Level of Care</div>
+                  </th>
+                  <th class="" scope="col">
+                    <div class="slds-truncate" title="Apartment">Apartment</div>
+                  </th>
+                  <th class="" scope="col">
+                    <div class="slds-truncate" title="Move-In Date">Move-In Date</div>
+                  </th>
+                  <th class="" scope="col">
+                    <div class="slds-truncate" title="Move-Out Date">Move-Out Date</div>
+                  </th>
+                  <aura:if isTrue="{!(v.ShowAddCol)}">
+                  <th class="" scope="col">
+                    <div class="slds-truncate" title=""></div>
+                  </th>
+                  </aura:if>
+                </tr>
+              </thead>
+              <tbody>
+                <aura:iteration items="{!v.lstOccupancy}" var="occ">
+                <tr class="slds-hint-parent">
+                  <td data-label="Resident">
+                    <div class="slds-truncate" title="Resident">{!occ.ResidentName}</div>
+                  </td>
+                  <td data-label="Level of Care">
+                    <div class="slds-truncate" title="Level of Care">{!occ.LevelofCare}</div>
+                  </td>
+                  <td data-label="Apartment">
+                    <div class="slds-truncate" title="Apartment">{!occ.ApartmentName}</div>
+                  </td>
+                  <td data-label="Move-In Date">
+                    <div class="slds-truncate" title="Move-In Date">{!occ.MoveInDate}</div>
+                  </td>
+                  <td data-label="Move-Out Date">
+                    <div class="slds-truncate" title="Move-Out Date">{!occ.MoveOutDate}</div>
+                  </td>
+                  <aura:if isTrue="{!(v.ShowAddCol)}">
+                  <td class="slds-size_small slds-var-m-around_xxx-small slds-m-left_none slds-m-right_none slds-hyphenate">
+                    <aura:if isTrue="{!(occ.Enable_Add_Temporary_SNF_Stay || occ.Enable_Add_Temporary_Respite_Stay)}">
+                      <ul class="slds-size_small slds-m-left_none slds-m-right_none">
+                          <aura:if isTrue="{!(occ.Enable_Add_Temporary_SNF_Stay)}">
+                        <li>
+                            <a  class="slds-button slds-button_neutral" href="javascript:void(0)" onclick="{!c.SNFStay}" data-id="{!occ.Id}">Add Temp SNF Stay</a>
+                            <!--<button class="slds-button slds-button_neutral"  onclick="{!c.SNFStay}" data-id="{!occ.Id}">Add Temp SNF Stay</button>-->
+                        </li>
+                          </aura:if>
+                          <aura:if isTrue="{!(occ.Enable_Add_Temporary_Respite_Stay)}">
+                        <li>
+                            <a  class="slds-button slds-button_neutral" href="javascript:void(0)" onclick="{!c.RespiteStay}" data-id="{!occ.Id}">Add Temp Respite Stay</a>
+                            <!--<button class="slds-button slds-button_neutral" href="javascript:void(0)" onclick="{!c.RespiteStay}" data-id="{!occ.Id}">Add Temp Respite Stay</button>-->
+                        </li>
+                          </aura:if>
+                     </ul>
+                      </aura:if>
+                  </td>
+                  </aura:if>
+                </tr>
+                </aura:iteration>
+              </tbody>
+            </table>
+            </div>
+            </ui:scrollerWrapper>
+        </aura:if>
+        <br/>
+        <aura:if isTrue="{!not(empty(v.lstPendingChange))}">
+            <div class="page-section page-header slds-align_absolute-center slds-border_bottom slds-m-top_xx-small slds-text-heading_medium">
+            	Pending Occupancy Changes
+            </div>
+            <ui:scrollerWrapper>
+            <div class="slds-scrollable_x">
+            <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_striped">
+              <thead>
+                <tr class="slds-line-height_reset">
+                  <th class="" scope="col">
+                    <div class="slds-truncate" title="Resident">Resident</div>
+                  </th>
+                  <th class="" scope="col">
+                    <div class="slds-truncate" title="Scheduled Effective Date">Scheduled Effective Date</div>
+                  </th>
+                  <th class="" scope="col">
+                    <div class="slds-truncate" title="Type">Type</div>
+                  </th>
+                  <th class="" scope="col">
+                    <div class="slds-truncate" title="Apartment">Apartment</div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <aura:iteration items="{!v.lstPendingChange}" var="occ">
+                <tr class="slds-hint-parent">
+                  <td data-label="Resident">
+                    <div class="slds-truncate" title="Resident">{!occ.strResident}</div>
+                  </td>
+                  <td data-label="Level of Care">
+                    <div class="slds-truncate" title="LScheduled Effective Date">{!occ.strDate}</div>
+                  </td>
+                  <td data-label="Apartment">
+                    <div class="slds-truncate" title="Type">{!occ.strType}</div>
+                  </td>
+                  <td data-label="Move-In Date">
+                    <div class="slds-truncate" title="Apartment">{!occ.strApartment}</div>
+                  </td>
+                </tr>
+                </aura:iteration>
+              </tbody>
+            </table>
+            </div>
+            </ui:scrollerWrapper>
+        </aura:if>
+    </aura:if>
+    <!--
+    <aura:if isTrue="{!(v.ActionType=='Pay Promissory Note in Full')}">
+        <div class="page-section page-header slds-align_absolute-center slds-border_bottom slds-m-top_xx-small slds-text-heading_medium">
+            	Pay Promissory Note in Full
+        </div>
+        <div class="slds-form__row slds-p-bottom_none slds-p-top_none">
+			<div class="slds-form__item slds-p-bottom_none slds-p-top_none" role="listitem">
+				<div class="slds-form-element slds-form-element_stacked slds-p-bottom_none slds-p-top_none">
+					<label class="slds-form-element__label" for="strPNoteDateId"><abbr class="slds-required" title="required">* </abbr>Date</label>
+                    <div class="slds-form-element__control">
+                    <lightning:input type="Date" label="Date" variant="label-hidden" value="{!v.strPNoteDate}" aura:id="strPNoteDateId" required="true"/>
+                    </div>
+				</div>
+			</div>	
+            <div class="slds-form__item slds-p-bottom_none slds-p-top_none" role="listitem">
+				<div class="slds-form-element slds-form-element_stacked slds-p-bottom_none slds-p-top_none">
+					<div class="slds-form-element slds-form-element_stacked slds-p-bottom_none slds-p-top_none">
+                        <ui:inputCurrency aura:id="dblPNoteAmountId" label="Amount" class="field" disabled="false" value="{!v.dblPNoteAmount}" required="true"/>
+                    </div>
+				</div>
+			</div>
+		</div>
+        <div class="slds-form__row slds-p-bottom_none slds-p-top_none">
+            <lightning:buttonGroup class="slds-align_absolute-center">
+               <lightning:button label="Submit" onclick="{!c.do_PNote}"/>&nbsp;
+                <lightning:button label="Cancel" onclick="{!c.do_MoveInCancel}"/>&nbsp;
+            </lightning:buttonGroup>
+        </div>
+    </aura:if>
+    -->
+    <aura:if isTrue="{!(v.ActionType=='Regular' || v.ActionType=='Promissory Note Deposit')}"> 
+        <div class="page-section page-header slds-align_absolute-center slds-border_bottom slds-m-top_xx-small slds-text-heading_medium">
+            	Move-In
+        </div>
+        <div class="slds-form__row slds-p-bottom_none slds-p-top_none">
+			<div class="slds-form__item slds-p-bottom_none slds-p-top_none" role="listitem">
+				<div class="slds-form-element slds-form-element_stacked slds-p-bottom_none slds-p-top_none">
+					<label class="slds-form-element__label" for="txtCommunityId">Community</label>
+					<lightning:input disabled="true" variant="label-hidden" label="Community" value="{!v.MoveInFormParams.strCommunity}" aura:id="txtCommunityId"/> 
+				</div>
+			</div>	
+			<div class="slds-form__item slds-p-bottom_none slds-p-top_none" role="listitem">
+				<div class="slds-form-element slds-form-element_stacked slds-p-bottom_none slds-p-top_none">
+					<label class="slds-form-element__label" for="strMoveInDateId"><abbr class="slds-required" title="required">* </abbr>Move In Date</label>
+                    <div class="slds-form-element__control">
+                    <lightning:input type="Date" label="Move In Date" variant="label-hidden" value="{!v.MoveInFormParams.strMoveInDate}" aura:id="strMoveInDateId" required="true" /> <!-- onchange="{!c.onChange_SetPromissoryNoteDue}" -->
+                    </div>
+				</div>
+			</div>	
+		</div>
+        <div class="slds-form__row slds-p-bottom_none slds-p-top_none">
+			<div class="slds-form__item slds-p-bottom_none slds-p-top_none" role="listitem">
+				<div class="slds-form-element slds-form-element_stacked slds-p-bottom_none slds-p-top_none">
+					<div class="slds-form-element__control">
+                    <lightning:select name="strLevelOfCare"  label="Level of Care" aura:id="strLevelOfCareId" value="{!v.MoveInFormParams.strLevelOfCare}" onchange="{!c.onChange_LevelofCare}" required="true" disabled="{!v.MoveInUnitDisable}">
+                    <aura:iteration items="{!v.MoveInFormParams.lstLevelOfCare}" var="item">
+                        <option value="{!item.value}" text="{!item.label}" selected="{!item.value==v.MoveInFormParams.strLevelOfCare}"/>
+                    </aura:iteration>
+                    </lightning:select>
+                    </div>
+				</div>
+			</div>	
+			<div class="slds-form__item slds-p-bottom_none slds-p-top_none" role="listitem">
+				<div class="slds-form-element slds-form-element_stacked slds-p-bottom_none slds-p-top_none">
+					<div class="slds-form-element__control">
+                    <lightning:select name="idApartment"  label="Apartment" aura:id="idApartmentId" value="{!v.MoveInFormParams.idApartment}" required="true" disabled="{!v.MoveInUnitDisable}">
+                    <aura:iteration items="{!v.MoveInFormParams.lstApartment}" var="item">
+                        <option value="{!item.value}" text="{!item.label}" selected="{!item.value==v.MoveInFormParams.idApartment}"/>
+                    </aura:iteration>
+                    </lightning:select>
+                    </div>
+				</div>
+			</div>	
+        </div>
+        <!--<div class="slds-form__row slds-p-bottom_none slds-p-top_none">
+			<div class="slds-form__item slds-p-bottom_none slds-p-top_none" role="listitem">
+				<div class="slds-form-element slds-form-element_stacked slds-p-bottom_none slds-p-top_none">
+					<lightning:select name="idArbitrationAgreement_"  label="Arbitration Agreement" aura:id="idArbitrationAgreementId" value="{!v.MoveInFormParams.strArbitrationAgreement}" required="true">
+                    <aura:iteration items="{!v.MoveInFormParams.lstArbitrationAgreement}" var="item">
+                        <option value="{!item.value}" text="{!item.label}" selected="{!item.value==v.MoveInFormParams.strArbitrationAgreement}"/>
+                    </aura:iteration>
+                    </lightning:select>
+				</div>
+			</div>
+			<div class="slds-form__item slds-p-bottom_none slds-p-top_none" role="listitem">
+				<div class="slds-form-element slds-form-element_stacked slds-p-bottom_none slds-p-top_none">
+					&nbsp;
+				</div>
+			</div>	
+		</div>-->
+
+        <div class="slds-form__row slds-p-bottom_none slds-p-top_none">
+			<div class="slds-form__item slds-p-bottom_none slds-p-top_none" role="listitem">
+				<div class="slds-form-element slds-form-element_stacked slds-p-bottom_none slds-p-top_none">
+					<label class="slds-form-element__label" for="txtstrPrimaryResidentId">Primary Resident</label>
+					<lightning:input disabled="true" variant="label-hidden" label="Primary Resident" value="{!v.MoveInFormParams.strPrimaryResident}" aura:id="txtstrPrimaryResidentId"/> 
+				</div>
+			</div>	
+			<div class="slds-form__item slds-p-bottom_none slds-p-top_none" role="listitem">
+				<div class="slds-form-element slds-form-element_stacked slds-p-bottom_none slds-p-top_none">
+					<label class="slds-form-element__label" for="txtstrSecondResidentId">Second Resident</label>
+					<lightning:input disabled="true" variant="label-hidden" label="Second Resident" value="{!v.MoveInFormParams.strSecondResident}" aura:id="txtstrSecondResidentId"/> 
+				</div>
+			</div>	
+		</div>
+        <!--
+        <div class="slds-form__row slds-p-bottom_none slds-p-top_none">
+			<div class="slds-form__item slds-p-bottom_none slds-p-top_none" role="listitem">
+				<div class="slds-form-element slds-form-element_stacked slds-p-bottom_none slds-p-top_none">
+					<div class="slds-form-element slds-form-element_stacked slds-p-bottom_none slds-p-top_none">
+                        <ui:inputCurrency aura:id="dblAmountId" label="{!if((v.ActionType=='Promissory Note Deposit'),'Additional Deposit Amount','Balance of Entry Fee')}" class="field" disabled="false" value="{!v.dblAmount}" required="{!v.MoveInFormParams.isAmountRequired}"/>
+                    </div>
+				</div>
+			</div>	
+			<div class="slds-form__item slds-p-bottom_none slds-p-top_none" role="listitem">
+				<div class="slds-form-element slds-form-element_stacked slds-p-bottom_none slds-p-top_none">
+					<aura:if isTrue="{!(v.ActionType=='Promissory Note Deposit')}">
+                    <label class="slds-form-element__label" for="strPromissoryNoteDueId">Promissory Note Due Date</label>
+                    <div class="slds-form-element__control">
+                    <lightning:input type="Date" label="Promissory Note Due Date" variant="label-hidden" value="{!v.MoveInFormParams.strPromissoryNoteDue}" aura:id="strPromissoryNoteDueId" />
+                    </div>
+                    </aura:if>
+				</div>
+			</div>	
+		</div>
+        -->
+        <!--
+        <div class="slds-form__row slds-p-bottom_none slds-p-top_none">
+			<div class="slds-form__item slds-p-bottom_none slds-p-top_none" role="listitem">
+				<div class="slds-form-element slds-form-element_stacked slds-p-bottom_none slds-p-top_none">
+					<aura:if isTrue="{!(v.MoveInFormParams.strLevelOfCare=='Independent Living')}">
+                    <div class="slds-form-element slds-form-element_stacked slds-p-bottom_none slds-p-top_none">
+                        <ui:inputCurrency aura:id="dblRebatableAmountId" label="Rebatable Amount" class="field" disabled="true" value="{!v.MoveInFormParams.dblRebatableAmount}" />
+                    </div>
+                    </aura:if>
+				</div>
+			</div>	
+			<div class="slds-form__item slds-p-bottom_none slds-p-top_none" role="listitem">
+				<div class="slds-form-element slds-form-element_stacked slds-p-bottom_none slds-p-top_none">
+					&nbsp;
+				</div>
+			</div>	
+		</div>
+        -->
+        <div class="slds-form__row slds-p-bottom_none slds-p-top_none">
+            <lightning:buttonGroup class="slds-align_absolute-center">
+               <lightning:button label="Move In" onclick="{!c.do_MoveIn}"/>&nbsp;
+                <lightning:button label="Cancel" onclick="{!c.do_MoveInCancel}"/>&nbsp;
+            </lightning:buttonGroup>
+        </div>
+    </aura:if> 
+    <aura:if isTrue="{!(v.ActionType=='Add Missing Resident')}">
+        <div class="page-section page-header slds-align_absolute-center slds-border_bottom slds-m-top_xx-small slds-text-heading_medium">
+            	Add Missing Resident
+        </div>
+        <div class="slds-form__row slds-p-bottom_none slds-p-top_none">
+			<div class="slds-form__item slds-p-bottom_none slds-p-top_none" role="listitem">
+				<div class="slds-form-element slds-form-element_stacked slds-p-bottom_none slds-p-top_none">
+					<label class="slds-form-element__label" for="txtCommunityIdA">Community</label>
+					<lightning:input disabled="true" variant="label-hidden" label="Community" value="{!v.AddSecondResidentFormParams.strCommunity}" aura:id="txtCommunityIdA"/> 
+				</div>
+			</div>	
+			<div class="slds-form__item slds-p-bottom_none slds-p-top_none" role="listitem">
+				<div class="slds-form-element slds-form-element_stacked slds-p-bottom_none slds-p-top_none">
+					<label class="slds-form-element__label" for="strMoveInDateIdA"><abbr class="slds-required" title="required">* </abbr>Move In Date</label>
+                    <div class="slds-form-element__control">
+                    <lightning:input type="Date" label="Move In Date" variant="label-hidden" value="{!v.AddSecondResidentFormParams.strMoveInDate}" aura:id="strMoveInDateIdA" required="true" disabled="{!v.AddSecondResidentFormParams.isScheduled}"/> 
+                    </div>
+				</div>
+			</div>	
+		</div>
+        <div class="slds-form__row slds-p-bottom_none slds-p-top_none">
+			<div class="slds-form__item slds-p-bottom_none slds-p-top_none" role="listitem">
+				<div class="slds-form-element slds-form-element_stacked slds-p-bottom_none slds-p-top_none">
+					<div class="slds-form-element__control">
+                    <!--<lightning:select name="strLevelOfCareA"  label="Level of Care" aura:id="strLevelOfCareIdA" value="{!v.AddSecondResidentFormParams.strLevelOfCare}" onchange="{!c.onChange_LevelofCareA}" required="true" disabled="{!v.AddSecondResidentFormParams.isScheduled}">-->
+                    <lightning:select name="strLevelOfCareA"  label="Level of Care" aura:id="strLevelOfCareIdA" value="{!v.AddSecondResidentFormParams.strLevelOfCare}" onchange="{!c.onChange_LevelofCareA}" required="true" disabled="true">
+                    <aura:iteration items="{!v.AddSecondResidentFormParams.lstLevelOfCare}" var="item">
+                        <option value="{!item.value}" text="{!item.label}" selected="{!item.value==v.AddSecondResidentFormParams.strLevelOfCare}"/>
+                    </aura:iteration>
+                    </lightning:select>
+                    </div>
+				</div>
+			</div>	
+			<div class="slds-form__item slds-p-bottom_none slds-p-top_none" role="listitem">
+				<div class="slds-form-element slds-form-element_stacked slds-p-bottom_none slds-p-top_none">
+					<div class="slds-form-element__control">
+                    <!--<lightning:select name="idApartmentA"  label="Apartment" aura:id="idApartmentIdA" value="{!v.AddSecondResidentFormParams.idApartment}" required="true" disabled="{!v.AddSecondResidentFormParams.isScheduled}">-->
+                    <lightning:select name="idApartmentA"  label="Apartment" aura:id="idApartmentIdA" value="{!v.AddSecondResidentFormParams.idApartment}" required="true" disabled="true">
+                    <aura:iteration items="{!v.AddSecondResidentFormParams.lstApartment}" var="item">
+                        <option value="{!item.value}" text="{!item.label}" selected="{!item.value==v.AddSecondResidentFormParams.idApartment}"/>
+                    </aura:iteration>
+                    </lightning:select>
+                    </div>
+				</div>
+			</div>	
+		</div>
+        <div class="slds-form__row slds-p-bottom_none slds-p-top_none">
+            <div class="slds-form__item slds-p-bottom_none slds-p-top_none" role="listitem">
+				<div class="slds-form-element slds-form-element_stacked slds-p-bottom_none slds-p-top_none">
+					<aura:if isTrue="{!(v.showRes1)}">
+                    <label class="slds-form-element__label" for="strResident1A">Resident</label>
+                    <div class="slds-form-element__control">
+                    <lightning:input type="Checkbox" label="{!'[ '+v.AddSecondResidentFormParams.strResident1+' ]'}" checked= "{!v.checkedRes1}" aura:id="strResident1A" /> 
+                    </div>
+                    </aura:if>
+				</div>
+				
+			</div>
+            <div class="slds-form__item slds-p-bottom_none slds-p-top_none" role="listitem">
+				<div class="slds-form-element slds-form-element_stacked slds-p-bottom_none slds-p-top_none">
+                    <aura:if isTrue="{!(v.showRes2)}">
+                    <label class="slds-form-element__label" for="strResident2A">Resident</label>
+                    <div class="slds-form-element__control">
+                    <lightning:input type="Checkbox" label="{!'[ '+v.AddSecondResidentFormParams.strResident2+' ]'}" checked= "{!v.checkedRes2}" aura:id="strResident2A" /> 
+                    </div>
+                    </aura:if>
+				</div>
+			</div>
+        </div>
+        <div class="slds-form__row slds-p-bottom_none slds-p-top_none">
+            <lightning:buttonGroup class="slds-align_absolute-center">
+               <lightning:button label="Add Missing Resident" onclick="{!c.do_AddSecondResident}"/>&nbsp;
+                <lightning:button label="Cancel" onclick="{!c.do_MoveInCancel}"/>&nbsp;
+            </lightning:buttonGroup>
+        </div>
+    </aura:if>
+    <aura:if isTrue="{!(v.ActionType=='Remove Prospect')}">
+        <div class="page-section page-header slds-align_absolute-center slds-border_bottom slds-m-top_xx-small slds-text-heading_medium">
+            	Remove Prospect
+        </div>
+        <div class="slds-form__row slds-p-bottom_none slds-p-top_none">
+            <div class="slds-form__item slds-p-bottom_none slds-p-top_none" role="listitem">
+				<div class="slds-form-element slds-form-element_stacked slds-p-bottom_none slds-p-top_none">
+					<aura:if isTrue="{!(v.showRes1)}">
+                    <label class="slds-form-element__label" for="strResident1R">Resident</label>
+                    <div class="slds-form-element__control">
+                    <lightning:input type="Checkbox" label="{!'[ '+v.RemoveProspectFormParams.strResident1+' ]'}" checked= "{!v.checkedRes1}" aura:id="strResident1R" /> 
+                    </div>
+                    </aura:if>
+				</div>
+			</div>
+            <div class="slds-form__item slds-p-bottom_none slds-p-top_none" role="listitem">
+				<div class="slds-form-element slds-form-element_stacked slds-p-bottom_none slds-p-top_none">
+                    <aura:if isTrue="{!(v.showRes2)}">
+                    <label class="slds-form-element__label" for="strResident2R">Resident</label>
+                    <div class="slds-form-element__control">
+                    <lightning:input type="Checkbox" label="{!'[ '+v.RemoveProspectFormParams.strResident2+' ]'}" checked= "{!v.checkedRes2}" aura:id="strResident2R" /> 
+                    </div>
+                    </aura:if>
+				</div>
+			</div>
+        </div>
+        <div class="slds-form__row slds-p-bottom_none slds-p-top_none">
+            <lightning:buttonGroup class="slds-align_absolute-center">
+               <lightning:button label="Remove Prospect" onclick="{!c.do_RemoveProspect}"/>&nbsp;
+                <lightning:button label="Cancel" onclick="{!c.do_MoveInCancel}"/>&nbsp;
+            </lightning:buttonGroup>
+        </div>
+    </aura:if>
+    <aura:if isTrue="{!(v.ActionType=='Reverse Move-Out')}">
+        <div class="page-section page-header slds-align_absolute-center slds-border_bottom slds-m-top_xx-small slds-text-heading_medium">
+            	Reverse Move-Out
+        </div>
+        <div class="slds-form__row slds-p-bottom_none slds-p-top_none">
+            <div class="slds-form__item slds-p-bottom_none slds-p-top_none" role="listitem">
+				<div class="slds-form-element slds-form-element_stacked slds-p-bottom_none slds-p-top_none">
+					<aura:if isTrue="{!(v.showRes1)}">
+                    <label class="slds-form-element__label" for="strResident1RV">Resident</label>
+                    <div class="slds-form-element__control">
+                    <lightning:input type="Checkbox" label="{!'[ '+v.ReverseMoveOutFormParams.strResident1+' ]'}" checked= "{!v.checkedRes1}" aura:id="strResident1RV" /> 
+                    </div>
+                    </aura:if>
+				</div>
+			</div>
+            <div class="slds-form__item slds-p-bottom_none slds-p-top_none" role="listitem">
+				<div class="slds-form-element slds-form-element_stacked slds-p-bottom_none slds-p-top_none">
+                    <aura:if isTrue="{!(v.showRes2)}">
+                    <label class="slds-form-element__label" for="strResident2RV">Resident</label>
+                    <div class="slds-form-element__control">
+                    <lightning:input type="Checkbox" label="{!'[ '+v.ReverseMoveOutFormParams.strResident2+' ]'}" checked= "{!v.checkedRes2}" aura:id="strResident2RV" /> 
+                    </div>
+                    </aura:if>
+				</div>
+			</div>
+        </div>
+        <div class="slds-form__row slds-p-bottom_none slds-p-top_none">
+            <lightning:buttonGroup class="slds-align_absolute-center">
+               <lightning:button label="Reverse Move-Out" onclick="{!c.do_ReverseMoveOut}"/>&nbsp;
+                <lightning:button label="Cancel" onclick="{!c.do_MoveInCancel}"/>&nbsp;
+            </lightning:buttonGroup>
+        </div>
+    </aura:if>
+    <aura:if isTrue="{!(v.ActionType=='Schedule Move-Out')}">
+        <div class="page-section page-header slds-align_absolute-center slds-border_bottom slds-m-top_xx-small slds-text-heading_medium">
+            	Schedule Move-Out
+        </div>
+        <div class="slds-form__row slds-p-bottom_none slds-p-top_none">
+            <div class="slds-form__item slds-p-bottom_none slds-p-top_none" role="listitem">
+				<div class="slds-form-element slds-form-element_stacked slds-p-bottom_none slds-p-top_none">
+                    <label class="slds-form-element__label" for="ScheduleMoveOutId">Scheduled Move Out Date</label>
+                    <div class="slds-form-element__control">
+                    <lightning:input type="Date" label="Scheduled Move Out Date" value="{!v.dtMoveOut}" variant="label-hidden"  aura:id="ScheduleMoveOutId" />
+                    </div>
+				</div>
+			</div>
+            <div class="slds-form__item slds-p-bottom_none slds-p-top_none" role="listitem">
+				<div class="slds-form-element slds-form-element_stacked slds-p-bottom_none slds-p-top_none">
+					<div class="slds-form-element__control">
+                    <lightning:select name="strMoveOutReasonS"  label="Move-Out Reason" aura:id="strMoveOutReasonSId" value="{!v.strMoveOutReason}" required="true">
+                        <aura:iteration items="{!v.MoveOutFormParams.lstMoveOutReason}" var="item">
+	                        <option value="{!item.value}" text="{!item.label}" selected="{!item.value==v.strMoveOutReason}"/>
+	                    </aura:iteration>
+                    </lightning:select>
+                    </div>
+				</div>
+			</div>
+        </div>
+        <div class="slds-form__row slds-p-bottom_none slds-p-top_none">
+            <div class="slds-form__item slds-p-bottom_none slds-p-top_none" role="listitem">
+            	
+				<div class="slds-form-element slds-form-element_stacked slds-p-bottom_none slds-p-top_none">
+					<aura:if isTrue="{!(v.showRes1)}">
+                    <label class="slds-form-element__label" for="PrimaryResidentSId">Primary Resident</label>
+                    <div class="slds-form-element__control">
+                    <lightning:input type="Checkbox" label="{!'[ '+v.MoveOutFormParams.strPrimaryResident+' ]'}" checked= "{!v.checkedRes1}" aura:id="PrimaryResidentSId" /> <!-- onchange="{!c.onChange_CalcShowRebatableRefund}" -->
+                    </div>
+                    </aura:if>
+				</div>
+				
+			</div>
+            <div class="slds-form__item slds-p-bottom_none slds-p-top_none" role="listitem">
+				<div class="slds-form-element slds-form-element_stacked slds-p-bottom_none slds-p-top_none">
+                    <aura:if isTrue="{!(v.showRes2)}">
+                    <label class="slds-form-element__label" for="PrimaryResidentSId">Second Resident</label>
+                    <div class="slds-form-element__control">
+                    <lightning:input type="Checkbox" label="{!'[ '+v.MoveOutFormParams.strSecondResident+' ]'}" checked= "{!v.checkedRes2}" aura:id="SecondResidentSId" /> <!-- onchange="{!c.onChange_CalcShowRebatableRefund}" -->
+                    </div>
+                    </aura:if>
+				</div>
+			</div>
+        </div>
+        <!--
+        <div class="slds-form__row slds-p-bottom_none slds-p-top_none">
+            <div class="slds-form__item slds-p-bottom_none slds-p-top_none" role="listitem">
+				<div class="slds-form-element slds-form-element_stacked slds-p-bottom_none slds-p-top_none">
+					<aura:if isTrue="{!(v.showRebatableRefund)}">
+                    	<div class="slds-form-element slds-form-element_stacked slds-p-bottom_none slds-p-top_none">
+                            <ui:inputCurrency aura:id="dblRebatableRefundId" label="Rebatable Amount" class="field" disabled="true" value="{!v.RebatableRefundParams.dblRefundAmount}" />
+                        </div>
+                    </aura:if>
+				</div>
+			</div>
+            <div class="slds-form__item slds-p-bottom_none slds-p-top_none" role="listitem">
+				<div class="slds-form-element slds-form-element_stacked slds-p-bottom_none slds-p-top_none">
+				&nbsp;</div>
+			</div>
+        </div>
+        -->
+        <div class="slds-form__row slds-p-bottom_none slds-p-top_none">
+            <lightning:buttonGroup class="slds-align_absolute-center">
+               <lightning:button label="Schedule Move Out" onclick="{!c.do_MoveOut}"/>&nbsp;
+                <lightning:button label="Cancel" onclick="{!c.do_MoveInCancel}"/>
+            </lightning:buttonGroup>
+        </div>
+    </aura:if>
+    
+    <aura:if isTrue="{!(v.ActionType=='Cancel Scheduled Move Out')}">
+        <div class="page-section page-header slds-align_absolute-center slds-border_bottom slds-m-top_xx-small slds-text-heading_medium">
+            	Cancel Scheduled Move-Out
+        </div>
+        <div class="slds-form__row slds-p-bottom_none slds-p-top_none">
+            <div class="slds-form__item slds-p-bottom_none slds-p-top_none" role="listitem">
+            	
+				<div class="slds-form-element slds-form-element_stacked slds-p-bottom_none slds-p-top_none">
+					<aura:if isTrue="{!(v.showRes1)}">
+                    <label class="slds-form-element__label" for="CSMPrimaryResidentSId">Primary Resident</label>
+                    <div class="slds-form-element__control">
+                    <lightning:input type="Checkbox" label="{!'[ '+v.CancelScheduledMoveOutFormParams.strPrimaryResident+' ]'}" checked= "{!v.checkedRes1}" aura:id="CSMPrimaryResidentSId" />
+                    </div>
+                    </aura:if>
+				</div>
+				
+			</div>
+            <div class="slds-form__item slds-p-bottom_none slds-p-top_none" role="listitem">
+				<div class="slds-form-element slds-form-element_stacked slds-p-bottom_none slds-p-top_none">
+                    <aura:if isTrue="{!(v.showRes2)}">
+                    <label class="slds-form-element__label" for="CSMSecondResidentSId">Second Resident</label>
+                    <div class="slds-form-element__control">
+                    <lightning:input type="Checkbox" label="{!'[ '+v.CancelScheduledMoveOutFormParams.strSecondResident+' ]'}" checked= "{!v.checkedRes2}" aura:id="CSMSecondResidentSId" />
+                    </div>
+                    </aura:if>
+				</div>
+			</div>
+        </div>
+        <div class="slds-form__row slds-p-bottom_none slds-p-top_none">
+            <lightning:buttonGroup class="slds-align_absolute-center">
+               <lightning:button label="Cancel Scheduled Move Out" onclick="{!c.do_CancelScheduledMoveOut}"/>&nbsp;
+                <lightning:button label="Back" onclick="{!c.do_MoveInCancel}"/>
+            </lightning:buttonGroup>
+        </div>
+    </aura:if>
+    
+    <aura:if isTrue="{!(v.ActionType=='Cancel Scheduled Transfer')}">
+        <div class="page-section page-header slds-align_absolute-center slds-border_bottom slds-m-top_xx-small slds-text-heading_medium">
+            	Cancel Scheduled Transfer
+        </div>
+        <div class="slds-form__row slds-p-bottom_none slds-p-top_none">
+            <div class="slds-form__item slds-p-bottom_none slds-p-top_none" role="listitem">
+            	
+				<div class="slds-form-element slds-form-element_stacked slds-p-bottom_none slds-p-top_none">
+					<aura:if isTrue="{!(v.showRes1)}">
+                    <label class="slds-form-element__label" for="CSTPrimaryResidentSId">Primary Resident</label>
+                    <div class="slds-form-element__control">
+                    <lightning:input type="Checkbox" label="{!'[ '+v.CancelScheduledTransferFormParams.strPrimaryResident+' ]'}" checked= "{!v.checkedRes1}" aura:id="CSTPrimaryResidentSId" />
+                    </div>
+                    </aura:if>
+				</div>
+				
+			</div>
+            <div class="slds-form__item slds-p-bottom_none slds-p-top_none" role="listitem">
+				<div class="slds-form-element slds-form-element_stacked slds-p-bottom_none slds-p-top_none">
+                    <aura:if isTrue="{!(v.showRes2)}">
+                    <label class="slds-form-element__label" for="CSTSecondResidentSId">Second Resident</label>
+                    <div class="slds-form-element__control">
+                    <lightning:input type="Checkbox" label="{!'[ '+v.CancelScheduledTransferFormParams.strSecondResident+' ]'}" checked= "{!v.checkedRes2}" aura:id="CSTSecondResidentSId" />
+                    </div>
+                    </aura:if>
+				</div>
+			</div>
+        </div>
+        <div class="slds-form__row slds-p-bottom_none slds-p-top_none">
+            <lightning:buttonGroup class="slds-align_absolute-center">
+               <lightning:button label="Cancel Scheduled Transfer" onclick="{!c.do_CancelScheduledTransfer}"/>&nbsp;
+                <lightning:button label="Back" onclick="{!c.do_MoveInCancel}"/>
+            </lightning:buttonGroup>
+        </div>
+    </aura:if>
+    <aura:if isTrue="{!(v.ActionType=='Reset/Correct Deposit')}">
+        <div class="page-section page-header slds-align_absolute-center slds-border_bottom slds-m-top_xx-small slds-text-heading_medium">
+            	Reset/Correct Deposit
+        </div>
+        <br/>
+        <div class="slds-form__row slds-p-bottom_none slds-p-top_none">
+            <lightning:buttonGroup class="slds-align_absolute-center">
+               <lightning:button label="Reset Deposit" onclick="{!c.do_ResetDeposit}"/>&nbsp;
+               <lightning:button label="Back" onclick="{!c.do_MoveInCancel}"/>
+            </lightning:buttonGroup>
+        </div>
+    </aura:if>
+    
+    <aura:if isTrue="{!((v.ActionType=='Cancel Deposit')||(v.ActionType=='Cancel Opportunity'))}">
+        <div class="page-section page-header slds-align_absolute-center slds-border_bottom slds-m-top_xx-small slds-text-heading_medium">
+            	{!v.ActionType}
+        </div>
+        <div class="slds-form__row slds-p-bottom_none slds-p-top_none">
+            <div class="slds-form__item slds-p-bottom_none slds-p-top_none" role="listitem">
+				<div class="slds-form-element slds-form-element_stacked slds-p-bottom_none slds-p-top_none">
+                    <label class="slds-form-element__label" for="CancelDId">Cancel Date</label>
+                    <div class="slds-form-element__control">
+                    <lightning:input type="Date" label="Cancel Date" value="{!v.CancelDepositFormParams.strCancelDate}" variant="label-hidden"  aura:id="CancelDId" />
+                    </div>
+				</div>
+			</div>
+            <div class="slds-form__item slds-p-bottom_none slds-p-top_none" role="listitem">
+				<div class="slds-form-element slds-form-element_stacked slds-p-bottom_none slds-p-top_none">
+					<div class="slds-form-element__control">
+                    <lightning:select name="strCancelReasonA"  label="Cancel Reason" aura:id="strCancelReasonAId" value="{!v.CancelDepositFormParams.strCancelReason}" required="true">
+                        <aura:iteration items="{!v.CancelDepositFormParams.lstCancelReason}" var="item">
+	                        <option value="{!item.value}" text="{!item.label}" selected="{!item.value==v.CancelDepositFormParams.strCancelReason}"/>
+	                    </aura:iteration>
+                    </lightning:select>
+                    </div>
+				</div>
+			</div>
+        </div>
+        <div class="slds-form__row slds-p-bottom_none slds-p-top_none">
+            <div class="slds-form__item slds-p-bottom_none slds-p-top_none" role="listitem">
+				<div class="slds-form-element slds-form-element_stacked slds-p-bottom_none slds-p-top_none">
+					<div class="slds-form-element__control">
+                    <aura:if isTrue="{!(v.CancelDepositFormParams.strCancelReason=='Went to another Community')}">
+                    <lightning:select name="strCompetitorA"  label="Competitor" aura:id="strCompetitorAId" value="{!v.CancelDepositFormParams.strCompetitor}" required="false">
+                        <aura:iteration items="{!v.CancelDepositFormParams.lstCompetitor}" var="item">
+	                        <option value="{!item.value}" text="{!item.label}" selected="{!item.value==v.CancelDepositFormParams.strCompetitor}"/>
+	                    </aura:iteration>
+                    </lightning:select>
+                    </aura:if>
+                    </div>
+				</div>
+			</div>
+            <div class="slds-form__item slds-p-bottom_none slds-p-top_none" role="listitem">
+				<div class="slds-form-element slds-form-element_stacked slds-p-bottom_none slds-p-top_none">
+                    <aura:if isTrue="{!(v.ActionType=='Cancel Deposit')}">
+                    	<div class="slds-form-element__control">
+                            <ui:inputCurrency aura:id="dblRefundAmountId" label="Refund Amount" class="field" disabled="false" value="{!v.CancelDepositFormParams.dblRefundAmount}" />
+                        </div>
+                    </aura:if>
+				</div>
+			</div>
+        </div>
+        <div class="slds-form__row slds-p-bottom_none slds-p-top_none">
+            <lightning:buttonGroup class="slds-align_absolute-center">
+               <lightning:button label="{!v.ActionType}" onclick="{!c.do_CancelDeposit}"/>&nbsp;
+               <lightning:button label="{!v.ActionType+' &amp; Set Account to Lost'}" onclick="{!c.do_CancelDepositSetAccLost}"/>&nbsp;
+               <lightning:button label="Back" onclick="{!c.do_MoveInCancel}"/>
+            </lightning:buttonGroup>
+        </div>
+    </aura:if>
+    <aura:if isTrue="{!(v.ActionType=='Move-Out')}">
+        <div class="page-section page-header slds-align_absolute-center slds-border_bottom slds-m-top_xx-small slds-text-heading_medium">
+            	Move-Out
+        </div>
+        <div class="slds-form__row slds-p-bottom_none slds-p-top_none">
+            <div class="slds-form__item slds-p-bottom_none slds-p-top_none" role="listitem">
+				<div class="slds-form-element slds-form-element_stacked slds-p-bottom_none slds-p-top_none">
+                    <label class="slds-form-element__label" for="MoveOutDId">Move Out Date</label>
+                    <div class="slds-form-element__control">
+                    <lightning:input type="Date" label="Move Out Date" value="{!v.dtMoveOut}" variant="label-hidden"  aura:id="MoveOutDId" />
+                    </div>
+				</div>
+			</div>
+            <div class="slds-form__item slds-p-bottom_none slds-p-top_none" role="listitem">
+				<div class="slds-form-element slds-form-element_stacked slds-p-bottom_none slds-p-top_none">
+					<div class="slds-form-element__control">
+                    <lightning:select name="strMoveOutReasonA"  label="Move-Out Reason" aura:id="strMoveOutReasonAId" value="{!v.strMoveOutReason}" required="true">
+                        <aura:iteration items="{!v.MoveOutFormParams.lstMoveOutReason}" var="item">
+	                        <option value="{!item.value}" text="{!item.label}" selected="{!item.value==v.strMoveOutReason}"/>
+	                    </aura:iteration>
+                    </lightning:select>
+                    </div>
+				</div>
+			</div>
+        </div>
+        <div class="slds-form__row slds-p-bottom_none slds-p-top_none">
+            <div class="slds-form__item slds-p-bottom_none slds-p-top_none" role="listitem">
+				<div class="slds-form-element slds-form-element_stacked slds-p-bottom_none slds-p-top_none">
+                    <aura:if isTrue="{!(v.showRes1)}">
+                    <label class="slds-form-element__label" for="PrimaryResidentId">Primary Resident</label>
+                    <div class="slds-form-element__control">
+                    <lightning:input type="Checkbox" label="{!'[ '+v.MoveOutFormParams.strPrimaryResident+' ]'}" checked= "{!v.checkedRes1}" aura:id="PrimaryResidentId" /> <!-- onchange="{!c.onChange_CalcShowRebatableRefund}" -->
+                    </div>
+                    </aura:if>
+				</div>
+			</div>
+            <div class="slds-form__item slds-p-bottom_none slds-p-top_none" role="listitem">
+				<div class="slds-form-element slds-form-element_stacked slds-p-bottom_none slds-p-top_none">
+                    <aura:if isTrue="{!(v.showRes2)}">
+                    <label class="slds-form-element__label" for="PrimaryResidentId">Second Resident</label>
+                    <div class="slds-form-element__control">
+                    <lightning:input type="Checkbox" label="{!'[ '+v.MoveOutFormParams.strSecondResident+' ]'}" checked= "{!v.checkedRes2}" aura:id="SecondResidentId" /> <!-- onchange="{!c.onChange_CalcShowRebatableRefund}" -->
+                    </div>
+                    </aura:if>
+				</div>
+			</div>
+        </div>
+        <!--
+        <div class="slds-form__row slds-p-bottom_none slds-p-top_none">
+            <div class="slds-form__item slds-p-bottom_none slds-p-top_none" role="listitem">
+				<div class="slds-form-element slds-form-element_stacked slds-p-bottom_none slds-p-top_none">
+					<aura:if isTrue="{!(v.showRebatableRefund)}">
+                    	<div class="slds-form-element slds-form-element_stacked slds-p-bottom_none slds-p-top_none">
+                            <ui:inputCurrency aura:id="dblRebatableRefundId" label="Rebatable Amount" class="field" disabled="false" value="{!v.RebatableRefundParams.dblRefundAmount}" />
+                        </div>
+                    </aura:if>
+				</div>
+			</div>
+            <div class="slds-form__item slds-p-bottom_none slds-p-top_none" role="listitem">
+				<div class="slds-form-element slds-form-element_stacked slds-p-bottom_none slds-p-top_none">
+				&nbsp;</div>
+			</div>
+        </div>
+        -->
+        <div class="slds-form__row slds-p-bottom_none slds-p-top_none">
+            <lightning:buttonGroup class="slds-align_absolute-center">
+               <lightning:button label="Move Out" onclick="{!c.do_MoveOut}"/>&nbsp;
+                <lightning:button label="Cancel" onclick="{!c.do_MoveInCancel}"/>
+            </lightning:buttonGroup>
+        </div>
+    </aura:if>
+    <aura:if isTrue="{!(v.ActionType=='Schedule Transfer')}">
+        <div class="page-section page-header slds-align_absolute-center slds-border_bottom slds-m-top_xx-small slds-text-heading_medium">
+            	Schedule Transfer
+        </div>
+        <div class="slds-form__row slds-p-bottom_none slds-p-top_none">
+            <div class="slds-form__item slds-p-bottom_none slds-p-top_none" role="listitem">
+				<div class="slds-form-element slds-form-element_stacked slds-p-bottom_none slds-p-top_none">
+                    <label class="slds-form-element__label" for="ScheduleTransferId">Scheduled Transfer Date</label>
+                    <div class="slds-form-element__control">
+                    <lightning:input type="Date" label="Scheduled Transfer Date" variant="label-hidden" value="{!v.dtTransfer}" aura:id="ScheduleTransferId" />
+                    </div>
+				</div>
+			</div>
+            <div class="slds-form__item slds-p-bottom_none slds-p-top_none" role="listitem">
+				<div class="slds-form-element slds-form-element_stacked slds-p-bottom_none slds-p-top_none">
+					&nbsp;
+				</div>
+			</div>
+        </div>
+        <div class="slds-form__row slds-p-bottom_none slds-p-top_none">
+            <div class="slds-form__item slds-p-bottom_none slds-p-top_none" role="listitem">
+            <div class="slds-form-element slds-form-element_stacked slds-p-bottom_none slds-p-top_none">
+                <div class="slds-form-element__control">
+                    <lightning:select name="strSTLoC"  label="Level of Care" value="{!v.strLevelofCare}" aura:id="strSTLoCId" onchange="{!c.onChange_LevelofCareT}" required="true">
+                        <aura:iteration items="{!v.TransferFormParams.lstLevelOfCare}" var="item">
+	                        <option value="{!item.value}" text="{!item.label}" selected="{!item.value==v.strLevelofCare}"/>
+	                    </aura:iteration>
+                    </lightning:select>
+                </div>
+            </div>
+            </div>
+            <div class="slds-form__item slds-p-bottom_none slds-p-top_none" role="listitem">
+            <div class="slds-form-element slds-form-element_stacked slds-p-bottom_none slds-p-top_none">
+                <div class="slds-form-element__control">
+                    <lightning:select name="strSTApt" value="{!v.idApartment}" label="Apartment" aura:id="strSTAptId" >
+                        <aura:iteration items="{!v.lstApartment}" var="item">
+	                        <option value="{!item.value}" text="{!item.label}" selected="{!item.value==v.idApartment}"/>
+	                    </aura:iteration>
+                    </lightning:select>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="slds-form__row slds-p-bottom_none slds-p-top_none">
+            <div class="slds-form__item slds-p-bottom_none slds-p-top_none" role="listitem">
+				<div class="slds-form-element slds-form-element_stacked slds-p-bottom_none slds-p-top_none">
+                    <aura:if isTrue="{!(v.showRes1)}">
+                    <label class="slds-form-element__label" for="PrimaryResidentSTId">Primary Resident</label>
+                    <div class="slds-form-element__control">
+                    <lightning:input type="Checkbox" label="{!'[ '+v.TransferFormParams.strPrimaryResident+' ]'}" checked= "{!v.checkedRes1}" aura:id="PrimaryResidentSTId" /> <!-- onchange="{!c.onChange_CalcShowRebatableRefund}" -->
+                    </div>
+                    </aura:if>
+				</div>
+			</div>
+            <div class="slds-form__item slds-p-bottom_none slds-p-top_none" role="listitem">
+				<div class="slds-form-element slds-form-element_stacked slds-p-bottom_none slds-p-top_none">
+                    <aura:if isTrue="{!(v.showRes2)}">
+                    <label class="slds-form-element__label" for="SecondResidentSTId">Second Resident</label>
+                    <div class="slds-form-element__control">
+                    <lightning:input type="Checkbox" label="{!'[ '+v.TransferFormParams.strSecondResident+' ]'}" checked= "{!v.checkedRes2}" aura:id="SecondResidentSTId" /> <!-- onchange="{!c.onChange_CalcShowRebatableRefund}" -->
+                    </div>
+                    </aura:if>
+				</div>
+			</div>
+        </div>
+        <!--
+        <div class="slds-form__row slds-p-bottom_none slds-p-top_none">
+            <div class="slds-form__item slds-p-bottom_none slds-p-top_none" role="listitem">
+				<div class="slds-form-element slds-form-element_stacked slds-p-bottom_none slds-p-top_none">
+					<aura:if isTrue="{!(v.showRebatableRefund)}">
+                    	<div class="slds-form-element slds-form-element_stacked slds-p-bottom_none slds-p-top_none">
+                            <ui:inputCurrency aura:id="dblRebatableRefundId" label="Rebatable Amount" class="field" disabled="true" value="{!v.RebatableRefundParams.dblRefundAmount}" />
+                        </div>
+                    </aura:if>
+				</div>
+			</div>
+            <div class="slds-form__item slds-p-bottom_none slds-p-top_none" role="listitem">
+				<div class="slds-form-element slds-form-element_stacked slds-p-bottom_none slds-p-top_none">
+					<aura:if isTrue="{!(v.showAddEntranceFee)}">
+                    	<div class="slds-form-element slds-form-element_stacked slds-p-bottom_none slds-p-top_none">
+                            <ui:inputCurrency aura:id="dblAddEntranceFeeId" label="Additional Entrance Fee" class="field" disabled="false" value="{!v.dblAddEntranceFee}" />
+                        </div>
+                    </aura:if>
+                </div>
+			</div>
+        </div>
+        -->
+        <div class="slds-form__row slds-p-bottom_none slds-p-top_none">
+            <lightning:buttonGroup class="slds-align_absolute-center">
+               <lightning:button label="Schedule Transfer" onclick="{!c.do_Transfer}"/>&nbsp;
+                <lightning:button label="Cancel" onclick="{!c.do_MoveInCancel}"/>
+            </lightning:buttonGroup>
+        </div>
+    </aura:if>
+    <aura:if isTrue="{!(v.ActionType=='Transfer')}">
+        <div class="page-section page-header slds-align_absolute-center slds-border_bottom slds-m-top_xx-small slds-text-heading_medium">
+            	Transfer
+        </div>
+        <div class="slds-form__row slds-p-bottom_none slds-p-top_none">
+            <div class="slds-form__item slds-p-bottom_none slds-p-top_none" role="listitem">
+				<div class="slds-form-element slds-form-element_stacked slds-p-bottom_none slds-p-top_none">
+                    <label class="slds-form-element__label" for="TransferId">Transfer Date</label>
+                    <div class="slds-form-element__control">
+                    <lightning:input type="Date" label="Transfer Date" variant="label-hidden" value="{!v.dtTransfer}"  aura:id="TransferId" />
+                    </div>
+				</div>
+			</div>
+            <div class="slds-form__item slds-p-bottom_none slds-p-top_none" role="listitem">
+				<div class="slds-form-element slds-form-element_stacked slds-p-bottom_none slds-p-top_none">
+					&nbsp;
+				</div>
+			</div>
+        </div>
+        <div class="slds-form__row slds-p-bottom_none slds-p-top_none">
+            <div class="slds-form__item slds-p-bottom_none slds-p-top_none" role="listitem">
+            <div class="slds-form-element slds-form-element_stacked slds-p-bottom_none slds-p-top_none">
+                <div class="slds-form-element__control">
+                    <lightning:select name="strTLoC"  label="Level of Care" value="{!v.strLevelofCare}" aura:id="strTLoCId" onchange="{!c.onChange_LevelofCareT}" required="true">
+                        <aura:iteration items="{!v.TransferFormParams.lstLevelOfCare}" var="item">
+	                        <option value="{!item.value}" text="{!item.label}" selected="{!item.value==v.strLevelofCare}"/>
+	                    </aura:iteration>
+                    </lightning:select>
+                </div>
+            </div>
+            </div>
+            <div class="slds-form__item slds-p-bottom_none slds-p-top_none" role="listitem">
+            <div class="slds-form-element slds-form-element_stacked slds-p-bottom_none slds-p-top_none">
+                <div class="slds-form-element__control">
+                    <lightning:select name="strTApt" value="{!v.idApartment}" label="Apartment" aura:id="strTAptId" >
+                        <aura:iteration items="{!v.lstApartment}" var="item">
+	                        <option value="{!item.value}" text="{!item.label}" selected="{!item.value==v.idApartment}"/>
+	                    </aura:iteration>
+                    </lightning:select>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="slds-form__row slds-p-bottom_none slds-p-top_none">
+            <div class="slds-form__item slds-p-bottom_none slds-p-top_none" role="listitem">
+				<div class="slds-form-element slds-form-element_stacked slds-p-bottom_none slds-p-top_none">
+                    <aura:if isTrue="{!(v.showRes1)}">
+                    <label class="slds-form-element__label" for="PrimaryResidentSTId1">Primary Resident</label>
+                    <div class="slds-form-element__control">
+                    <lightning:input type="Checkbox" label="{!'[ '+v.TransferFormParams.strPrimaryResident+' ]'}" checked= "{!v.checkedRes1}" aura:id="PrimaryResidentSTId1" /> <!-- onchange="{!c.onChange_CalcShowRebatableRefund}" -->
+                    </div>
+                    </aura:if>
+				</div>
+			</div>
+            <div class="slds-form__item slds-p-bottom_none slds-p-top_none" role="listitem">
+				<div class="slds-form-element slds-form-element_stacked slds-p-bottom_none slds-p-top_none">
+                    <aura:if isTrue="{!(v.showRes2)}">
+                    <label class="slds-form-element__label" for="SecondResidentSTId1">Second Resident</label>
+                    <div class="slds-form-element__control">
+                    <lightning:input type="Checkbox" label="{!'[ '+v.TransferFormParams.strSecondResident+' ]'}" checked= "{!v.checkedRes2}" aura:id="SecondResidentSTId1" /> <!-- onchange="{!c.onChange_CalcShowRebatableRefund}" -->
+                    </div>
+                    </aura:if>
+				</div>
+			</div>
+        </div>
+        <!--
+        <div class="slds-form__row slds-p-bottom_none slds-p-top_none">
+            <div class="slds-form__item slds-p-bottom_none slds-p-top_none" role="listitem">
+				<div class="slds-form-element slds-form-element_stacked slds-p-bottom_none slds-p-top_none">
+					<aura:if isTrue="{!(v.showRebatableRefund)}">
+                    	<div class="slds-form-element slds-form-element_stacked slds-p-bottom_none slds-p-top_none">
+                            <ui:inputCurrency aura:id="dblRebatableRefundId" label="Rebatable Amount" class="field" disabled="true" value="{!v.RebatableRefundParams.dblRefundAmount}" />
+                        </div>
+                    </aura:if>
+				</div>
+			</div>
+            <div class="slds-form__item slds-p-bottom_none slds-p-top_none" role="listitem">
+				<div class="slds-form-element slds-form-element_stacked slds-p-bottom_none slds-p-top_none">
+					<aura:if isTrue="{!(v.showAddEntranceFee)}">
+                    	<div class="slds-form-element slds-form-element_stacked slds-p-bottom_none slds-p-top_none">
+                            <ui:inputCurrency aura:id="dblAddEntranceFeeId" label="Additional Entrance Fee" class="field" disabled="false" value="{!v.dblAddEntranceFee}" />
+                        </div>
+                    </aura:if>
+                </div>
+			</div>
+        </div>
+        -->
+        <div class="slds-form__row slds-p-bottom_none slds-p-top_none">
+            <lightning:buttonGroup class="slds-align_absolute-center">
+               <lightning:button label="Transfer" onclick="{!c.do_Transfer}"/>&nbsp;
+                <lightning:button label="Cancel" onclick="{!c.do_MoveInCancel}"/>
+            </lightning:buttonGroup>
+        </div>
+    </aura:if>
+    <aura:if isTrue="{!v.Spinner}">
+    <div aura:id="spinnerId" class="slds-spinner_container">
+       <div class="slds-spinner--brand  slds-spinner slds-spinner--large slds-is-relative" role="alert">
+         <span class="slds-assistive-text">Processing</span>
+         <div class="slds-spinner__dot-a"></div>
+         <div class="slds-spinner__dot-b"></div>
+       </div>
+    </div>
+ 	</aura:if>
+</aura:component>

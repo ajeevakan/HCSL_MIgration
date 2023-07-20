@@ -1,0 +1,970 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Accepted Date --></label>
+        <name>Accepted_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- All Inquiries with a Visit --></label>
+        <name>All_Inquiries_with_a_Visit__c</name>
+    </fields>
+    <fields>
+        <label><!-- Assessment Date --></label>
+        <name>Assessment_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Assign Original Owner as Floater --></label>
+        <name>Assign_Original_Owner_as_Floater__c</name>
+    </fields>
+    <fields>
+        <label><!-- Assigned Floater --></label>
+        <name>Assigned_Floater__c</name>
+        <relationshipLabel><!-- Opportunities (Assigned Floater) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Clinical Capability Denial Details --></label>
+        <name>Clinical_Capability_Denial_Details__c</name>
+    </fields>
+    <fields>
+        <label><!-- Community --></label>
+        <name>Community__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contract Type --></label>
+        <name>Contract_Type__c</name>
+        <picklistValues>
+            <masterLabel>50% ROC</masterLabel>
+            <translation><!-- 50% ROC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>75% ROC</masterLabel>
+            <translation><!-- 75% ROC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>90% ROC</masterLabel>
+            <translation><!-- 90% ROC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ROC I</masterLabel>
+            <translation><!-- ROC I --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ROC II</masterLabel>
+            <translation><!-- ROC II --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Traditional</masterLabel>
+            <translation><!-- Traditional --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Type A 50% ROC</masterLabel>
+            <translation><!-- Type A 50% ROC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Type A 90% ROC</masterLabel>
+            <translation><!-- Type A 90% ROC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Type A Traditional</masterLabel>
+            <translation><!-- Type A Traditional --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Type B 90% ROC</masterLabel>
+            <translation><!-- Type B 90% ROC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unbundled</masterLabel>
+            <translation><!-- Unbundled --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Counter Has Referring Practioner --></label>
+        <name>Counter_Has_Referring_Practioner__c</name>
+    </fields>
+    <fields>
+        <label><!-- Counter Stage Lost and Denied --></label>
+        <name>Counter_Stage_Lost_and_Denied__c</name>
+    </fields>
+    <fields>
+        <label><!-- Counter Stage MI and MO --></label>
+        <name>Counter_Stage_MI_and_MO__c</name>
+    </fields>
+    <fields>
+        <label><!-- Create OCR for Account --></label>
+        <name>Create_OCR_for_Account__c</name>
+    </fields>
+    <fields>
+        <label><!-- Create Occupancy --></label>
+        <name>Create_Occupancy__c</name>
+    </fields>
+    <fields>
+        <label><!-- Current Generator(s) --></label>
+        <name>CurrentGenerators__c</name>
+    </fields>
+    <fields>
+        <label><!-- Days Since Last Contact --></label>
+        <name>Days_Since_Last_Contact__c</name>
+    </fields>
+    <fields>
+        <label><!-- Days to Initial Visit --></label>
+        <name>Days_to_Initial_Visit__c</name>
+    </fields>
+    <fields>
+        <label><!-- Delivery/Installation Status --></label>
+        <name>DeliveryInstallationStatus__c</name>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In progress</masterLabel>
+            <translation><!-- In progress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yet to begin</masterLabel>
+            <translation><!-- Yet to begin --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Deposit Date --></label>
+        <name>DepositDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Deposit Cancelled Date --></label>
+        <name>Deposit_Cancelled_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Deposit Date (Transaction) --></label>
+        <name>Deposit_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Expected Move In Date --></label>
+        <name>Expected_Move_In_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- First Connected Conversation Date --></label>
+        <name>First_Connected_Conversation_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Initial Tour Date --></label>
+        <name>First_Tour_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Force Occupancy Trigger --></label>
+        <name>Force_Occupancy_Trigger__c</name>
+    </fields>
+    <fields>
+        <label><!-- Diagnosis --></label>
+        <name>HealthCloudGA__Diagnosis__c</name>
+    </fields>
+    <fields>
+        <label><!-- Insurance Group ID --></label>
+        <name>HealthCloudGA__InsuranceGroupId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Insurance Member ID --></label>
+        <name>HealthCloudGA__InsuranceMemberId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Insurance Type --></label>
+        <name>HealthCloudGA__InsuranceType__c</name>
+        <picklistValues>
+            <masterLabel>Commercial</masterLabel>
+            <translation>상용</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medicaid</masterLabel>
+            <translation>메디케이드</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medicare</masterLabel>
+            <translation>의료 보험</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation>기타</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Self-pay</masterLabel>
+            <translation>본인 부담</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Out of Network --></label>
+        <name>HealthCloudGA__IsOutOfNetwork__c</name>
+    </fields>
+    <fields>
+        <label><!-- Primary Diagnosis --></label>
+        <name>HealthCloudGA__PrimaryDiagnosis__c</name>
+        <relationshipLabel><!-- Opportunities (PrimaryDiagnosis) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Primary Insurance --></label>
+        <name>HealthCloudGA__Primary_Insurance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Priority --></label>
+        <name>HealthCloudGA__Priority__c</name>
+        <picklistValues>
+            <masterLabel>Emergent</masterLabel>
+            <translation>위급</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Routine</masterLabel>
+            <translation>루틴</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Urgent</masterLabel>
+            <translation>응급</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Reason for Out of Network Referral --></label>
+        <name>HealthCloudGA__ReasonForOutOfNetworkReferral__c</name>
+        <picklistValues>
+            <masterLabel>Insurance Not Accepted</masterLabel>
+            <translation>보험이 수락되지 않음</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Limited Provider Availability</masterLabel>
+            <translation>제한된 공급자 가용성</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Patient Preference</masterLabel>
+            <translation>환자 기본 설정</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Provider Preference</masterLabel>
+            <translation>공급자 기본 설정</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Service Not Offered</masterLabel>
+            <translation>서비스가 제공되지 않음</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Reason for Referral --></label>
+        <name>HealthCloudGA__Reason_for_Referral__c</name>
+    </fields>
+    <fields>
+        <label><!-- Referral Received Date --></label>
+        <name>HealthCloudGA__ReferralReceivedDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Referred To Organization --></label>
+        <name>HealthCloudGA__ReferredToOrganization__c</name>
+        <relationshipLabel><!-- Referred Opportunities --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Referred To Practitioner --></label>
+        <name>HealthCloudGA__ReferredToPractitioner__c</name>
+        <relationshipLabel><!-- Referred Opportunities --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Referred To User --></label>
+        <name>HealthCloudGA__ReferredToUser__c</name>
+        <relationshipLabel><!-- Opportunities (Referred To User) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Referring Organization --></label>
+        <name>HealthCloudGA__ReferringOrganization__c</name>
+        <relationshipLabel><!-- Opportunities --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Referring Practitioner Score --></label>
+        <name>HealthCloudGA__ReferringPractitionerScore__c</name>
+    </fields>
+    <fields>
+        <label><!-- Referring Practitioner --></label>
+        <name>HealthCloudGA__ReferringPractitioner__c</name>
+        <relationshipLabel><!-- Opportunities --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Referring User --></label>
+        <name>HealthCloudGA__ReferringUser__c</name>
+        <relationshipLabel><!-- Opportunities (Referring User) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Secondary Diagnosis --></label>
+        <name>HealthCloudGA__SecondaryDiagnosis__c</name>
+        <relationshipLabel><!-- Opportunities (SecondaryDiagnosis) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Specialty --></label>
+        <name>HealthCloudGA__Specialty__c</name>
+        <picklistValues>
+            <masterLabel>Cardiology</masterLabel>
+            <translation>심장학</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Neurosurgery</masterLabel>
+            <translation>신경외과학</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Oncology</masterLabel>
+            <translation>종양학</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Orthopedics</masterLabel>
+            <translation>정형외과학</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Tertiary Diagnosis --></label>
+        <name>HealthCloudGA__TertiaryDiagnosis__c</name>
+        <relationshipLabel><!-- Opportunities (TertiaryDiagnosis) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Tracking Number --></label>
+        <name>HealthCloudGA__TrackingNumber__c</name>
+    </fields>
+    <fields>
+        <label><!-- Type of Service --></label>
+        <name>HealthCloudGA__TypeOfService__c</name>
+        <picklistValues>
+            <masterLabel>2nd Opinion</masterLabel>
+            <translation>2차 소견</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Consultation</masterLabel>
+            <translation>자문</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Follow up</masterLabel>
+            <translation>후속 치료</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lab Services</masterLabel>
+            <translation>실험 서비스</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other (please specify in comments)</masterLabel>
+            <translation>기타(설명에 명시)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Radiology Services</masterLabel>
+            <translation>방사선 서비스</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Surgery</masterLabel>
+            <translation>수술</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Level of Care --></label>
+        <name>Housing_Type__c</name>
+        <picklistValues>
+            <masterLabel>Active Adult</masterLabel>
+            <translation><!-- Active Adult --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Assisted Living</masterLabel>
+            <translation><!-- Assisted Living --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Independent Living</masterLabel>
+            <translation><!-- Independent Living --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Memory Care</masterLabel>
+            <translation><!-- Memory Care --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Skilled Nursing</masterLabel>
+            <translation><!-- Skilled Nursing --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Information Packet Returned Date --></label>
+        <name>Information_Packet_Returned_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Information Packet Sent Date --></label>
+        <name>Information_Packet_Sent_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Initial Activity Date --></label>
+        <name>Initial_Activity_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Initial Appointment Date --></label>
+        <name>Initial_Appointment_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Inquiries with No Visit Yet --></label>
+        <name>Inquiries_with_No_Visit_Yet__c</name>
+    </fields>
+    <fields>
+        <label><!-- Insurance Plan Denial Details --></label>
+        <name>Insurance_Plan_Denial_Details__c</name>
+    </fields>
+    <fields>
+        <label><!-- Internet Lead Source --></label>
+        <name>Internet_Lead_Source__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Active --></label>
+        <name>Is_Active__c</name>
+    </fields>
+    <fields>
+        <label><!-- LOC Different from Room --></label>
+        <name>LOC_Different_from_Room__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Appointment Date --></label>
+        <name>Last_Appointment_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Completed Activity Date --></label>
+        <name>Last_Completed_Activity_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Completed Activity Type --></label>
+        <name>Last_Completed_Activity_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead Temperature --></label>
+        <name>Lead_Score__c</name>
+        <picklistValues>
+            <masterLabel>Cold</masterLabel>
+            <translation><!-- Cold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hot</masterLabel>
+            <translation><!-- Hot --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Yet Classified</masterLabel>
+            <translation><!-- Not Yet Classified --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Warm</masterLabel>
+            <translation><!-- Warm --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Campaign --></label>
+        <name>Lead_Source_Campaign__c</name>
+        <relationshipLabel><!-- Opportunities --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Lead Status --></label>
+        <name>Lead_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lost Date --></label>
+        <name>Lost_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lost Lead Details --></label>
+        <name>Lost_Denied_Reason_Detail__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lost Reason --></label>
+        <name>Lost_Reason__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lost To --></label>
+        <name>Lost_To__c</name>
+        <relationshipLabel><!-- Opportunities (Lost To) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Main Competitor(s) --></label>
+        <name>MainCompetitors__c</name>
+    </fields>
+    <fields>
+        <label><!-- Move In Date --></label>
+        <name>Move_In_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Move Out Date --></label>
+        <name>Move_Out_Discharge_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Move Out Reason --></label>
+        <name>Move_Out_Reason__c</name>
+        <picklistValues>
+            <masterLabel>Competitor</masterLabel>
+            <translation><!-- Competitor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cost</masterLabel>
+            <translation><!-- Cost --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Death</masterLabel>
+            <translation><!-- Death --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Move Closer to Family</masterLabel>
+            <translation><!-- Move Closer to Family --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Move in with Family</masterLabel>
+            <translation><!-- Move in with Family --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Move to Health Center</masterLabel>
+            <translation><!-- Move to Health Center --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No Availability</masterLabel>
+            <translation><!-- No Availability --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Prospect Decision</masterLabel>
+            <translation><!-- Prospect Decision --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Satisfaction Guarantee</masterLabel>
+            <translation><!-- Satisfaction Guarantee --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unqualified Medically</masterLabel>
+            <translation><!-- Unqualified Medically --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Next Activity Status --></label>
+        <name>Next_Activity_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Next Scheduled Activity Date --></label>
+        <name>Next_Scheduled_Activity_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Next Scheduled Activity Type --></label>
+        <name>Next_Scheduled_Activity_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Next Scheduled Appointment Date --></label>
+        <name>Next_Scheduled_Appointment_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Not Contacted in Designated Cadence --></label>
+        <name>Not_Contacted_in_Designated_Candence__c</name>
+    </fields>
+    <fields>
+        <label><!-- Not Opened After Conversion Yet --></label>
+        <name>Not_Opened_After_Conversion_Yet__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number of Completed Activities --></label>
+        <name>Number_Of_Completed_Activities__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number of Appointments --></label>
+        <name>Number_of_Appointments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Inquiry Date --></label>
+        <name>Opportunity_Inquiry_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunity Name Formula --></label>
+        <name>Opportunity_Name_Formula__c</name>
+    </fields>
+    <fields>
+        <label><!-- Order Number --></label>
+        <name>OrderNumber__c</name>
+    </fields>
+    <fields>
+        <label><!-- Past Due Active Prospect --></label>
+        <name>Past_Due_Active_Prospect__c</name>
+    </fields>
+    <fields>
+        <label><!-- Primary Contact City --></label>
+        <name>Primary_Contact_City__c</name>
+    </fields>
+    <fields>
+        <label><!-- Primary Contact Email --></label>
+        <name>Primary_Contact_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Primary Contact Phone --></label>
+        <name>Primary_Contact_Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Primary Contact State --></label>
+        <name>Primary_Contact_State__c</name>
+    </fields>
+    <fields>
+        <label><!-- Primary Contact --></label>
+        <name>Primary_Contact__c</name>
+        <relationshipLabel><!-- Opportunities (Primary Contact) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Primary Household --></label>
+        <name>Primary_Household__c</name>
+        <relationshipLabel><!-- Opportunities (Primary Household) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Primary Insurance --></label>
+        <name>Primary_Insurance__c</name>
+        <picklistValues>
+            <masterLabel>AARP</masterLabel>
+            <translation><!-- AARP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Aetna</masterLabel>
+            <translation><!-- Aetna --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Aetna MMAI</masterLabel>
+            <translation><!-- Aetna MMAI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Anthem</masterLabel>
+            <translation><!-- Anthem --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Blue Cross Blue Shield</masterLabel>
+            <translation><!-- Blue Cross Blue Shield --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bright Health</masterLabel>
+            <translation><!-- Bright Health --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bright Health MMAI</masterLabel>
+            <translation><!-- Bright Health MMAI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cigna</masterLabel>
+            <translation><!-- Cigna --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cigna MMAI</masterLabel>
+            <translation><!-- Cigna MMAI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Health Alliance</masterLabel>
+            <translation><!-- Health Alliance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Humana</masterLabel>
+            <translation><!-- Humana --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Humana MMAI</masterLabel>
+            <translation><!-- Humana MMAI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Optum</masterLabel>
+            <translation><!-- Optum --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PACE</masterLabel>
+            <translation><!-- PACE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UHC</masterLabel>
+            <translation><!-- UHC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UHC MMAI</masterLabel>
+            <translation><!-- UHC MMAI --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Primary Resident Exists --></label>
+        <name>Primary_Resident_Exists__c</name>
+    </fields>
+    <fields>
+        <label><!-- Primary Resident --></label>
+        <name>Primary_Resident__c</name>
+        <relationshipLabel><!-- Opportunities (Primary Resident) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Reporting Community --></label>
+        <name>Reporting_Community__c</name>
+        <relationshipLabel><!-- Opportunities --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Room Vacant Before Move In --></label>
+        <name>Room_Vacant_Before_Move_In__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sales Enagement Score --></label>
+        <name>Sales_Enagement_Score__c</name>
+    </fields>
+    <fields>
+        <label><!-- Second Resident Exists --></label>
+        <name>Second_Resident_Exists__c</name>
+    </fields>
+    <fields>
+        <label><!-- Second Resident --></label>
+        <name>Second_Resident__c</name>
+        <relationshipLabel><!-- Opportunities (Second Resident) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Senior Living --></label>
+        <name>Senior_Living__c</name>
+    </fields>
+    <fields>
+        <label><!-- Service Type --></label>
+        <name>Service_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Skilled Nursing --></label>
+        <name>Skilled_Nursing__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Temp Display --></label>
+        <name>Temp_Display__c</name>
+    </fields>
+    <fields>
+        <label><!-- Toggle Create System Activities Trigger --></label>
+        <name>Toggle_Create_System_Activities_Trigger__c</name>
+    </fields>
+    <fields>
+        <label><!-- Toggle Occupancy Trigger --></label>
+        <name>Toggle_Occupancy_Trigger__c</name>
+    </fields>
+    <fields>
+        <label><!-- Top 10 --></label>
+        <name>Top_10__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tracking Number --></label>
+        <name>TrackingNumber__c</name>
+    </fields>
+    <fields>
+        <label><!-- Type of Service --></label>
+        <name>TypeOfService__c</name>
+        <picklistValues>
+            <masterLabel>2nd Opinion</masterLabel>
+            <translation><!-- 2nd Opinion --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Consultation</masterLabel>
+            <translation><!-- Consultation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Follow up</masterLabel>
+            <translation><!-- Follow up --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lab Services</masterLabel>
+            <translation><!-- Lab Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other (please specify in comments)</masterLabel>
+            <translation><!-- Other (please specify in comments) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Radiology Services</masterLabel>
+            <translation><!-- Radiology Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Surgery</masterLabel>
+            <translation><!-- Surgery --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Apartment --></label>
+        <name>Unit__c</name>
+        <relationshipLabel><!-- Opportunities --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Visit /No Visit --></label>
+        <name>Visit_No_Visit__c</name>
+    </fields>
+    <fields>
+        <label><!-- Web Req. Tour Date --></label>
+        <name>Web_Requested_Tour_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Web Req. Tour Time --></label>
+        <name>Web_Requested_Tour_Time_of_Day__c</name>
+    </fields>
+    <fields>
+        <label><!-- eReferral Facility Id --></label>
+        <name>eReferral_Facility_Id__c</name>
+    </fields>
+    <layouts>
+        <layout>Opportunity Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Priority List --></label>
+            <section>Priority List</section>
+        </sections>
+        <sections>
+            <label><!-- Resident --></label>
+            <section>Resident</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Senior Living Opportunity Layout</layout>
+        <sections>
+            <label><!-- Activity Summary --></label>
+            <section>Activity Summary</section>
+        </sections>
+        <sections>
+            <label><!-- Additional Information --></label>
+            <section>Additional Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Financials --></label>
+            <section>Financials</section>
+        </sections>
+        <sections>
+            <label><!-- Initial Lead Source --></label>
+            <section>Initial Lead Source</section>
+        </sections>
+        <sections>
+            <label><!-- Lost Lead --></label>
+            <section>Lost Lead</section>
+        </sections>
+        <sections>
+            <label><!-- Preferences --></label>
+            <section>Preferences</section>
+        </sections>
+        <sections>
+            <label><!-- Ready List --></label>
+            <section>Ready List</section>
+        </sections>
+        <sections>
+            <label><!-- Reservation Deposit --></label>
+            <section>Reservation Deposit</section>
+        </sections>
+        <sections>
+            <label><!-- Resident --></label>
+            <section>Resident</section>
+        </sections>
+        <sections>
+            <label><!-- Resident Waitlist --></label>
+            <section>Resident Waitlist</section>
+        </sections>
+        <sections>
+            <label><!-- System Information (Do Not Edit) --></label>
+            <section>System Information (Do Not Edit)</section>
+        </sections>
+        <sections>
+            <label><!-- Wait List --></label>
+            <section>Wait List</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Skilled Nursing Opportunity Layout</layout>
+        <sections>
+            <label><!-- Activity Summary --></label>
+            <section>Activity Summary</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Diagnosis --></label>
+            <section>Diagnosis</section>
+        </sections>
+        <sections>
+            <label><!-- Lost / Denied --></label>
+            <section>Lost / Denied</section>
+        </sections>
+        <sections>
+            <label><!-- Payor + Insurance --></label>
+            <section>Payor + Insurance</section>
+        </sections>
+        <sections>
+            <label><!-- Priority List --></label>
+            <section>Priority List</section>
+        </sections>
+        <sections>
+            <label><!-- Referral Source --></label>
+            <section>Referral Source</section>
+        </sections>
+        <sections>
+            <label><!-- Resident --></label>
+            <section>Resident</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Deposit --></label>
+        <name>Deposit</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Email --></label>
+        <name>Email</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Log a Call --></label>
+        <name>Log_a_Call</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Lost --></label>
+        <name>Lost</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Merge Contacts --></label>
+        <name>Merge_Contacts</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Merge Households --></label>
+        <name>Merge_Households</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Merge Opportunities --></label>
+        <name>Merge_Opportunities</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- New Event --></label>
+        <name>New_Event</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- New Influencer --></label>
+        <name>New_Influencer</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- New Primary Resident --></label>
+        <name>New_Primary_Resident</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- New Second Resident --></label>
+        <name>New_Second_Resident</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- New Task --></label>
+        <name>New_Task</name>
+    </quickActions>
+    <recordTypes>
+        <label><!-- Patient Referral --></label>
+        <name>HealthCloudGA__Patient_Referral</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Senior Living --></label>
+        <name>Senior_Living</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Skilled Nursing --></label>
+        <name>Skilled_Nursing</name>
+    </recordTypes>
+    <webLinks>
+        <label><!-- DeliveryStatus --></label>
+        <name>DeliveryStatus</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- DeliveryStatus --></label>
+        <name>HealthCloudGA__DeliveryStatus</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_Pardot_Emails --></label>
+        <name>pi__Send_Pardot_Emails</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_Single_Pardot_Email --></label>
+        <name>pi__Send_Single_Pardot_Email</name>
+    </webLinks>
+</CustomObjectTranslation>

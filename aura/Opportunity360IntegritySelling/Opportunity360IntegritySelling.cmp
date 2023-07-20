@@ -1,0 +1,224 @@
+<aura:component controller="Opportunity360" implements="flexipage:availableForAllPageTypes,force:hasRecordId,force:lightningQuickAction" access="global" >
+<aura:handler name="init" value="{!this}" action="{!c.myAction}" />
+    <aura:dependency resource="markup://force:editRecord" type="EVENT" />
+    
+    <aura:handler event="force:refreshView" action="{!c.myAction}" />    
+
+<aura:attribute name="recordId" type="Id" />
+<aura:attribute name="Task" type="Task" />
+<aura:attribute name="Contacts" type="OpportunityContactRole" />
+<aura:attribute name="Columns" type="List" />
+<aura:attribute name="ActivityList" type="wrapActivity" />
+    <aura:attribute name="activity" type="Task"/>
+     <aura:attribute name="opportunity" type="Opportunity"/>
+<aura:attribute name="Spinner" type="boolean" default="false"/>
+<force:recordData aura:id="taskRecord"
+                  recordId="{!v.recordId}"
+                  targetFields="{!v.Task}"
+                  layoutType="FULL"
+                  recordUpdated="{!c.myAction}"
+                  />
+    
+
+        
+
+<!--  -->
+
+	
+
+
+<!--  -->         
+    
+<!--
+<lightning:card iconName="standard:contact" title="{! 'Thrive and Activities for ' + v.Account.Name}">
+-->
+    
+    
+     <aura:iteration items="{!v.Contacts}" var="ContactCard" >
+         
+               <ul class="slds-list--vertical slds-has-cards--space has-selections">
+        <li class="slds-list__item slds-m-around--x-small">
+          <div class="slds-tile slds-tile--board">
+            <span class="slds-tile__title slds-truncate ">
+             
+ 
+     <div class="slds-tile__detail">
+           
+                      <div class="slds-grid slds-wrap">
+           
+         <div class="slds-col slds-size_6-of-12 slds-max-small-size_1-of-1 slds-text-heading_medium">
+          <table>
+          <tr>
+          <td>
+             
+
+          <a value = "{!ContactCard.Contact.Id}" Id =  "{!ContactCard.Contact.Id}" onclick="{!c.goToContact}">{!ContactCard.Contact.Name} </a> - {!ContactCard.Contact.Relationship_to_Prospect__c}  
+          </td>
+          </tr>
+          </table>
+     </div>
+    <div class="slds-col slds-size_5-of-12 slds-max-small-size_1-of-1 slds-text-heading_medium">
+          <table>
+          <tr>
+          <td>
+              <aura:if isTrue="{!if(ContactCard.Role=='Influencer',if(ContactCard.Contact.Prospect__c,true,false),false)}">
+                  {!ContactCard.Role}/Prospect
+              <aura:set attribute="else">
+                 {!ContactCard.Role}
+              </aura:set>
+              </aura:if>
+          </td>
+          </tr>
+          </table>
+     </div>
+                          <div class="slds-col slds-size_1-of-12 slds-max-small-size_1-of-1" >
+          <table>
+          <tr>
+          <td>
+              <aura:if isTrue="{!if(ContactCard.IsPrimary,true,false)}">
+              <lightning:icon iconName="action:approval" alternativeText="Primary Contact" title="Primary Contact" size="x-small"/>
+              &nbsp;
+              </aura:if>
+              <aura:if isTrue="{!if(ContactCard.Contact.Inactive__c,true,false)}">
+              <lightning:icon  iconName="action:close" alternativeText="Inactive Contact" title="Inactive Contact" size="x-small"/>
+              &nbsp;
+              </aura:if>
+              <!--<lightning:icon iconName="utility:upload" size="xx-small" />-->
+          </td>
+          </tr>
+          </table>
+     </div>
+        </div>
+                     </div>
+        
+                
+       </span>
+              
+        <div class="slds-tile__detail slds-p-bottom_xx-small slds-p-top_xx-small slds-text-body--regular ">
+                <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-grow-none slds-max-small-size_1-of-1">
+               <lightning:button value="{!ContactCard.Contact.Id}" onclick="{!c.editContact}" name="{!ContactCard.Contact.Id+'edit'}" label="{!'  Edit  '}" /> 
+                </div> 
+                    <div class="slds-col slds-grow-none slds-max-small-size_1-of-1">
+                &nbsp;<lightning:button value="{!ContactCard.Contact.Id}" onclick="{!c.myAction}" name="{!ContactCard.Contact.Id+'Refresh'}" label="{!' Refresh '}" />
+                 </div> 
+                    <div class="slds-col slds-grow-none slds-max-small-size_1-of-1">
+                        &nbsp;<lightning:button value="{!ContactCard.Contact.Id}" onclick="{!c.newOppTask}" name="{!ContactCard.Contact.Id+'task'}" label="{!'New Task'}" />
+                                      </div>
+                        <div class="slds-col slds-grow-none slds-max-small-size_1-of-1">        
+                &nbsp;<lightning:button value="{!ContactCard.Contact.Id}" onclick="{!c.newOppEvent}" name="{!ContactCard.Contact.Id+'event'}" label="{!'New Event'}" />
+                      </div>
+                &nbsp;<div class="slds-col slds-grow-none slds-max-small-size_1-of-1"> 
+                    <lightning:buttonMenu alternativeText="Show menu" onselect="{! c.handleMenuSelect }">
+                        <aura:if isTrue="{!if(ContactCard.IsPrimary,false,if(ContactCard.Contact.Inactive__c,false,true))}">
+                    		<lightning:menuItem value="{!ContactCard.Id+',MakePrimaryContact'}"   label="{!'Make Primary Contact'}" />
+                        </aura:if>
+                        <aura:if isTrue="{!if(ContactCard.Role=='Second Prospect Resident',if(ContactCard.Contact.Inactive__c,false,true),false)}">
+                    		<lightning:menuItem value="{!ContactCard.Id+',MakePrimaryResident'}"   label="{!'Make Primary Resident'}" />
+                        </aura:if>
+                        <aura:if isTrue="{!if(ContactCard.Contact.Inactive__c,true,false)}">
+                            <lightning:menuItem value="{!ContactCard.Contact.Id+',Reactivate'}"   label="{!'Reactivate Contact'}" />
+                            <aura:set attribute="else">
+                            <lightning:menuItem value="{!ContactCard.Contact.Id+',Inactivate'}"   label="{!'Set Contact Inactive'}" /> 
+                            <lightning:menuItem value="{!ContactCard.Contact.Id+',InactivateD'}"   label="{!'Set Contact Inactive &amp; Deceased'}" /> 
+                            </aura:set>
+                        </aura:if>
+                        <aura:if isTrue="{!if(ContactCard.Role=='Influencer',if(ContactCard.Contact.Prospect__c,if(ContactCard.Contact.Inactive__c,false,true),false),false)}">
+                    		<lightning:menuItem value="{!ContactCard.Id+',MakeSecondResident'}"   label="{!'Make Second Resident'}" />
+                        </aura:if>
+                        <aura:if isTrue="{!if(ContactCard.Role=='Second Prospect Resident',true,false)}">
+                    		<lightning:menuItem value="{!ContactCard.Id+',DemoteSecondResident'}"   label="{!'Demote Second Resident'}" />
+                        </aura:if>
+                    </lightning:buttonMenu>
+                    </div>
+              </div>
+             </div>
+  
+      
+            <div class="slds-tile__detail slds-border_top">
+                <div class="slds-grid slds-wrap">
+             
+                     <div class="slds-col slds-size_1-of-2 slds-max-small-size_1-of-1">
+                    <Table>
+                        <tr><b>First Name: </b><lightning:formattedPhone value="{!ContactCard.Contact.FirstName}"/></tr>
+                        <tr><b>Home Phone: </b><lightning:formattedPhone value="{!ContactCard.Contact.HomePhone}"/></tr>
+                    <tr><b>Mobile Phone: </b><lightning:formattedPhone value="{!ContactCard.Contact.MobilePhone}"/></tr>
+                        <!--<tr><b>Work Phone: </b><lightning:formattedPhone value="{!ContactCard.Work_Phone__c}"/></tr>-->
+                        <tr><b>Email: </b><lightning:formattedEmail value="{!ContactCard.Contact.Email}" /> </tr>
+                    </Table>
+                    </div>
+ 
+                    <div class="slds-col slds-size_1-of-2 slds-max-small-size_1-of-1">
+                        <Table>
+                        <tr><b>Street : </b>{!ContactCard.Contact.MailingStreet}</tr>
+                        <tr><b>City : </b>{!ContactCard.Contact.MailingCity}</tr>       
+                        <tr><b>State : </b>{!ContactCard.Contact.MailingState}</tr>
+                        <tr><b>Zip : </b>{!ContactCard.Contact.MailingPostalCode}</tr> 
+                        </Table>
+                    
+                    </div>
+                    
+                   
+                    </div>
+                 <div class="slds-tile slds-tile--board">
+                <div class="slds-tile__detail">
+                    <Table class="slds-border_top">
+
+                        <tr>
+                                            <td>
+                       <p class="slds-text-body--regular slds-cell-wrap"><b>Description: </b>{!ContactCard.Contact.Description}</p> 
+                       </td>
+                         
+                   </tr>
+                    </Table>
+                     
+                     </div>
+                </div>
+                 </div>
+          </div>
+        </li>
+      </ul>
+
+       </aura:iteration>
+    
+    
+       
+    
+    <div class="slds-box">
+     <span class="slds-tile__title slds-truncate slds-text-heading--medium">
+         Activity Notes
+    </span>
+
+    <div class="slds-grid slds-wrap " >
+                <aura:iteration items="{!v.ActivityList}" var ="aList">
+                       
+                      <div class="slds-col slds-size_1-of-6 slds-max-small-size_1-of-1 slds-border_top ">
+                      <b><div class="slds-truncate" title="">{!aList.ActivityDate}</div></b>
+                     </div>
+                    <div class="slds-col slds-size_1-of-6 slds-max-small-size_1-of-1 slds-border_top">
+                     <div class="slds-truncate" title="">{!aList.Subject}</div>
+                    </div>
+                    <div class="slds-col slds-size_1-of-6 slds-max-small-size_1-of-1 slds-border_top ">
+                     <div class="slds-truncate" title="">{!aList.WhoName}</div>
+                    </div>
+                    <div class="slds-col slds-size_3-of-6 slds-max-small-size_1-of-1 slds-border_top">
+                  <div class="slds-text-body--regular slds-cell-wrap" title="">{!aList.Description}</div>
+                    </div>
+               
+           </aura:iteration> 
+    </div>
+        </div>
+    
+    <aura:if isTrue="{!v.Spinner}">
+    <div aura:id="spinnerId" class="slds-spinner_container">
+       <div class="slds-spinner--brand  slds-spinner slds-spinner--large slds-is-relative" role="alert">
+         <span class="slds-assistive-text">Processing</span>
+         <div class="slds-spinner__dot-a"></div>
+         <div class="slds-spinner__dot-b"></div>
+       </div>
+    </div>
+ 	</aura:if>
+ <!--   
+</lightning:card>
+-->
+</aura:component>

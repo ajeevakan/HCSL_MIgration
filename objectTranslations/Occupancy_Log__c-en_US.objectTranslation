@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Occupancy Log</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Occupancy Logs</value>
+    </caseValues>
+    <fields>
+        <label><!-- Apartment --></label>
+        <name>Apartment__c</name>
+        <relationshipLabel><!-- Occupancy Logs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Bed --></label>
+        <name>Bed__c</name>
+        <relationshipLabel><!-- Occupancy Logs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- End Date --></label>
+        <name>End_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Level of Care --></label>
+        <name>Level_of_Care__c</name>
+    </fields>
+    <fields>
+        <label><!-- Move Out Reason --></label>
+        <name>Move_Out_Reason__c</name>
+        <picklistValues>
+            <masterLabel>Asked to leave: Behavioral</masterLabel>
+            <translation><!-- Asked to leave: Behavioral --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Asked to leave: Non-payment</masterLabel>
+            <translation><!-- Asked to leave: Non-payment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Care level not available</masterLabel>
+            <translation><!-- Care level not available --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Death</masterLabel>
+            <translation><!-- Death --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Discharge Against Medical Advice</masterLabel>
+            <translation><!-- Discharge Against Medical Advice --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Discharge Home</masterLabel>
+            <translation><!-- Discharge Home --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Discharge to Acute Rehab</masterLabel>
+            <translation><!-- Discharge to Acute Rehab --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Discharge to Another SNF</masterLabel>
+            <translation><!-- Discharge to Another SNF --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Discharge to Hospice</masterLabel>
+            <translation><!-- Discharge to Hospice --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Discharge to Hospital</masterLabel>
+            <translation><!-- Discharge to Hospital --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Distance from family</masterLabel>
+            <translation><!-- Distance from family --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not able to afford any longer</masterLabel>
+            <translation><!-- Not able to afford any longer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rehab</masterLabel>
+            <translation><!-- Rehab --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Short-term stay</masterLabel>
+            <translation><!-- Short-term stay --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unhappy: Care issues</masterLabel>
+            <translation><!-- Unhappy: Care issues --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unhappy: Management</masterLabel>
+            <translation><!-- Unhappy: Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unhappy: Programming</masterLabel>
+            <translation><!-- Unhappy: Programming --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Value does not justify price</masterLabel>
+            <translation><!-- Value does not justify price --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Went to Another Community</masterLabel>
+            <translation><!-- Went to Another Community --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Went to Another Watermark Community</masterLabel>
+            <translation><!-- Went to Another Watermark Community --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Occupancy --></label>
+        <name>Occupancy__c</name>
+        <relationshipLabel><!-- Occupancy Logs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Resident --></label>
+        <name>Resident__c</name>
+        <relationshipLabel><!-- Occupancy Logs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Start Date --></label>
+        <name>Start_Date__c</name>
+    </fields>
+    <layouts>
+        <layout>Occupancy Log Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Initial Move In --></label>
+        <name>Initial_Move_In</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Transfer --></label>
+        <name>Transfer</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

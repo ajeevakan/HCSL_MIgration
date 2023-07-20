@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Self</fullName>
+        <default>false</default>
+        <label>Self</label>
+    </customValue>
+    <customValue>
+        <fullName>Friend</fullName>
+        <default>false</default>
+        <label>Friend</label>
+    </customValue>
+    <customValue>
+        <fullName>Spouse</fullName>
+        <default>false</default>
+        <label>Spouse</label>
+    </customValue>
+    <customValue>
+        <fullName>Partner</fullName>
+        <default>false</default>
+        <label>Partner</label>
+    </customValue>
+    <customValue>
+        <fullName>Son</fullName>
+        <default>false</default>
+        <label>Son</label>
+    </customValue>
+    <customValue>
+        <fullName>Daughter</fullName>
+        <default>false</default>
+        <label>Daughter</label>
+    </customValue>
+    <customValue>
+        <fullName>Sister</fullName>
+        <default>false</default>
+        <label>Sister</label>
+    </customValue>
+    <customValue>
+        <fullName>Brother</fullName>
+        <default>false</default>
+        <label>Brother</label>
+    </customValue>
+    <customValue>
+        <fullName>Father</fullName>
+        <default>false</default>
+        <label>Father</label>
+    </customValue>
+    <customValue>
+        <fullName>Mother</fullName>
+        <default>false</default>
+        <label>Mother</label>
+    </customValue>
+    <customValue>
+        <fullName>Other Relative</fullName>
+        <default>false</default>
+        <label>Other Relative</label>
+    </customValue>
+    <customValue>
+        <fullName>Legal Guardian</fullName>
+        <default>false</default>
+        <label>Legal Guardian</label>
+    </customValue>
+    <masterLabel>Relationship to Prospect</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

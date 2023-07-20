@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>manjaka.andriamasinoro@lansdalegroup.com</contactEmail>
+    <label>Api Gateway Test</label>
+    <oauthConfig>
+        <callbackUrl>https://login.salesforce.com/services/oauth2/success
+https://localhost
+https://login.salesforce.com</callbackUrl>
+        <certificate>MIIDdzCCAl+gAwIBAgIUEBlYJdAhIaYC9MXPYYx8D6oHA10wDQYJKoZIhvcNAQELBQAwSjELMAkGA1UEBhMCVVMxETAPBgNVBAgMCFZpcmdpbmlhMQ8wDQYDVQQHDAZNY0xlYW4xFzAVBgNVBAoMDkxhbnNkYWxlIEdyb3VwMCAXDTIyMDExNDA1NTIxNVoYDzIxMjExMjIxMDU1MjE1WjBKMQswCQYDVQQGEwJVUzERMA8GA1UECAwIVmlyZ2luaWExDzANBgNVBAcMBk1jTGVhbjEXMBUGA1UECgwOTGFuc2RhbGUgR3JvdXAwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDmAumLtXRB6DstA58nZe2HnUjD28aQpGxu1gmC++U8fY4ZFxd5DXNDeEM3jo+vdgWyK7PRWeXfvzz3l3zG5ipOyYudWzQhDZnzqVPx6JW2Yku4hIbdHOLwC+NbKxpJc+CjiCz8SlMtrLTj76yxKluJ+NUmGsyHIOlzf59G4TnCrE93WyNzzm+ZsQI+yRaplX6uPoFcgoqM/ty9VONBmXB3yUtfJMVKLCIgCBNf149ZAAwqp3tRvnhFpF/bEUw+Sl0AHa3w8AxyGgZ6XbmWqO2PelX45vZgH8vk79QD7XJdn8BvaxfH3TIBpBtJgq+dUnBdDmos0OVgkxug6imqFGcfAgMBAAGjUzBRMB0GA1UdDgQWBBQZ+On1CvHRq1OIl3E7RSZu0T5OBTAfBgNVHSMEGDAWgBQZ+On1CvHRq1OIl3E7RSZu0T5OBTAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQBVpNRnFF6YQyKbpkjOCzMzrBckQJdLlSx8w+opVNcEkTUenyrSTHuG235sPF9rE2e8vmD0QGqNov2cnsPNl/GjrRs7N31IlOmjgWa02BfPJbaprLEOipukAlM9OsRDqRrwGeJS69IoKu8Fv7tfqPoKEDqT1IjJNZ4Hi72lJYDYNxAkdAG6aDmzBHPUTQXk2AiY0SkYEQHGnek/3UiiVP69RAGcm/XzigDjeyuai91wnAYX04hCO6s20EUSg9nGxtQcTpk944HvafW/qZEuk16i9xUKH66kcTqEDIyb3wMVAM5wfWGPviwXQgY/LsscgoHxqE8wORx5HXb5iBGLASrI</certificate>
+        <consumerKey>3MVG9cHH2bfKACZbmHN8ZUBb4uucDDFMVAao9pfHxflFenjUOW5EUzqfHN.541e1q2vFU.QrFYzY8KcoM6UPK</consumerKey>
+        <isAdminApproved>true</isAdminApproved>
+        <isClientCredentialEnabled>false</isClientCredentialEnabled>
+        <isCodeCredentialEnabled>false</isCodeCredentialEnabled>
+        <isCodeCredentialPostOnly>false</isCodeCredentialPostOnly>
+        <isConsumerSecretOptional>false</isConsumerSecretOptional>
+        <isIntrospectAllTokens>true</isIntrospectAllTokens>
+        <isSecretRequiredForRefreshToken>true</isSecretRequiredForRefreshToken>
+        <scopes>Api</scopes>
+        <scopes>Web</scopes>
+        <scopes>RefreshToken</scopes>
+        <scopes>OpenID</scopes>
+    </oauthConfig>
+    <oauthPolicy>
+        <ipRelaxation>BYPASS</ipRelaxation>
+        <refreshTokenPolicy>infinite</refreshTokenPolicy>
+    </oauthPolicy>
+    <profileName>System Administrator</profileName>
+</ConnectedApp>

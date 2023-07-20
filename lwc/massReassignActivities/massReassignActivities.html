@@ -1,0 +1,45 @@
+<template>
+    <lightning-card title="Reassign Activities">
+        <div class="slds-grid slds-gutters slds-m-bottom_medium slds-p-horizontal_xx-large">
+            <div class="slds-col slds-size_1-of-2">
+                <lightning-combobox name="assignedTo" label="Currently Assigned To" options={userOptions} value={selectedAssignedTo} onchange={handleChange} required></lightning-combobox>
+            </div>
+            <div class="slds-col slds-size_1-of-2">
+                <lightning-combobox name="reassignTo" label="Reassign To" options={userOptions} value={selectedReassignTo} onchange={handleChange} required></lightning-combobox>
+            </div>
+        </div>
+        <div class="slds-grid slds-gutters slds-m-bottom_small slds-p-horizontal_xx-large">
+            <div class="slds-col slds-size_1-of-2">
+                <lightning-input name="includeConsumer" type="checkbox" label="Include Consumer Marketing Activities" value={includeConsumer} onchange={handleChange}></lightning-input>
+            </div>
+            <div class="slds-col slds-size_1-of-2">
+                <lightning-input name="includeOutreach" type="checkbox" label="Include Outreach Activities" value={includeOutreach} onchange={handleChange}></lightning-input>
+            </div>
+        </div>
+        <div class="slds-grid slds-gutters slds-m-bottom_small slds-p-horizontal_xx-large">
+            <div class="slds-col slds-size_1-of-2">
+                <lightning-combobox name="community" label="Consumer Marketing Activity Opportunity Community" options={communityOptions} value={selectedCommunity} onchange={handleChange}></lightning-combobox>
+            </div>
+            <div class="slds-col slds-size_1-of-2">
+                <lightning-combobox name="leadScore" label="Lead Score" options={leadScoreOptions} value={selectedLeadScore} onchange={handleChange}></lightning-combobox>
+            </div>
+        </div>
+        <div class="slds-grid slds-gutters slds-m-bottom_small slds-p-horizontal_xx-large">
+            <div class="slds-col slds-size_1-of-2">
+                <lightning-input name="dateFrom" type="date" label="Activity Date From" value={selectedDateFrom} onchange={handleChange}></lightning-input>
+            </div>
+            <div class="slds-col slds-size_1-of-2">
+                <lightning-input name="dateTo" type="date" label="Activity Date To" value={selectedDateTo} onchange={handleChange}></lightning-input>
+            </div>
+        </div>
+        <template if:true={processing}>
+            <div slot="footer">
+                <div class="slds-spinner slds-spinner_medium slds-p-horizontal_xx-large"></div>
+                <span class="slds-assistive-text">Processing...</span>
+            </div>
+        </template>
+        <template if:false={processing}>
+            <lightning-button label="Reassign" variant="brand" slot="footer" onclick={handleSubmit} disabled={processing}></lightning-button>
+        </template>
+    </lightning-card>
+</template>

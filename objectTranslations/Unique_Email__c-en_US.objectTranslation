@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Unique Email</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Unique Emails</value>
+    </caseValues>
+    <fields>
+        <label><!-- Unique Email Relationship --></label>
+        <name>Unique_Email_Relationship__c</name>
+    </fields>
+    <startsWith>Vowel</startsWith>
+</CustomObjectTranslation>

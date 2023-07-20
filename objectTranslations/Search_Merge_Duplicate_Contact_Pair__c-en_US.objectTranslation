@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Search/Merge Duplicate Contact Pair</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Search/Merge Duplicate Contact Pair</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account --></label>
+        <name>Account__c</name>
+        <relationshipLabel><!-- Search/Merge Duplicate Contact Pair --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Contact To Keep --></label>
+        <lookupFilter>
+            <errorMessage><!-- You must select a Contact from this Account --></errorMessage>
+        </lookupFilter>
+        <name>Contact_To_Keep__c</name>
+        <relationshipLabel><!-- Search/Merge Duplicate Contact Pair (Contact To Keep) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Contact To Merge --></label>
+        <name>Contact_To_Merge__c</name>
+        <relationshipLabel><!-- Search/Merge Duplicate Contact Pair --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>Search/Merge Duplicate Contact Pair Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- You have selected the same contact to merge that you selected to keep. Please select a different contact to merge. --></errorMessage>
+        <name>Contacts_Cannot_be_the_Same</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You have selected Contacts in two different communities. You may only merge contacts in the same community. --></errorMessage>
+        <name>Contacts_to_Merge_Must_be_Same_Community</name>
+    </validationRules>
+</CustomObjectTranslation>

@@ -1,0 +1,69 @@
+<aura:component controller="LeadDupContactListController" implements="flexipage:availableForAllPageTypes,force:hasRecordId" access="global" >
+    <aura:handler name="init" value="{!this}" action="{!c.myAction}" />
+    
+    <aura:attribute name="recordId" type="Id" />
+    <aura:attribute name="Lead" type="Lead" />
+    <aura:attribute name="Contacts" type="List" />
+    <aura:attribute name="Columns" type="List" />
+       <lightning:quickActionAPI aura:id="quickActionAPI" />
+    <force:recordData aura:id="leadRecord"
+                      recordId="{!v.recordId}"
+                      targetFields="{!v.Lead}"
+                      layoutType="FULL"
+                      />
+    
+    <lightning:card iconName="standard:contact" title="{! 'Potential Duplicates of ' + v.Lead.Name}">
+     
+        
+        <aura:iteration items="{!v.Contacts}" var="ContactCard">
+            
+            <ul class="slds-list--vertical slds-has-cards--space has-selections">
+                <li class="slds-list__item slds-m-around--x-small">
+                 
+
+                        <p class="slds-tile__title slds-truncate slds-text-heading--medium"><a value="{!ContactCard.con.Id}" Id="{!ContactCard.con.Id}" onclick="{!c.goToContact}">{!ContactCard.con.Name}</a></p>
+                        <div class="slds-tile__detail">
+                            <table>
+                                <td >
+                                    <p class="slds-truncate">Phone: <lightning:formattedPhone value="{!ContactCard.con.Phone}"></lightning:formattedPhone></p>
+                                    <p class="slds-truncate">Email: <lightning:formattedEmail value="{!ContactCard.con.Email}" /> </p>
+                                       </td>
+
+                            </table>
+                                    <lightning:button value="{!ContactCard.con.Id}" label="Merge into Existing Contact and Create Opportunity" onclick="{!c.mergeContact }" />
+                                    
+           
+                                    <lightning:card iconName="standard:opportunity" title="{! 'Related Opportunities for ' + ContactCard.con.Name}">
+                                    <aura:iteration items="{!ContactCard.oppList}" var="OppCard">
+                                        <ul class="slds-list--vertical slds-has-cards--space has-selections">
+                                             
+                                           <li class="slds-list__item slds-m-around--x-small">
+                                               <p class="slds-tile__title slds-truncate slds-text-heading--medium"><a value="{!OppCard.Id}" Id="{!OppCard.Id}" onclick="{!c.goToContact}">{!OppCard.Name}</a></p>
+                                               <div class="slds-tile__detail slds-p-bottom_xx-small slds-p-top_xx-small slds-text-body--regular ">
+                                               <div class="slds-grid slds-wrap">
+                                               <div class="slds-col slds-grow-none slds-max-small-size_1-of-1">        
+                                                  <lightning:button value="{!ContactCard.con.Id +','+OppCard.Id}" label="Merge Contact and Opportunity" onclick="{!c.mergeOpp }" />
+                                               </div>
+                                              <div class="slds-col slds-grow-none slds-max-small-size_1-of-1"> 
+                                                  <lightning:buttonMenu alternativeText="Show menu" onselect="{! c.handleMenuSelect }">
+                                                     <lightning:menuItem value="{!ContactCard.con.Id +','+OppCard.Id+',NewConMergeHH'}"   label="{!'Create Contact and Opportunity for Existing Household'}" />
+                                                     <lightning:menuItem value="{!ContactCard.con.Id +','+OppCard.Id+',NewConMergeOpp'}"   label="{!'Create Contact and Merge into Existing Opportunity'}" /> 
+                                                  </lightning:buttonMenu>
+                                               </div>
+                                                   </div></div>
+                                           </li>
+                                        </ul>
+                                    </aura:iteration>
+                                        </lightning:card>
+                                    
+                             
+                        </div>
+                  
+                </li>
+            </ul>
+            
+        </aura:iteration>
+        
+    </lightning:card>
+    
+</aura:component>

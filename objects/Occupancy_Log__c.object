@@ -1,0 +1,642 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>false</enableReports>
+    <enableSearch>false</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <label>Occupancy Log</label>
+    <nameField>
+        <displayFormat>OL{0000000}</displayFormat>
+        <label>Occupancy Log Number</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Occupancy Logs</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
+    <fields>
+        <fullName>Bed__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Bed</label>
+        <referenceTo>Bed__c</referenceTo>
+        <relationshipLabel>Occupancy Logs</relationshipLabel>
+        <relationshipName>Occupancy_Logs</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>End_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>End Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Resident__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Resident</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Occupancy Logs</relationshipLabel>
+        <relationshipName>Occupancy_Logs</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Apartment__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Apartment</label>
+        <referenceTo>Unit__c</referenceTo>
+        <relationshipLabel>Occupancy Logs</relationshipLabel>
+        <relationshipName>Occupancy_Logs</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Occupancy__c</fullName>
+        <externalId>false</externalId>
+        <label>Occupancy</label>
+        <referenceTo>Occupancy__c</referenceTo>
+        <relationshipLabel>Occupancy Logs</relationshipLabel>
+        <relationshipName>Occupancy_Logs</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Start_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Start Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Level_of_Care__c</fullName>
+        <externalId>false</externalId>
+        <label>Level of Care</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Housing_Type</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Move_Out_Reason__c</fullName>
+        <externalId>false</externalId>
+        <label>Move Out Reason</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Asked to leave: Behavioral</fullName>
+                    <default>false</default>
+                    <label>Asked to leave: Behavioral</label>
+                </value>
+                <value>
+                    <fullName>Asked to leave: Non-payment</fullName>
+                    <default>false</default>
+                    <label>Asked to leave: Non-payment</label>
+                </value>
+                <value>
+                    <fullName>Care level not available</fullName>
+                    <default>false</default>
+                    <label>Care level not available</label>
+                </value>
+                <value>
+                    <fullName>Death</fullName>
+                    <default>false</default>
+                    <label>Death</label>
+                </value>
+                <value>
+                    <fullName>Distance from family</fullName>
+                    <default>false</default>
+                    <label>Distance from family</label>
+                </value>
+                <value>
+                    <fullName>Not able to afford any longer</fullName>
+                    <default>false</default>
+                    <label>Not able to afford any longer</label>
+                </value>
+                <value>
+                    <fullName>Rehab</fullName>
+                    <default>false</default>
+                    <label>Rehab</label>
+                </value>
+                <value>
+                    <fullName>Short-term stay</fullName>
+                    <default>false</default>
+                    <label>Short-term stay</label>
+                </value>
+                <value>
+                    <fullName>Unhappy: Care issues</fullName>
+                    <default>false</default>
+                    <label>Unhappy: Care issues</label>
+                </value>
+                <value>
+                    <fullName>Unhappy: Management</fullName>
+                    <default>false</default>
+                    <label>Unhappy: Management</label>
+                </value>
+                <value>
+                    <fullName>Unhappy: Programming</fullName>
+                    <default>false</default>
+                    <label>Unhappy: Programming</label>
+                </value>
+                <value>
+                    <fullName>Value does not justify price</fullName>
+                    <default>false</default>
+                    <label>Value does not justify price</label>
+                </value>
+                <value>
+                    <fullName>Went to Another Community</fullName>
+                    <default>false</default>
+                    <label>Went to Another Community</label>
+                </value>
+                <value>
+                    <fullName>Went to Another Watermark Community</fullName>
+                    <default>false</default>
+                    <label>Went to Another Watermark Community</label>
+                </value>
+                <value>
+                    <fullName>Discharge Home</fullName>
+                    <default>false</default>
+                    <label>Discharge Home</label>
+                </value>
+                <value>
+                    <fullName>Discharge to Hospital</fullName>
+                    <default>false</default>
+                    <label>Discharge to Hospital</label>
+                </value>
+                <value>
+                    <fullName>Discharge to Another SNF</fullName>
+                    <default>false</default>
+                    <label>Discharge to Another SNF</label>
+                </value>
+                <value>
+                    <fullName>Discharge to Hospice</fullName>
+                    <default>false</default>
+                    <label>Discharge to Hospice</label>
+                </value>
+                <value>
+                    <fullName>Discharge to Acute Rehab</fullName>
+                    <default>false</default>
+                    <label>Discharge to Acute Rehab</label>
+                </value>
+                <value>
+                    <fullName>Discharge Against Medical Advice</fullName>
+                    <default>false</default>
+                    <label>Discharge Against Medical Advice</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <recordTypes>
+        <fullName>Transfer</fullName>
+        <active>true</active>
+        <label>Transfer</label>
+        <picklistValues>
+            <picklist>Level_of_Care__c</picklist>
+            <values>
+                <fullName>Adult Day Club</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Assisted Living</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Assisted Living Memory Support</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Assisted Living Respite</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hospice</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Independent Living</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Memory Support</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Residential Healthcare</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Residential Living</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Respite</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Short Term Rehab</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Social</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unknown</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Move_Out_Reason__c</picklist>
+            <values>
+                <fullName>Asked to leave%3A Behavioral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Asked to leave%3A Non-payment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Care level not available</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Death</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Discharge Against Medical Advice</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Discharge Home</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Discharge to Acute Rehab</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Discharge to Another SNF</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Discharge to Hospice</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Discharge to Hospital</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Distance from family</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not able to afford any longer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rehab</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Short-term stay</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unhappy%3A Care issues</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unhappy%3A Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unhappy%3A Programming</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Value does not justify price</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Went to Another Community</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Went to Another Watermark Community</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Initial_Move_In</fullName>
+        <active>true</active>
+        <label>Initial Move In</label>
+        <picklistValues>
+            <picklist>Level_of_Care__c</picklist>
+            <values>
+                <fullName>Adult Day Club</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Assisted Living</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Assisted Living Memory Support</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Assisted Living Respite</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hospice</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Independent Living</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Memory Support</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Residential Healthcare</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Residential Living</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Respite</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Short Term Rehab</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Social</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unknown</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Move_Out_Reason__c</picklist>
+            <values>
+                <fullName>Asked to leave%3A Behavioral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Asked to leave%3A Non-payment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Care level not available</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Death</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Discharge Against Medical Advice</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Discharge Home</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Discharge to Acute Rehab</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Discharge to Another SNF</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Discharge to Hospice</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Discharge to Hospital</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Distance from family</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not able to afford any longer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rehab</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Short-term stay</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unhappy%3A Care issues</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unhappy%3A Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unhappy%3A Programming</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Value does not justify price</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Went to Another Community</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Went to Another Watermark Community</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+</CustomObject>

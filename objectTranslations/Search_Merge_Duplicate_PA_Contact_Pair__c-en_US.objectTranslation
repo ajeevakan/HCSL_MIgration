@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Search/Merge Duplicate PA Contact Pair</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Search/Merge Duplicate PA Contact Pairs</value>
+    </caseValues>
+    <fields>
+        <label><!-- Contact to Keep --></label>
+        <name>Contact_to_Keep__c</name>
+        <relationshipLabel><!-- Search/Merge Duplicate PA Contact Pairs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Contact to Merge --></label>
+        <name>Contact_to_Merge__c</name>
+        <relationshipLabel><!-- Search/Merge Duplicate PA Contact Pairs (Contact to Merge) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Household of Contact to Keep --></label>
+        <name>Household_of_Contact_to_Keep__c</name>
+        <relationshipLabel><!-- Search/Merge Duplicate PA Contact Pairs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Household of Contact to Merge --></label>
+        <name>Household_of_Contact_to_Merge__c</name>
+        <relationshipLabel><!-- Search/Merge Duplicate PA Contact Pairs (Household of Contact to Merge) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Households Different --></label>
+        <name>Households_Different__c</name>
+    </fields>
+    <fields>
+        <label><!-- Instructions --></label>
+        <name>Instructions__c</name>
+    </fields>
+    <fields>
+        <label><!-- Start from Opportunity --></label>
+        <name>Start_from_Opportunity__c</name>
+        <relationshipLabel><!-- Search/Merge Duplicate PA Contact Pairs --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>Search/Merge Duplicate PA Contact Pair Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- System Information --></label>
+            <section>System Information</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Cancel Merge --></label>
+        <name>Cancel_Merge</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Merge --></label>
+        <name>Merge</name>
+    </quickActions>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

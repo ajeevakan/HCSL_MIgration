@@ -1,0 +1,595 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Activity Complete Date --></label>
+        <name>Activity_Complete_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sales Activity Type --></label>
+        <name>Activity_Type__c</name>
+        <picklistValues>
+            <masterLabel>Appointment Initial</masterLabel>
+            <translation><!-- Appointment Initial --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Assessment</masterLabel>
+            <translation><!-- Assessment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Call In</masterLabel>
+            <translation><!-- Call In --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Call Out</masterLabel>
+            <translation><!-- Call Out --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cancellation</masterLabel>
+            <translation><!-- Cancellation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Closing Tour</masterLabel>
+            <translation><!-- Closing Tour --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Community Experience</masterLabel>
+            <translation><!-- Community Experience --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Deposit</masterLabel>
+            <translation><!-- Deposit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EBD Call In</masterLabel>
+            <translation><!-- EBD Call In --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EBD Call Out</masterLabel>
+            <translation><!-- EBD Call Out --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EBD Presentation</masterLabel>
+            <translation><!-- EBD Presentation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EBD Tour</masterLabel>
+            <translation><!-- EBD Tour --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Email In</masterLabel>
+            <translation><!-- Email In --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Email Out</masterLabel>
+            <translation><!-- Email Out --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Home Visit</masterLabel>
+            <translation><!-- Home Visit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Initial Call In</masterLabel>
+            <translation><!-- Initial Call In --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Initial Call Out</masterLabel>
+            <translation><!-- Initial Call Out --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Initial Email In</masterLabel>
+            <translation><!-- Initial Email In --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Initial Email Out</masterLabel>
+            <translation><!-- Initial Email Out --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Initial Mail In</masterLabel>
+            <translation><!-- Initial Mail In --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Initial Tour</masterLabel>
+            <translation><!-- Initial Tour --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Initial Walk In</masterLabel>
+            <translation><!-- Initial Walk In --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Initial Walk In Tour</masterLabel>
+            <translation><!-- Initial Walk In Tour --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Inquiry</masterLabel>
+            <translation><!-- Inquiry --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MAIL OUT-COMMUNITY NEWSLETTER</masterLabel>
+            <translation><!-- MAIL OUT-COMMUNITY NEWSLETTER --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mail In</masterLabel>
+            <translation><!-- Mail In --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mail Out - Personal Mail</masterLabel>
+            <translation><!-- Mail Out - Personal Mail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Move In</masterLabel>
+            <translation><!-- Move In --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Move Out</masterLabel>
+            <translation><!-- Move Out --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Post-Deposit Tour</masterLabel>
+            <translation><!-- Post-Deposit Tour --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Resident Tour</masterLabel>
+            <translation><!-- Resident Tour --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tour</masterLabel>
+            <translation><!-- Tour --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tour - Initial</masterLabel>
+            <translation><!-- Tour - Initial --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Waitlist</masterLabel>
+            <translation><!-- Waitlist --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Walk-In Tour</masterLabel>
+            <translation><!-- Walk-In Tour --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Appointment --></label>
+        <name>Appointment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Community --></label>
+        <name>Community__c</name>
+    </fields>
+    <fields>
+        <label><!-- Connected Conversation --></label>
+        <name>Connected_Conversation__c</name>
+    </fields>
+    <fields>
+        <label><!-- Deposits --></label>
+        <name>Deposits__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fire Task Roll Up Trigger --></label>
+        <name>Fire_Task_Roll_Up_Trigger__c</name>
+    </fields>
+    <fields>
+        <label><!-- Form utm campaign --></label>
+        <name>Form_utm_campaign__c</name>
+    </fields>
+    <fields>
+        <label><!-- Form utm content --></label>
+        <name>Form_utm_content__c</name>
+    </fields>
+    <fields>
+        <label><!-- Form utm medium --></label>
+        <name>Form_utm_medium__c</name>
+    </fields>
+    <fields>
+        <label><!-- Form utm source --></label>
+        <name>Form_utm_source__c</name>
+    </fields>
+    <fields>
+        <label><!-- Form utm term --></label>
+        <name>Form_utm_term__c</name>
+    </fields>
+    <fields>
+        <label><!-- Age --></label>
+        <name>HealthCloudGA__Age__c</name>
+    </fields>
+    <fields>
+        <help>Cílem tohoto úkolu je adresa</help>
+        <label><!-- Goal --></label>
+        <name>HealthCloudGA__CarePlanGoal__c</name>
+        <relationshipLabel><!-- Activities --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Problémem tohoto úkolu je adresa</help>
+        <label><!-- Problem --></label>
+        <name>HealthCloudGA__CarePlanProblem__c</name>
+        <relationshipLabel><!-- Activities --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Care Plan Template --></label>
+        <name>HealthCloudGA__CarePlanTemplate__c</name>
+        <relationshipLabel><!-- Activities --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Category --></label>
+        <name>HealthCloudGA__Category__c</name>
+        <picklistValues>
+            <masterLabel>Counselling</masterLabel>
+            <translation>Poradenství</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Diagnosis</masterLabel>
+            <translation>Diagnóza</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Exercise</masterLabel>
+            <translation>Cvičení</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vaccination</masterLabel>
+            <translation>Očkování</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Condition Status --></label>
+        <name>HealthCloudGA__Conditions_Status__c</name>
+        <picklistValues>
+            <masterLabel>Asymptomatic</masterLabel>
+            <translation>Asymptomatický</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Asymptomatic - Declined to Participate</masterLabel>
+            <translation>Asymptomatický - Odmítl/a se zúčastnit</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cured</masterLabel>
+            <translation>Vyléčený/á</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Evaluated - No Risk</masterLabel>
+            <translation>Hodnoceno - Bez rizika</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Symptomatic</masterLabel>
+            <translation>Symptomatický</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Symptomatic - Declined to Participate</masterLabel>
+            <translation>Symptomatický - Odmítl/a se zúčastnit</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Contract Tracing Status --></label>
+        <name>HealthCloudGA__Contract_Tracing_Status__c</name>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation>Dokončeno</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Progress</masterLabel>
+            <translation>Probíhá</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Incoming</masterLabel>
+            <translation>Přicházející</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No Response</masterLabel>
+            <translation>Bez odpovědi</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Gender --></label>
+        <name>HealthCloudGA__Gender__c</name>
+        <picklistValues>
+            <masterLabel>Decline to Specify</masterLabel>
+            <translation>Odmítá specifikovat</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Female</masterLabel>
+            <translation>Žena</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Male</masterLabel>
+            <translation>Muž</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation>Jiné</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Monitored at Home --></label>
+        <name>HealthCloudGA__Monitored_at_Home__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation>Ne</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation>Ano</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Sort Order --></label>
+        <name>HealthCloudGA__SortOrder__c</name>
+    </fields>
+    <fields>
+        <label><!-- TaskType --></label>
+        <name>HealthCloudGA__TaskType__c</name>
+        <picklistValues>
+            <masterLabel>Administrative</masterLabel>
+            <translation>Administrativní</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Clinical</masterLabel>
+            <translation>Klinické</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation>Jiné</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Uncategorized</masterLabel>
+            <translation>Nezařazené</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Testing Status --></label>
+        <name>HealthCloudGA__Testing_Status__c</name>
+        <picklistValues>
+            <masterLabel>Negative Test</masterLabel>
+            <translation>Negativní test</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Positive Test</masterLabel>
+            <translation>Pozitivní test</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Test Results Pending</masterLabel>
+            <translation>Čeká se na výsledky testů</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Test Scheduled</masterLabel>
+            <translation>Testování naplánováno</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Testing Recommended</masterLabel>
+            <translation>Testování doporučeno</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unknown</masterLabel>
+            <translation>Neznámý</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Initial Appointments --></label>
+        <name>Initial_Appointments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Initial Inquiries --></label>
+        <name>Initial_Inquiries__c</name>
+    </fields>
+    <fields>
+        <label><!-- Initial Tours --></label>
+        <name>Initial_Tours__c</name>
+    </fields>
+    <fields>
+        <label><!-- Internet Lead Source --></label>
+        <name>Internet_Lead_Source__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Complete --></label>
+        <name>Is_Complete__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Pending --></label>
+        <name>Is_Pending__c</name>
+    </fields>
+    <fields>
+        <label><!-- Campaign --></label>
+        <name>Lead_Source_Campaign__c</name>
+        <relationshipLabel><!-- Activities --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Move Ins --></label>
+        <name>Move_Ins__c</name>
+    </fields>
+    <fields>
+        <label><!-- Inquiry Source --></label>
+        <name>Re_Inquiry_Source__c</name>
+        <picklistValues>
+            <masterLabel>Advertising</masterLabel>
+            <translation><!-- Advertising --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Direct Mail</masterLabel>
+            <translation><!-- Direct Mail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Email</masterLabel>
+            <translation><!-- Email --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Referral</masterLabel>
+            <translation><!-- Referral --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Web</masterLabel>
+            <translation><!-- Web --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Referral Contact --></label>
+        <name>Referral_Contact__c</name>
+        <relationshipLabel><!-- Activities --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Referral Organization --></label>
+        <name>Referral_Organization__c</name>
+        <relationshipLabel><!-- Activities --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Report Month --></label>
+        <name>Report_Month__c</name>
+    </fields>
+    <fields>
+        <label><!-- Report Year --></label>
+        <name>Report_Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Result Code --></label>
+        <name>Result_Code__c</name>
+        <picklistValues>
+            <masterLabel>Cancelled</masterLabel>
+            <translation><!-- Cancelled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Follow Up Email Sent</masterLabel>
+            <translation><!-- Follow Up Email Sent --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Follow Up Scheduled</masterLabel>
+            <translation><!-- Follow Up Scheduled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Left Message</masterLabel>
+            <translation><!-- Left Message --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No Answer</masterLabel>
+            <translation><!-- No Answer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No Show</masterLabel>
+            <translation><!-- No Show --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RSVP</masterLabel>
+            <translation><!-- RSVP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rescheduled</masterLabel>
+            <translation><!-- Rescheduled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Scheduled Appointment</masterLabel>
+            <translation><!-- Scheduled Appointment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Social Media MSG Sent or Comment</masterLabel>
+            <translation><!-- Social Media MSG Sent or Comment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Take off call list</masterLabel>
+            <translation><!-- Take off call list --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wrong Number</masterLabel>
+            <translation><!-- Wrong Number --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- System --></label>
+        <name>System__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Appointments --></label>
+        <name>Total_Appointments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Tours --></label>
+        <name>Total_Tours__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tour --></label>
+        <name>Tour__c</name>
+    </fields>
+    <fields>
+        <help><!-- CSS color code for event background color in calendar view --></help>
+        <label><!-- Calendar Background Color --></label>
+        <name>cccalendar__Calendar_Background_Color__c</name>
+    </fields>
+    <fields>
+        <help><!-- CSS color code for event border color in calendar view --></help>
+        <label><!-- Calendar Border Color --></label>
+        <name>cccalendar__Calendar_Border_Color__c</name>
+    </fields>
+    <fields>
+        <help><!-- Mode to render event with on Calendar: The rendering type of this event. Can be empty (normal rendering), &quot;background&quot;, or &quot;inverse-background&quot; --></help>
+        <label><!-- Calendar Rendering --></label>
+        <name>cccalendar__Calendar_Rendering__c</name>
+        <picklistValues>
+            <masterLabel>Background</masterLabel>
+            <translation><!-- Background --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Inverse-Background</masterLabel>
+            <translation><!-- Inverse-Background --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Normal</masterLabel>
+            <translation><!-- Normal --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- CSS color code for event text color in calendar view --></help>
+        <label><!-- Calendar Text Color --></label>
+        <name>cccalendar__Calendar_Text_Color__c</name>
+    </fields>
+    <fields>
+        <help><!-- Check to display event&apos;s local timezone in event details --></help>
+        <label><!-- Display Event&apos;s Local Timezone --></label>
+        <name>cccalendar__Display_Events_Local_Timezone__c</name>
+    </fields>
+    <fields>
+        <help><!-- SLDS icon name for the event, from http://www.lightningdesignsystem.com/icons/. Example: utility:events --></help>
+        <label><!-- Event Icon Name --></label>
+        <name>cccalendar__Event_Icon_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Event URL 2 Open in Same Tab --></label>
+        <name>cccalendar__Event_URL_2_Open_in_Same_Tab__c</name>
+    </fields>
+    <fields>
+        <help><!-- Button link on Event --></help>
+        <label><!-- Event URL 2 --></label>
+        <name>cccalendar__Event_URL_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Event URL Open in Same Tab --></label>
+        <name>cccalendar__Event_URL_Open_in_Same_Tab__c</name>
+    </fields>
+    <fields>
+        <help><!-- Text to display on button linking to event URL field --></help>
+        <label><!-- Event URL Text 2 --></label>
+        <name>cccalendar__Event_URL_Text_2__c</name>
+    </fields>
+    <fields>
+        <help><!-- Text to display on button linking to event URL field --></help>
+        <label><!-- Event URL Text --></label>
+        <name>cccalendar__Event_URL_Text__c</name>
+    </fields>
+    <fields>
+        <help><!-- Button link on Event --></help>
+        <label><!-- Event URL --></label>
+        <name>cccalendar__Event_URL__c</name>
+    </fields>
+    <fields>
+        <help><!-- URL for Event Image, to be used for Tile Display --></help>
+        <label><!-- Image URL --></label>
+        <name>cccalendar__Image_URL__c</name>
+    </fields>
+    <fields>
+        <help><!-- Specify event&apos;s local timezone. Required if Display event&apos;s local timezone is checked --></help>
+        <label><!-- Local Timezone --></label>
+        <name>cccalendar__Local_Timezone__c</name>
+    </fields>
+</CustomObjectTranslation>

@@ -1,0 +1,63 @@
+<template>
+    <lightning-card title={Formtitle}>
+        <template if:true={paramObj}>
+            <div  class="slds-grid slds-gutters slds-m-bottom_medium slds-p-horizontal_xx-large">
+            <lightning-formatted-rich-text
+                value={paramObj.message}
+            ></lightning-formatted-rich-text>
+        </div>
+            <template for:each={paramObj.paramFields} for:item="pf">
+                <div key={pf.paramId} class="slds-grid slds-gutters slds-m-bottom_medium slds-p-horizontal_xx-large">
+                    <div key={pf.paramId} class="slds-col slds-size_1-of-1">
+                        
+                        <template if:true={pf.isPICKLIST}>
+                            <lightning-combobox name={pf.paramId} label={pf.fieldLabel} options={pf.picklistOptions} value={pf.fieldValue} onchange={handleChange}></lightning-combobox>
+                        </template>
+                        <template if:true={pf.isDATE}>
+                            <lightning-input name={pf.paramId} type="date" label={pf.fieldLabel} value={pf.fieldValue} onchange={handleChange}></lightning-input>
+                        </template>
+                        <template if:true={pf.isNUMBER}>
+                            <lightning-input name={pf.paramId} type="number" label={pf.fieldLabel} value={pf.fieldValue} onchange={handleChange}></lightning-input>
+                        </template>
+                        <template if:true={pf.isTEXT}>
+                            <lightning-input name={pf.paramId} type="text" label={pf.fieldLabel} value={pf.fieldValue} onchange={handleChange}></lightning-input>
+                        </template>
+                    </div>
+                </div>
+            </template>
+        </template>
+        <template if:true={processing}>
+            <div slot="footer">
+                <div class="slds-spinner slds-spinner_medium slds-p-horizontal_xx-large"></div>
+                <span class="slds-assistive-text">Processing...</span>
+            </div>
+        </template>
+
+        <div slot= "footer">
+            <div class="slds-grid slds-grid_align-center">
+                <div class="slds-col">
+                    <template if:true={showSubmitButton}>
+                        <lightning-button label={ButtonName} variant="brand" onclick={SubmitForm} disabled={processing}></lightning-button>
+                    </template>
+                </div>
+                <div class="slds-col">&nbsp;</div>
+                <div class="slds-col">
+                    <lightning-button
+                            label="Close" slot="footer"
+                            onclick={navigateToHome}
+                        ></lightning-button>
+                </div>
+            </div>
+        </div>
+
+        <!--<template if:true={showSubmitButton}>
+            <lightning-button label={ButtonName} variant="brand" slot="footer" onclick={SubmitForm} disabled={processing}></lightning-button>
+        </template>
+        <lightning-button
+            label="Close" slot="footer"
+            onclick={navigateToHome}
+        ></lightning-button>-->
+
+
+    </lightning-card>
+</template>

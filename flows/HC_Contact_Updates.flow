@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>57.0</apiVersion>
+    <decisions>
+        <name>Set_Home_Phone_Preferred</name>
+        <label>Set Home Phone Preferred</label>
+        <locationX>182</locationX>
+        <locationY>335</locationY>
+        <defaultConnector>
+            <targetReference>Set_Home_Phone_When_Phone_Changed</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Set_HomePhone_Preferred</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>fSetHomePhonePreferred</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_HomePhonePreferred</targetReference>
+            </connector>
+            <label>Set Home Phone Preferred</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Set_Home_Phone_When_Phone_Changed</name>
+        <label>Set Home Phone When Phone Changed</label>
+        <locationX>182</locationX>
+        <locationY>671</locationY>
+        <defaultConnector>
+            <targetReference>Set_Main_Phone</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Set_Home_Phone_When_PhoneChanged</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>fSetHomePhoneWhenPhoneChanged</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_HomePhone_When_Phone_Changed</targetReference>
+            </connector>
+            <label>Set Home Phone When Phone Changed</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Set_Main_Phone</name>
+        <label>Set Main Phone</label>
+        <locationX>182</locationX>
+        <locationY>1007</locationY>
+        <defaultConnector>
+            <targetReference>Set_Mobile_When_Phone_Changed</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>SetMainPhone</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>fSetMainPhone</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Contact_Phone</targetReference>
+            </connector>
+            <label>Set Main Phone</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Set_Mobile_Preferred</name>
+        <label>Set Mobile Preferred</label>
+        <locationX>182</locationX>
+        <locationY>2351</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Set_MobilePreferred</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>fSetMobilePreferred</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Preferred_Phone_as_Mobile</targetReference>
+            </connector>
+            <label>Set Mobile Preferred</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Set_Mobile_When_Phone_Changed</name>
+        <label>Set Mobile When Phone Changed</label>
+        <locationX>182</locationX>
+        <locationY>1343</locationY>
+        <defaultConnector>
+            <targetReference>Set_Work_Phone_Preferred</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Set_Mobile_When_PhoneChanged</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>fSetMobileWhenPhoneChanged</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Contact_Mobile</targetReference>
+            </connector>
+            <label>Set Mobile When Phone Changed</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Set_Work_Phone_Preferred</name>
+        <label>Set Work Phone Preferred</label>
+        <locationX>182</locationX>
+        <locationY>1679</locationY>
+        <defaultConnector>
+            <targetReference>Set_Work_Phone_When_Phone_Changed</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Set_Work_PhonePreferred</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>fSetWorkPhonePreferred</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Preferred_Phone_to_Work</targetReference>
+            </connector>
+            <label>Set Work Phone Preferred</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Set_Work_Phone_When_Phone_Changed</name>
+        <label>Set Work Phone When Phone Changed</label>
+        <locationX>182</locationX>
+        <locationY>2015</locationY>
+        <defaultConnector>
+            <targetReference>Set_Mobile_Preferred</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Set_WorkPhone_When_Phone_Changed</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>fSetWorkPhoneWhenPhoneChanged</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Work_Phone</targetReference>
+            </connector>
+            <label>Set Work Phone When Phone Changed</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <formulas>
+        <name>fSetHomePhonePreferred</name>
+        <dataType>Boolean</dataType>
+        <expression>((ISNEW() || ISCHANGED({!$Record.HomePhone}) || ISCHANGED ({!$Record.Work_Phone__c}) || ISCHANGED ({!$Record.MobilePhone})) &amp;&amp; NOT(ISBLANK({!$Record.HomePhone}))) &amp;&amp; ( ISBLANK(TEXT ( {!$Record.Preferred_Phone__c} ) ) &amp;&amp; ISBLANK({!$Record.Work_Phone__c}) &amp;&amp; ISBLANK({!$Record.MobilePhone}) )</expression>
+    </formulas>
+    <formulas>
+        <name>fSetHomePhoneWhenPhoneChanged</name>
+        <dataType>Boolean</dataType>
+        <expression>(ISNEW() || ISCHANGED( {!$Record.Phone} )) &amp;&amp; NOT(ISBLANK({!$Record.Phone})) &amp;&amp; ((ISBLANK(TEXT({!$Record.Preferred_Phone__c})) || ISPICKVAL({!$Record.Preferred_Phone__c}, &apos;Home&apos;)) ) &amp;&amp; ( {!$Record.Phone} != {!$Record.HomePhone} || ISBLANK({!$Record.HomePhone}) )</expression>
+    </formulas>
+    <formulas>
+        <name>fSetMainPhone</name>
+        <dataType>Boolean</dataType>
+        <expression>NOT (ISCHANGED ({!$Record.Phone})) &amp;&amp; (ISNEW() || ISCHANGED( {!$Record.HomePhone} ) || ISCHANGED( {!$Record.Work_Phone__c} ) || ISCHANGED( {!$Record.MobilePhone} ) || ISCHANGED(  {!$Record.Preferred_Phone__c} ) ) &amp;&amp; ( NOT(ISBLANK({!$Record.HomePhone})) || NOT(ISBLANK({!$Record.Work_Phone__c})) || NOT(ISBLANK({!$Record.MobilePhone})) )</expression>
+    </formulas>
+    <formulas>
+        <name>fSetMobilePreferred</name>
+        <dataType>Boolean</dataType>
+        <expression>((ISNEW() || ISCHANGED({!$Record.HomePhone}) || ISCHANGED ({!$Record.Work_Phone__c}) || ISCHANGED ({!$Record.MobilePhone})) &amp;&amp; NOT(ISBLANK({!$Record.MobilePhone}))) &amp;&amp; (( ISBLANK({!$Record.Work_Phone__c}) &amp;&amp; ISBLANK(TEXT ( {!$Record.Preferred_Phone__c} ) )) )</expression>
+    </formulas>
+    <formulas>
+        <name>fSetMobileWhenPhoneChanged</name>
+        <dataType>Boolean</dataType>
+        <expression>(ISNEW() || ISCHANGED( {!$Record.Phone} )) &amp;&amp; NOT(ISBLANK({!$Record.Phone})) &amp;&amp; ISPICKVAL({!$Record.Preferred_Phone__c}, &apos;Mobile&apos;) &amp;&amp; ( {!$Record.Phone} != {!$Record.MobilePhone} || ISBLANK({!$Record.MobilePhone}) )</expression>
+    </formulas>
+    <formulas>
+        <name>fSetWorkPhonePreferred</name>
+        <dataType>Boolean</dataType>
+        <expression>((ISNEW() || ISCHANGED({!$Record.HomePhone}) || ISCHANGED ({!$Record.Work_Phone__c}) || ISCHANGED ({!$Record.MobilePhone})) &amp;&amp; NOT(ISBLANK({!$Record.Work_Phone__c}))) &amp;&amp; ((ISBLANK({!$Record.HomePhone}) &amp;&amp; ISBLANK({!$Record.MobilePhone}) ) || ISBLANK(TEXT({!$Record.Preferred_Phone__c})) )</expression>
+    </formulas>
+    <formulas>
+        <name>fSetWorkPhoneWhenPhoneChanged</name>
+        <dataType>Boolean</dataType>
+        <expression>(ISNEW() || ISCHANGED( {!$Record.Phone}) ) &amp;&amp; NOT(ISBLANK({!$Record.Phone})) &amp;&amp; ISPICKVAL({!$Record.Preferred_Phone__c}, &apos;Work&apos;) &amp;&amp; ( {!$Record.Phone} != {!$Record.Work_Phone__c} || ISBLANK({!$Record.Work_Phone__c}))</expression>
+    </formulas>
+    <formulas>
+        <name>fUpdateContactPhone</name>
+        <dataType>String</dataType>
+        <expression>IF (
+(ISBLANK(TEXT({!$Record.Preferred_Phone__c})) ||
+ISPICKVAL({!$Record.Preferred_Phone__c}, &apos;Work&apos;)) &amp;&amp; NOT(ISBLANK({!$Record.Work_Phone__c}))
+, {!$Record.Work_Phone__c},
+IF(
+(ISBLANK(TEXT({!$Record.Preferred_Phone__c})) ||
+ISPICKVAL({!$Record.Preferred_Phone__c}, &apos;Mobile&apos;)) &amp;&amp; NOT(ISBLANK({!$Record.MobilePhone}))
+, {!$Record.MobilePhone},
+
+
+IF(
+(ISBLANK(TEXT({!$Record.Preferred_Phone__c})) ||
+ISPICKVAL({!$Record.Preferred_Phone__c}, &apos;Home&apos;)) &amp;&amp; NOT(ISBLANK({!$Record.HomePhone}))
+, {!$Record.HomePhone},
+
+if ( NOT(ISBLANK({!$Record.Work_Phone__c})),
+{!$Record.Work_Phone__c}, If (NOT(ISBLANK({!$Record.MobilePhone})), {!$Record.MobilePhone}, IF(NOT(ISBLANK({!$Record.HomePhone})),{!$Record.HomePhone}, {!$Record.Phone}) ) )
+
+)
+
+)
+)</expression>
+    </formulas>
+    <formulas>
+        <name>fUpdateWorkPhone</name>
+        <dataType>String</dataType>
+        <expression>IF (ISBLANK({!$Record.Phone}), {!$Record.Work_Phone__c}, {!$Record.Phone})</expression>
+    </formulas>
+    <interviewLabel>HC Opportunity Updates {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>HC Contact Updates</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Set_HomePhone_When_Phone_Changed</name>
+        <label>Set Home Phone When Phone Changed</label>
+        <locationX>50</locationX>
+        <locationY>791</locationY>
+        <connector>
+            <targetReference>Set_Main_Phone</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>HomePhone</field>
+            <value>
+                <elementReference>$Record.Phone</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Preferred_Phone__c</field>
+            <value>
+                <stringValue>Home</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Set_HomePhonePreferred</name>
+        <label>Set Home Phone Preferred</label>
+        <locationX>50</locationX>
+        <locationY>455</locationY>
+        <connector>
+            <targetReference>Set_Home_Phone_When_Phone_Changed</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Preferred_Phone__c</field>
+            <value>
+                <stringValue>Home</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Set_Preferred_Phone_to_Work</name>
+        <label>Set Preferred Phone to Work</label>
+        <locationX>50</locationX>
+        <locationY>1799</locationY>
+        <connector>
+            <targetReference>Set_Work_Phone_When_Phone_Changed</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Preferred_Phone__c</field>
+            <value>
+                <stringValue>Work</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Contact_Mobile</name>
+        <label>Update Contact Mobile</label>
+        <locationX>50</locationX>
+        <locationY>1463</locationY>
+        <connector>
+            <targetReference>Set_Work_Phone_Preferred</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>MobilePhone</field>
+            <value>
+                <elementReference>$Record.Phone</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Contact_Phone</name>
+        <label>Update Contact Phone</label>
+        <locationX>50</locationX>
+        <locationY>1127</locationY>
+        <connector>
+            <targetReference>Set_Mobile_When_Phone_Changed</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Phone</field>
+            <value>
+                <elementReference>fUpdateContactPhone</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Preferred_Phone_as_Mobile</name>
+        <label>Update Preferred Phone as Mobile</label>
+        <locationX>50</locationX>
+        <locationY>2471</locationY>
+        <inputAssignments>
+            <field>Preferred_Phone__c</field>
+            <value>
+                <stringValue>Mobile</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Work_Phone</name>
+        <label>Update Work Phone</label>
+        <locationX>50</locationX>
+        <locationY>2135</locationY>
+        <connector>
+            <targetReference>Set_Mobile_Preferred</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Work_Phone__c</field>
+            <value>
+                <elementReference>fUpdateWorkPhone</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Set_Home_Phone_Preferred</targetReference>
+        </connector>
+        <object>Contact</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

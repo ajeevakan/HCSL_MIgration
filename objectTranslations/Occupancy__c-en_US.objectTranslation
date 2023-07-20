@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Occupancy</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Occupancies</value>
+    </caseValues>
+    <fields>
+        <label><!-- Current Apartment/Room --></label>
+        <name>Apartment__c</name>
+        <relationshipLabel><!-- Occupancies --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Apply Change to Couple --></label>
+        <name>Apply_Change_to_Couple__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bed --></label>
+        <name>Bed__c</name>
+        <relationshipLabel><!-- Occupancies --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Cancel Scheduled Move Out --></label>
+        <name>Cancel_Scheduled_Move_Out__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cancel Scheduled Transfer --></label>
+        <name>Cancel_Scheduled_Transfer__c</name>
+    </fields>
+    <fields>
+        <label><!-- Change to Fire Occupancy Trigger --></label>
+        <name>Change_to_Fire_Occupancy_Trigger__c</name>
+    </fields>
+    <fields>
+        <label><!-- Community --></label>
+        <name>Community__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pending Move Ins --></label>
+        <name>Count_Pending_Move_In__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pending Move Outs --></label>
+        <name>Count_Pending_Move_Out_Room__c</name>
+    </fields>
+    <fields>
+        <label><!-- Count Primary --></label>
+        <name>Count_Primary__c</name>
+    </fields>
+    <fields>
+        <label><!-- Current Apartment Level of Care --></label>
+        <name>Current_Apartment_Level_of_Care__c</name>
+    </fields>
+    <fields>
+        <label><!-- Current Occ Room Same Opp Room --></label>
+        <name>Current_Occ_Room_Same_Opp_Room__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Primary Calculation Sort Priority --></label>
+        <name>Is_Primary_Calculation_Sort_Priority__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Primary --></label>
+        <name>Is_Primary__c</name>
+    </fields>
+    <fields>
+        <label><!-- Transfer Date --></label>
+        <name>Last_Change_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Transfer Date --></label>
+        <name>Last_Transfer_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Level of Care --></label>
+        <name>Level_of_Care__c</name>
+    </fields>
+    <fields>
+        <label><!-- Move In Date Display --></label>
+        <name>Move_In_Date_Display__c</name>
+    </fields>
+    <fields>
+        <label><!-- Move In Date --></label>
+        <name>Move_In_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Move In/Transfer Date --></label>
+        <name>Move_In_Transfer_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Move In or Move Out --></label>
+        <name>Move_In_or_Move_Out__c</name>
+    </fields>
+    <fields>
+        <label><!-- Move Out Date --></label>
+        <name>Move_Out_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Move Out Reason --></label>
+        <name>Move_Out_Reason__c</name>
+        <picklistValues>
+            <masterLabel>Asked to leave: Behavioral</masterLabel>
+            <translation><!-- Asked to leave: Behavioral --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Asked to leave: Non-payment</masterLabel>
+            <translation><!-- Asked to leave: Non-payment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Care level not available</masterLabel>
+            <translation><!-- Care level not available --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Death</masterLabel>
+            <translation><!-- Death --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Discharge Against Medical Advice</masterLabel>
+            <translation><!-- Discharge Against Medical Advice --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Discharge Home</masterLabel>
+            <translation><!-- Discharge Home --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Discharge to Acute Rehab</masterLabel>
+            <translation><!-- Discharge to Acute Rehab --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Discharge to Another SNF</masterLabel>
+            <translation><!-- Discharge to Another SNF --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Discharge to Hospice</masterLabel>
+            <translation><!-- Discharge to Hospice --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Discharge to Hospital</masterLabel>
+            <translation><!-- Discharge to Hospital --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Distance from family</masterLabel>
+            <translation><!-- Distance from family --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not able to afford any longer</masterLabel>
+            <translation><!-- Not able to afford any longer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rehab</masterLabel>
+            <translation><!-- Rehab --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Short-term stay</masterLabel>
+            <translation><!-- Short-term stay --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unhappy: Care issues</masterLabel>
+            <translation><!-- Unhappy: Care issues --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unhappy: Management</masterLabel>
+            <translation><!-- Unhappy: Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unhappy: Programming</masterLabel>
+            <translation><!-- Unhappy: Programming --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Value does not justify price</masterLabel>
+            <translation><!-- Value does not justify price --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Went to Another Community</masterLabel>
+            <translation><!-- Went to Another Community --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Went to Another Watermark Community</masterLabel>
+            <translation><!-- Went to Another Watermark Community --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Move Out / Transfer Type --></label>
+        <name>Move_Out_Transfer_Type__c</name>
+        <picklistValues>
+            <masterLabel>Primary Resident</masterLabel>
+            <translation><!-- Primary Resident --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Second Resident</masterLabel>
+            <translation><!-- Second Resident --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Move Out or Scheduled Move Out Date --></label>
+        <name>Move_Out_or_Scheduled_Move_Out_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Net Pending MI/MO --></label>
+        <name>Net_Pending_MI_MO__c</name>
+    </fields>
+    <fields>
+        <label><!-- Occupancy Status Label --></label>
+        <name>Occupancy_Status_Label__c</name>
+    </fields>
+    <fields>
+        <label><!-- Occupancy Status --></label>
+        <name>Occupancy_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opp LOC Different and Same Unit --></label>
+        <name>Opp_LOC_Different_and_Same_Unit__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunity Out of Sync? --></label>
+        <name>Opportunity_Out_of_Sync__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pending MI/MO Date --></label>
+        <name>Pending_MI_MO_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pending Move In --></label>
+        <name>Pending_Move_In__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pending Move Out --></label>
+        <name>Pending_Move_Out__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pending Scheduled Move In Date --></label>
+        <name>Pending_Scheduled_Move_In_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Potential Missing Move Out Date --></label>
+        <name>Potential_Missing_Move_Out_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Primary Current Occupancy for Room --></label>
+        <name>Primary_Current_Occupancy_for_Room__c</name>
+    </fields>
+    <fields>
+        <label><!-- Primary Next Resident of Room --></label>
+        <name>Primary_Next_Resident_of_Room__c</name>
+    </fields>
+    <fields>
+        <label><!-- Resident Account Id --></label>
+        <name>Resident_Account_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Resident --></label>
+        <name>Resident__c</name>
+        <relationshipLabel><!-- Occupancies --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Resident is not a Prospect --></label>
+        <name>Resident_is_not_a_Prospect__c</name>
+    </fields>
+    <fields>
+        <label><!-- Scheduled Move In Date --></label>
+        <name>Scheduled_Move_In_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Scheduled Move In or Transfer In Date --></label>
+        <name>Scheduled_Move_In_or_Transfer_In_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Scheduled Move Out Date --></label>
+        <name>Scheduled_Move_Out_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Scheduled Move Out or Transfer Date --></label>
+        <name>Scheduled_Move_Out_or_Transfer_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Scheduled Occupancy Change --></label>
+        <name>Scheduled_Occupancy_Change__c</name>
+    </fields>
+    <fields>
+        <label><!-- Selected Room in Wrong Community --></label>
+        <name>Selected_Room_in_Wrong_Community__c</name>
+    </fields>
+    <fields>
+        <label><!-- Source Opportunity --></label>
+        <name>Source_Opportunity__c</name>
+        <relationshipLabel><!-- Occupancies --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Transfer Apartment/Room --></label>
+        <name>Transfer_Apartment__c</name>
+        <relationshipLabel><!-- Occupancies (Transfer Apartment/Room) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Transfer Bed --></label>
+        <name>Transfer_Bed__c</name>
+        <relationshipLabel><!-- Occupancies (Transfer Bed) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Transfer Level of Care --></label>
+        <name>Transfer_Level_of_Care__c</name>
+    </fields>
+    <layouts>
+        <layout>Occupancy Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Move Out --></label>
+            <section>Move Out</section>
+        </sections>
+        <sections>
+            <label><!-- Scheduled Changes --></label>
+            <section>Scheduled Changes</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Initial Occupancy --></label>
+        <name>Initial_Occupancy</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

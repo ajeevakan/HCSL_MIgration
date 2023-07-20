@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>TLG Json Interface</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>TLG Json Interfaces</value>
+    </caseValues>
+    <fields>
+        <label><!-- Description Field in Dup Activity --></label>
+        <name>Description_Field_in_Dup_Activity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Dup Activity Type --></label>
+        <name>Dup_Activity_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Duplicate Check --></label>
+        <name>Duplicate_Check__c</name>
+    </fields>
+    <fields>
+        <label><!-- Interface Lead Id Field --></label>
+        <name>Interface_Lead_Id_Field__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead Source --></label>
+        <name>Lead_Source__c</name>
+    </fields>
+    <fields>
+        <label><!-- Referral Org Code --></label>
+        <name>Referral_Org_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Referral Organization Id --></label>
+        <name>Referral_Organization_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- SFDC Account External Id Field --></label>
+        <name>SFDC_Account_External_Id_Field__c</name>
+    </fields>
+    <fields>
+        <label><!-- SFDC External Id Field --></label>
+        <name>SFDC_External_Id_Field__c</name>
+    </fields>
+    <fields>
+        <label><!-- Target Object --></label>
+        <name>Target_Object__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

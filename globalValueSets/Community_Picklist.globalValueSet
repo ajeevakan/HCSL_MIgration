@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>ALB</fullName>
+        <default>false</default>
+        <label>ALB</label>
+    </customValue>
+    <customValue>
+        <fullName>APT</fullName>
+        <default>false</default>
+        <label>APT</label>
+    </customValue>
+    <customValue>
+        <fullName>TBD</fullName>
+        <default>false</default>
+        <label>TBD</label>
+    </customValue>
+    <customValue>
+        <fullName>BAK</fullName>
+        <default>false</default>
+        <label>BAK</label>
+    </customValue>
+    <customValue>
+        <fullName>CAB</fullName>
+        <default>false</default>
+        <label>CAB</label>
+    </customValue>
+    <customValue>
+        <fullName>DTT</fullName>
+        <default>false</default>
+        <label>DTT</label>
+    </customValue>
+    <customValue>
+        <fullName>EAA</fullName>
+        <default>false</default>
+        <label>EAA</label>
+    </customValue>
+    <customValue>
+        <fullName>GDD</fullName>
+        <default>false</default>
+        <label>GDD</label>
+    </customValue>
+    <customValue>
+        <fullName>Lutheran Home</fullName>
+        <default>false</default>
+        <label>Lutheran Home</label>
+    </customValue>
+    <customValue>
+        <fullName>Birdwood</fullName>
+        <default>false</default>
+        <label>Birdwood</label>
+    </customValue>
+    <customValue>
+        <fullName>TEST</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>TEST</label>
+    </customValue>
+    <masterLabel>Community Picklist</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

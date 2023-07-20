@@ -1,0 +1,14 @@
+<aura:component implements="force:lightningQuickAction,force:hasRecordId">
+	<aura:handler name="init" value="{!this}" action="{!c.myAction}" />
+    <aura:handler name="render" value="{!this}" action="{!c.cancelAccountMerge}"/>
+         <aura:attribute name="recordId" type="Id" />
+        <aura:attribute name="record" type="Search_Merge_Duplicate_Opportunity_Pair__c" />
+        <aura:attribute name="simpleRecord" type="Search_Merge_Duplicate_Opportunity_Pair__c" />
+    
+        <force:recordData aura:id="recordHandler"
+                  recordId="{!v.recordId}"
+                  targetRecord="{!v.record}"
+                  targetFields="{!v.simpleRecord}"
+                  layoutType="FULL"
+                  />
+</aura:component>

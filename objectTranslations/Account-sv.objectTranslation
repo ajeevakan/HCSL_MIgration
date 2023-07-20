@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldSets>
+        <label><!-- New External Member​ --></label>
+        <name>HealthCloudGA__QuickAddIndividual</name>
+    </fieldSets>
+    <fields>
+        <label><!-- Active --></label>
+        <name>Active__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Assign Original Owner as Floater --></label>
+        <name>Assign_Original_Owner_as_Floater__c</name>
+    </fields>
+    <fields>
+        <label><!-- Assigned Floater --></label>
+        <name>Assigned_Floater__c</name>
+        <relationshipLabel><!-- Accounts --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Community --></label>
+        <name>Community__c</name>
+    </fields>
+    <fields>
+        <label><!-- Customer Priority --></label>
+        <name>CustomerPriority__c</name>
+        <picklistValues>
+            <masterLabel>High</masterLabel>
+            <translation><!-- High --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Low</masterLabel>
+            <translation><!-- Low --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medium</masterLabel>
+            <translation><!-- Medium --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Active --></label>
+        <name>HealthCloudGA__Active__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Healthcare plan for this patient --></help>
+        <label><!-- Care Plan --></label>
+        <name>HealthCloudGA__CarePlan__c</name>
+        <relationshipLabel><!-- PatientAccounts --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Disabled --></label>
+        <name>HealthCloudGA__Disabled__c</name>
+    </fields>
+    <fields>
+        <label><!-- Enrollment Type --></label>
+        <name>HealthCloudGA__EnrollmentType__c</name>
+        <picklistValues>
+            <masterLabel>Dual</masterLabel>
+            <translation><!-- Dual --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ESRD</masterLabel>
+            <translation><!-- ESRD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FBDual</masterLabel>
+            <translation><!-- FBDual --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NonDual</masterLabel>
+            <translation><!-- NonDual --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PBDual</masterLabel>
+            <translation><!-- PBDual --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Individual ID --></label>
+        <name>HealthCloudGA__IndividualId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Individual Type --></label>
+        <name>HealthCloudGA__IndividualType__c</name>
+        <picklistValues>
+            <masterLabel>Group</masterLabel>
+            <translation>Grupp</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Individual</masterLabel>
+            <translation>Individuell</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Indicates whether a patient is in a institution. --></help>
+        <label><!-- Institution --></label>
+        <name>HealthCloudGA__Institution__c</name>
+    </fields>
+    <fields>
+        <help><!-- Indicates whether a patient falls within low income guidelines. --></help>
+        <label><!-- Low Income --></label>
+        <name>HealthCloudGA__LowIncome__c</name>
+    </fields>
+    <fields>
+        <help><!-- Indicates whether a patient is eligible for medicaid. --></help>
+        <label><!-- Medicaid Eligibility Status --></label>
+        <name>HealthCloudGA__MedicaidEligibilityStatus__c</name>
+    </fields>
+    <fields>
+        <label><!-- Medical Record Number --></label>
+        <name>HealthCloudGA__MedicalRecordNumber__c</name>
+    </fields>
+    <fields>
+        <help><!-- New member or continued from previous year. --></help>
+        <label><!-- Medicare Enrollee --></label>
+        <name>HealthCloudGA__MedicareEnrollee__c</name>
+        <picklistValues>
+            <masterLabel>Continued</masterLabel>
+            <translation><!-- Continued --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Enrollee</masterLabel>
+            <translation><!-- New Enrollee --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- OREC --></label>
+        <name>HealthCloudGA__OREC__c</name>
+        <picklistValues>
+            <masterLabel>Age</masterLabel>
+            <translation><!-- Age --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Disabled</masterLabel>
+            <translation><!-- Disabled --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Payer Type --></label>
+        <name>HealthCloudGA__PayerType__c</name>
+    </fields>
+    <fields>
+        <label><!-- Primary Contact --></label>
+        <name>HealthCloudGA__PrimaryContact__c</name>
+        <relationshipLabel><!-- Accounts (Primary Contact) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Source System ID --></label>
+        <name>HealthCloudGA__SourceSystemId__c</name>
+    </fields>
+    <fields>
+        <help><!-- Identifies the system that created the record and owns update rights to it. Defaults to Health1 for manually created records. --></help>
+        <label><!-- Source System --></label>
+        <name>HealthCloudGA__SourceSystem__c</name>
+    </fields>
+    <fields>
+        <label><!-- TaxId --></label>
+        <name>HealthCloudGA__TaxId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Inquiry Date --></label>
+        <name>Inquiry_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead Source Campaign --></label>
+        <name>Lead_Source_Campaign__c</name>
+        <relationshipLabel><!-- Accounts --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Lead Source --></label>
+        <name>Lead_Source__c</name>
+        <picklistValues>
+            <masterLabel>DM - BRC</masterLabel>
+            <translation><!-- DM - BRC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DM - Event</masterLabel>
+            <translation><!-- DM - Event --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DM - Other</masterLabel>
+            <translation><!-- DM - Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GEN - Drive By</masterLabel>
+            <translation><!-- GEN - Drive By --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GEN - Lives in Area</masterLabel>
+            <translation><!-- GEN - Lives in Area --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GEN - Redevelopment</masterLabel>
+            <translation><!-- GEN - Redevelopment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GEN - Reputation</masterLabel>
+            <translation><!-- GEN - Reputation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GEN - Signage</masterLabel>
+            <translation><!-- GEN - Signage --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>INT - Web Other</masterLabel>
+            <translation><!-- INT - Web Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>INT - Website Inquiry</masterLabel>
+            <translation><!-- INT - Website Inquiry --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ME - Radio</masterLabel>
+            <translation><!-- ME - Radio --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ME - TV</masterLabel>
+            <translation><!-- ME - TV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PM - Magazine</masterLabel>
+            <translation><!-- PM - Magazine --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PM - Newspaper</masterLabel>
+            <translation><!-- PM - Newspaper --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PM - Phone Directory/Yellow Pages</masterLabel>
+            <translation><!-- PM - Phone Directory/Yellow Pages --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PR - Public Relations</masterLabel>
+            <translation><!-- PR - Public Relations --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>REF - Family/Friend</masterLabel>
+            <translation><!-- REF - Family/Friend --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>REF - Other Community</masterLabel>
+            <translation><!-- REF - Other Community --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>REF - Professional</masterLabel>
+            <translation><!-- REF - Professional --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>REF - Resident Referral</masterLabel>
+            <translation><!-- REF - Resident Referral --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>REF - Residents</masterLabel>
+            <translation><!-- REF - Residents --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>REF - Team Member</masterLabel>
+            <translation><!-- REF - Team Member --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>REF - Wait List</masterLabel>
+            <translation><!-- REF - Wait List --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Navihealth eReferral External Id --></label>
+        <name>Navihealth_eReferral_External_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number of Locations --></label>
+        <name>NumberofLocations__c</name>
+    </fields>
+    <fields>
+        <label><!-- Purge from Hubspot --></label>
+        <name>Purge_from_Hubspot__c</name>
+    </fields>
+    <fields>
+        <label><!-- Referral Organization Code --></label>
+        <name>Referral_Organization_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Created From Account --></label>
+        <name>Related_Main_Prospect__c</name>
+        <relationshipLabel><!-- RelatedContacts --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Reporting Community --></label>
+        <name>Reporting_Community__c</name>
+        <relationshipLabel><!-- Accounts --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- SLA Expiration Date --></label>
+        <name>SLAExpirationDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- SLA Serial Number --></label>
+        <name>SLASerialNumber__c</name>
+    </fields>
+    <fields>
+        <label><!-- SLA --></label>
+        <name>SLA__c</name>
+        <picklistValues>
+            <masterLabel>Bronze</masterLabel>
+            <translation><!-- Bronze --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gold</masterLabel>
+            <translation><!-- Gold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Platinum</masterLabel>
+            <translation><!-- Platinum --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Silver</masterLabel>
+            <translation><!-- Silver --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Upsell Opportunity --></label>
+        <name>UpsellOpportunity__c</name>
+        <picklistValues>
+            <masterLabel>Maybe</masterLabel>
+            <translation><!-- Maybe --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Account Layout</layout>
+        <sections>
+            <label><!-- Additional Information --></label>
+            <section>Additional Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Organization</layout>
+        <sections>
+            <label><!-- Address --></label>
+            <section>Address</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Description --></label>
+            <section>Description</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>SL Household</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label><!-- System Information --></label>
+            <section>System Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>SL Person Account Layout</layout>
+        <layoutType>PersonAccount</layoutType>
+        <sections>
+            <label><!-- Account Engagement --></label>
+            <section>Account Engagement</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>SL Referral Organization</layout>
+        <sections>
+            <label><!-- Address Information --></label>
+            <section>Address Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Description --></label>
+            <section>Description</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label><!-- System Information --></label>
+            <section>System Information</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Create Household Contact --></label>
+        <name>Create_Household_Contact</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Merge Accounts --></label>
+        <name>Search_Merge_Accounts</name>
+    </quickActions>
+    <recordTypes>
+        <label><!-- BusinessRT --></label>
+        <name>BusinessRT</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Represents a business or an organization --></description>
+        <label><!-- Business --></label>
+        <name>HealthCloudGA__IndustriesBusiness</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Represents a Household --></description>
+        <label><!-- Household --></label>
+        <name>HealthCloudGA__IndustriesHousehold</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Represents an Individual --></description>
+        <label><!-- Individual --></label>
+        <name>HealthCloudGA__IndustriesIndividual</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Represents a Payer --></description>
+        <label><!-- Payer --></label>
+        <name>HealthCloudGA__IndustriesPayer</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- The Individual record type can&apos;t be changed --></errorMessage>
+        <name>HealthCloudGA__NotAllowingConversionFromIndividual</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The record type can&apos;t be changed to Individual. --></errorMessage>
+        <name>HealthCloudGA__NotAllowingConversionToIndividual</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Billing --></label>
+        <name>Billing</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_Pardot_Emails --></label>
+        <name>pi__Send_Pardot_Emails</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_Single_Pardot_Email --></label>
+        <name>pi__Send_Single_Pardot_Email</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_To_Prospect_Insight --></label>
+        <name>pi__Send_To_Prospect_Insight</name>
+    </webLinks>
+</CustomObjectTranslation>

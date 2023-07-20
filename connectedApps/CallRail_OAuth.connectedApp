@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>manjaka.andriamasinoro@lansdalegroup.com</contactEmail>
+    <label>CallRail OAuth</label>
+    <oauthConfig>
+        <callbackUrl>http://localhost</callbackUrl>
+        <certificate>MIIEijCCA3KgAwIBAgIOAYkl/eXNAAAAAEGMtV4wDQYJKoZIhvcNAQELBQAwgYUxHTAbBgNVBAMMFENhbGxSYWlsX0NlcnRpZmljYXRlMRgwFgYDVQQLDA8wMEQ1ZTAwMDAwMkZZTGQxFzAVBgNVBAoMDlNhbGVzZm9yY2UuY29tMRYwFAYDVQQHDA1TYW4gRnJhbmNpc2NvMQswCQYDVQQIDAJDQTEMMAoGA1UEBhMDVVNBMB4XDTIzMDcwNTEyMTkwM1oXDTI0MDcwNTEyMDAwMFowgYUxHTAbBgNVBAMMFENhbGxSYWlsX0NlcnRpZmljYXRlMRgwFgYDVQQLDA8wMEQ1ZTAwMDAwMkZZTGQxFzAVBgNVBAoMDlNhbGVzZm9yY2UuY29tMRYwFAYDVQQHDA1TYW4gRnJhbmNpc2NvMQswCQYDVQQIDAJDQTEMMAoGA1UEBhMDVVNBMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAlgXZ/CKgQETBzrXTVd75F4o4Xo+wPdaEIDmy3iU0HPraT6336Yvy7uZukYq6/rZcgkLjegpV/ULxSVCki1mB+MS75/gCVlmKK4bEfmU7nyiQirAIbfJZ/xB7bd46UbfqU0sV2Jq53TDaCzLn9hPngaLL7kOXZ/niyD1Hml2B+YXysxj4CrC9oCxITfbHjZ0r+oNy3Uw9UEEJDERAYpIRhtNraKbKPUT1c6cLulYE3KwehA7k1HHZsHiIVpcGf8wMiYdmso4N/QUM+1YJREdh/C2MNcMx+4ZPA4D6IdkP0alXGOFwZRxRi8kOTTpHC4d9COPzJA0VXuE1y4iT6wNlTQIDAQABo4H1MIHyMB0GA1UdDgQWBBRb1r7DVKVmVtKAhxCxzW6XND7QOzAPBgNVHRMBAf8EBTADAQH/MIG/BgNVHSMEgbcwgbSAFFvWvsNUpWZW0oCHELHNbpc0PtA7oYGLpIGIMIGFMR0wGwYDVQQDDBRDYWxsUmFpbF9DZXJ0aWZpY2F0ZTEYMBYGA1UECwwPMDBENWUwMDAwMDJGWUxkMRcwFQYDVQQKDA5TYWxlc2ZvcmNlLmNvbTEWMBQGA1UEBwwNU2FuIEZyYW5jaXNjbzELMAkGA1UECAwCQ0ExDDAKBgNVBAYTA1VTQYIOAYkl/eXNAAAAAEGMtV4wDQYJKoZIhvcNAQELBQADggEBADgj6wVmTggLeOhY891nbwcFAvSaJeQPUrB9xWa0ZZpRz0zot/aUNLNaX55btY0T1UxF5ybxsrVcYhZueDxRFhTSoMN05YoNx5EIoK5Tu6Bt64QfBIqZ2sTOIQViHYBs6Uo5zpIsgobl5+Lz8yHC0qsBaNUcXn9Ou8xBJblLxtSlpzQFQkH3qnBvWZ9oITqz/gH6XvweUA2aJRa7+oOf2vJd09s7kXHwCnOSjK4jbS8mv1+pyUeX7DoIjIXfmKVrqp7Lbkf7oR44pXqdQq84kO1dvg3uOrxH86i9AP0AOTvJJDgOQXV7QZFdmWtcDx+7okJd4LzGRVrnT1wPsOSEpOg=</certificate>
+        <consumerKey>3MVG9cHH2bfKACZbmHN8ZUBb4uoaNVlEW5CwqbzQXszWX5QfaMNWJxOV0T_4abZ5zXu8kGAx9QPQrBu0sGCH9</consumerKey>
+        <isAdminApproved>true</isAdminApproved>
+        <isClientCredentialEnabled>true</isClientCredentialEnabled>
+        <isCodeCredentialEnabled>false</isCodeCredentialEnabled>
+        <isCodeCredentialPostOnly>false</isCodeCredentialPostOnly>
+        <isConsumerSecretOptional>false</isConsumerSecretOptional>
+        <isIntrospectAllTokens>false</isIntrospectAllTokens>
+        <isSecretRequiredForRefreshToken>true</isSecretRequiredForRefreshToken>
+        <oauthClientCredentialUser>callrail@tlghctf.com</oauthClientCredentialUser>
+        <scopes>Full</scopes>
+        <scopes>RefreshToken</scopes>
+    </oauthConfig>
+    <oauthPolicy>
+        <ipRelaxation>ENFORCE</ipRelaxation>
+        <refreshTokenPolicy>zero</refreshTokenPolicy>
+    </oauthPolicy>
+    <profileName>Salesforce API Only System Integrations</profileName>
+    <profileName>CallRail Integration User</profileName>
+</ConnectedApp>

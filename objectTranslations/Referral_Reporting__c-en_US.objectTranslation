@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Referral Reporting</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Referral Reporting</value>
+    </caseValues>
+    <fields>
+        <label><!-- Adult Day Club Referral --></label>
+        <name>Adult_Day_Club_Referral__c</name>
+    </fields>
+    <fields>
+        <label><!-- Community --></label>
+        <name>Community__c</name>
+        <relationshipLabel><!-- Referral Reporting --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Date --></label>
+        <name>Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Metric Type --></label>
+        <name>Metric_Type__c</name>
+        <picklistValues>
+            <masterLabel>Admit</masterLabel>
+            <translation><!-- Admit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Marketing Activity</masterLabel>
+            <translation><!-- Marketing Activity --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Referral</masterLabel>
+            <translation><!-- Referral --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Move Ins/Admits --></label>
+        <name>Move_Ins_Admits__c</name>
+    </fields>
+    <fields>
+        <label><!-- MySolutions Referral --></label>
+        <name>MySolutions_Referral__c</name>
+    </fields>
+    <fields>
+        <label><!-- Outreach Activities --></label>
+        <name>Outreach_Activities__c</name>
+    </fields>
+    <fields>
+        <label><!-- Outreach Activity Type --></label>
+        <name>Outreach_Activity_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Patient Contact --></label>
+        <name>Patient_Contact__c</name>
+        <relationshipLabel><!-- Referral Reporting --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Referral Contact --></label>
+        <name>Referral_Contact__c</name>
+        <relationshipLabel><!-- Referral Reporting (Referral Contact) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Referral Moved In\Admitted --></label>
+        <name>Referral_Moved_In_Admitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Referrals --></label>
+        <name>Referrals__c</name>
+    </fields>
+    <fields>
+        <label><!-- Referring Organization --></label>
+        <name>Referring_Organization__c</name>
+    </fields>
+    <fields>
+        <label><!-- Related Referral --></label>
+        <name>Related_Referral__c</name>
+        <relationshipLabel><!-- Referral Reporting --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Senior Living Referral --></label>
+        <name>Senior_Living_Referral__c</name>
+    </fields>
+    <fields>
+        <label><!-- Skilled Nursing Referral --></label>
+        <name>Skilled_Nursing_Referral__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>
