@@ -1128,18 +1128,13 @@ IF (ISPICKVAL( StageName, &apos;Depositor&apos;), &apos;Depositor&apos;,
 IF (ISPICKVAL( StageName, &apos;Lost&apos;), &apos;Lost&apos;,
 IF (ISPICKVAL( StageName, &apos;Move Out&apos;), &apos;Move Out - Former Resident&apos;,
 IF (ISPICKVAL( StageName, &apos;Resident&apos;), &apos;Resident&apos;,
-
 IF (NOT(ISnull( 	Days_Since_Last_Contact__c)) &amp;&amp; 	Days_Since_Last_Contact__c  &lt;= 90,
-
 IF( NOT(ISBLANK(Last_Appointment_Date__c)), &apos;01-Contact Last 90 Days-Has a Visit&apos;, &apos;02-Contact Last 90 Days-No Visit Yet&apos;),
-
 
 IF (NOT(ISBLANK(Last_Appointment_Date__c)), &apos;03-No Contact Last 90 Days-Has a Visit&apos;,
 IF (ISBLANK(Last_Appointment_Date__c) &amp;&amp; Number_Of_Completed_Activities__c &gt; 10, &apos;04-No Contact Last 90 Days-No Visit Yet-More Than 10 Activities&apos;,
 IF ( ISBLANK(Last_Appointment_Date__c) &amp;&amp; Number_Of_Completed_Activities__c &lt;= 10, &apos;05-No Contact Last 90 Days-No Visit Yet-Some Activity&apos;, &apos;06-No Activity&apos;)
-
 )))
-
 ))
 ))
 )</formula>
@@ -1312,15 +1307,10 @@ if ( Unit__r.Level_of_Care_formula__c = TEXT( Housing_Type__c ), false, true)
         <externalId>false</externalId>
         <formula>if (Status__c = &apos;Not Yet Classified&apos; &amp;&amp; text(StageName) = &apos;New&apos;, Account.FirstName + &apos; &apos; + Account.LastName,
 
-
 IF(NOT(ISBLANK(Primary_Resident__c )) &amp;&amp; NOT( Primary_Resident__r.Deceased__c ) &amp;&amp; ISBLANK( Second_Resident__c ), Primary_Resident__r.FirstName + &apos; &apos; + Primary_Resident__r.LastName + &apos; - &apos; +   Status__c,
-
 IF( NOT(ISBLANK(Primary_Resident__c ))&amp;&amp; NOT( Primary_Resident__r.Deceased__c ) &amp;&amp; NOT(ISBLANK( Second_Resident__c )) &amp;&amp; NOT( Second_Resident__r.Deceased__c ), Primary_Resident__r.FirstName + &apos; &apos; + Primary_Resident__r.LastName + &apos; &amp; &apos; + Second_Resident__r.FirstName + &apos; &apos; + Second_Resident__r.LastName + &apos; - &apos; +  Status__c,
-
 IF( NOT(ISBLANK(Primary_Resident__c ))&amp;&amp; NOT( Primary_Resident__r.Deceased__c ) &amp;&amp; NOT(ISBLANK( Second_Resident__c )) &amp;&amp; Second_Resident__r.Deceased__c , Primary_Resident__r.FirstName + &apos; &apos; + Primary_Resident__r.LastName + &apos; - &apos; + Status__c,
-
 IF( NOT(ISBLANK(Primary_Resident__c ))&amp;&amp; Primary_Resident__r.Deceased__c &amp;&amp; NOT(ISBLANK( Second_Resident__c )) &amp;&amp; NOT(Second_Resident__r.Deceased__c) , Second_Resident__r.FirstName + &apos; &apos; + Second_Resident__r.LastName + &apos; - &apos; +  Status__c,
-
 Account.FirstName + &apos; &apos; + Account.LastName+ &apos; - &apos; + Status__c))))
 )</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
@@ -1335,11 +1325,9 @@ Account.FirstName + &apos; &apos; + Account.LastName+ &apos; - &apos; + Status__
         <fullName>Past_Due_Active_Prospect__c</fullName>
         <externalId>false</externalId>
         <formula>IF ( Is_Active__c,
-
 IF ( ISBLANK(Next_Scheduled_Activity_Date__c), True,
 IF (Next_Scheduled_Activity_Date__c &lt; TODAY(), true, false)
 )
-
 , False)</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>Past Due Active Prospect</label>
@@ -1622,7 +1610,6 @@ IF (Next_Scheduled_Activity_Date__c &lt; TODAY(), true, false)
         <fullName>Not_Contacted_in_Designated_Candence__c</fullName>
         <externalId>false</externalId>
         <formula>if ( 
-
 ispickval(Lead_Score__c , &apos;Hot&apos;) &amp;&amp;  (Days_Since_Last_Contact__c = null || Days_Since_Last_Contact__c &gt; 30),
 true, 
   if (ispickval(Lead_Score__c , &apos;Warm&apos;) &amp;&amp;  (Days_Since_Last_Contact__c = null || Days_Since_Last_Contact__c &gt; 60), true,

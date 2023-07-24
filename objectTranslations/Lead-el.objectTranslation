@@ -48,6 +48,10 @@
         <name>CurrentGenerators__c</name>
     </fields>
     <fields>
+        <label><!-- eReferral Facility Id --></label>
+        <name>eReferral_Facility_Id__c</name>
+    </fields>
+    <fields>
         <label><!-- External Source Code --></label>
         <name>External_Source_Code__c</name>
     </fields>
@@ -375,13 +379,13 @@
         <relationshipLabel><!-- Leads (Primary Care Provider) --></relationshipLabel>
     </fields>
     <fields>
-        <label><!-- Primary Diagnosis Description --></label>
-        <name>HealthCloudGA__PrimaryDiagnosisDescription__c</name>
-    </fields>
-    <fields>
         <label><!-- Primary Diagnosis --></label>
         <name>HealthCloudGA__PrimaryDiagnosis__c</name>
         <relationshipLabel><!-- Leads (PrimaryDiagnosis) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Primary Diagnosis Description --></label>
+        <name>HealthCloudGA__PrimaryDiagnosisDescription__c</name>
     </fields>
     <fields>
         <label><!-- Primary Insurance --></label>
@@ -504,13 +508,13 @@
         <relationshipLabel><!-- Leads --></relationshipLabel>
     </fields>
     <fields>
-        <label><!-- Referring Practitioner Score --></label>
-        <name>HealthCloudGA__ReferringPractitionerScore__c</name>
-    </fields>
-    <fields>
         <label><!-- Referring Practitioner --></label>
         <name>HealthCloudGA__ReferringPractitioner__c</name>
         <relationshipLabel><!-- Leads (Referring Practitioner) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Referring Practitioner Score --></label>
+        <name>HealthCloudGA__ReferringPractitionerScore__c</name>
     </fields>
     <fields>
         <label><!-- Referring User --></label>
@@ -523,25 +527,21 @@
         <relationshipLabel><!-- Leads (Related Account) --></relationshipLabel>
     </fields>
     <fields>
-        <label><!-- SSN --></label>
-        <name>HealthCloudGA__SSN__c</name>
+        <label><!-- Secondary Diagnosis --></label>
+        <name>HealthCloudGA__SecondaryDiagnosis__c</name>
+        <relationshipLabel><!-- Leads (SecondaryDiagnosis) --></relationshipLabel>
     </fields>
     <fields>
         <label><!-- Secondary Diagnosis Description --></label>
         <name>HealthCloudGA__SecondaryDiagnosisDescription__c</name>
     </fields>
     <fields>
-        <label><!-- Secondary Diagnosis --></label>
-        <name>HealthCloudGA__SecondaryDiagnosis__c</name>
-        <relationshipLabel><!-- Leads (SecondaryDiagnosis) --></relationshipLabel>
+        <label><!-- Secondary Insurance --></label>
+        <name>HealthCloudGA__SecondaryInsurance__c</name>
     </fields>
     <fields>
         <label><!-- Secondary Insurance ID --></label>
         <name>HealthCloudGA__SecondaryInsuranceID__c</name>
-    </fields>
-    <fields>
-        <label><!-- Secondary Insurance --></label>
-        <name>HealthCloudGA__SecondaryInsurance__c</name>
     </fields>
     <fields>
         <label><!-- Signing Provider --></label>
@@ -549,13 +549,13 @@
         <relationshipLabel><!-- Leads (Signing Provider) --></relationshipLabel>
     </fields>
     <fields>
-        <label><!-- Source System ID --></label>
-        <name>HealthCloudGA__SourceSystemId__c</name>
-    </fields>
-    <fields>
         <help>Προσδιορίζει το σύστημα που δημιούργησε την εγγραφή και έχει τα σχετικά δικαιώματα ενημέρωσης. Για τις εγγραφές που έχουν δημιουργηθεί με μη αυτόματο τρόπο, παίρνει από προεπιλογή την τιμή Health1.</help>
         <label><!-- Source System --></label>
         <name>HealthCloudGA__SourceSystem__c</name>
+    </fields>
+    <fields>
+        <label><!-- Source System ID --></label>
+        <name>HealthCloudGA__SourceSystemId__c</name>
     </fields>
     <fields>
         <label><!-- Specialty --></label>
@@ -620,6 +620,10 @@
             <masterLabel>Surgery</masterLabel>
             <translation><!-- Surgery --></translation>
         </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- SSN --></label>
+        <name>HealthCloudGA__SSN__c</name>
     </fields>
     <fields>
         <label><!-- Start/Resumption of Care Date --></label>
@@ -926,121 +930,6 @@
         <name>NumberofLocations__c</name>
     </fields>
     <fields>
-        <label><!-- Preferred Service Type --></label>
-        <name>Preferred_Housing_Type__c</name>
-    </fields>
-    <fields>
-        <label><!-- Preferred Phone --></label>
-        <name>Preferred_Phone__c</name>
-        <picklistValues>
-            <masterLabel>Home</masterLabel>
-            <translation><!-- Home --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Mobile</masterLabel>
-            <translation><!-- Mobile --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Work</masterLabel>
-            <translation><!-- Work --></translation>
-        </picklistValues>
-    </fields>
-    <fields>
-        <label><!-- Primary --></label>
-        <name>Primary__c</name>
-        <picklistValues>
-            <masterLabel>No</masterLabel>
-            <translation><!-- No --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Yes</masterLabel>
-            <translation><!-- Yes --></translation>
-        </picklistValues>
-    </fields>
-    <fields>
-        <label><!-- Product Interest --></label>
-        <name>ProductInterest__c</name>
-        <picklistValues>
-            <masterLabel>GC1000 series</masterLabel>
-            <translation><!-- GC1000 series --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>GC3000 series</masterLabel>
-            <translation><!-- GC3000 series --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>GC5000 series</masterLabel>
-            <translation><!-- GC5000 series --></translation>
-        </picklistValues>
-    </fields>
-    <fields>
-        <label><!-- Prospect First Name --></label>
-        <name>Prospect_First_Name__c</name>
-    </fields>
-    <fields>
-        <label><!-- Prospect Last Name --></label>
-        <name>Prospect_Last_Name__c</name>
-    </fields>
-    <fields>
-        <label><!-- Prospect --></label>
-        <name>Prospect__c</name>
-    </fields>
-    <fields>
-        <label><!-- Ref Org Code --></label>
-        <name>Ref_Org_Code__c</name>
-    </fields>
-    <fields>
-        <label><!-- Relationship to Prospect Filter --></label>
-        <name>Relationship_to_Prospect_Filter__c</name>
-    </fields>
-    <fields>
-        <label><!-- Relationship to Prospect --></label>
-        <name>Relationship_to_Prospect__c</name>
-    </fields>
-    <fields>
-        <label><!-- Reporting Community --></label>
-        <name>Reporting_Community__c</name>
-        <relationshipLabel><!-- Leads --></relationshipLabel>
-    </fields>
-    <fields>
-        <label><!-- SIC Code --></label>
-        <name>SICCode__c</name>
-    </fields>
-    <fields>
-        <label><!-- Senior Living --></label>
-        <name>Senior_Living__c</name>
-    </fields>
-    <fields>
-        <label><!-- Skilled Nursing --></label>
-        <name>Skilled_Nursing__c</name>
-    </fields>
-    <fields>
-        <label><!-- Web Form --></label>
-        <name>Web_Form__c</name>
-    </fields>
-    <fields>
-        <help><!-- What day was requested for a Tour? --></help>
-        <label><!-- Web Requested Tour Date --></label>
-        <name>Web_Requested_Tour_Date__c</name>
-    </fields>
-    <fields>
-        <help><!-- What time of day was requested for a Tour? --></help>
-        <label><!-- Web Requested Tour Time of Day --></label>
-        <name>Web_Requested_Tour_Time_of_Day__c</name>
-    </fields>
-    <fields>
-        <label><!-- eReferral Facility Id --></label>
-        <name>eReferral_Facility_Id__c</name>
-    </fields>
-    <fields>
-        <label><!-- Needs Score Synced --></label>
-        <name>pi__Needs_Score_Synced__c</name>
-    </fields>
-    <fields>
-        <label><!-- Account Engagement Last Scored At --></label>
-        <name>pi__Pardot_Last_Scored_At__c</name>
-    </fields>
-    <fields>
         <label><!-- Account Engagement Campaign --></label>
         <name>pi__campaign__c</name>
     </fields>
@@ -1089,12 +978,20 @@
         <name>pi__last_activity__c</name>
     </fields>
     <fields>
+        <label><!-- Needs Score Synced --></label>
+        <name>pi__Needs_Score_Synced__c</name>
+    </fields>
+    <fields>
         <label><!-- Account Engagement Notes --></label>
         <name>pi__notes__c</name>
     </fields>
     <fields>
         <label><!-- Account Engagement Hard Bounced --></label>
         <name>pi__pardot_hard_bounced__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Engagement Last Scored At --></label>
+        <name>pi__Pardot_Last_Scored_At__c</name>
     </fields>
     <fields>
         <label><!-- Account Engagement Score --></label>
@@ -1123,6 +1020,109 @@
     <fields>
         <label><!-- Google Analytics Term --></label>
         <name>pi__utm_term__c</name>
+    </fields>
+    <fields>
+        <label><!-- Preferred Service Type --></label>
+        <name>Preferred_Housing_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Preferred Phone --></label>
+        <name>Preferred_Phone__c</name>
+        <picklistValues>
+            <masterLabel>Home</masterLabel>
+            <translation><!-- Home --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mobile</masterLabel>
+            <translation><!-- Mobile --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Work</masterLabel>
+            <translation><!-- Work --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Primary --></label>
+        <name>Primary__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Product Interest --></label>
+        <name>ProductInterest__c</name>
+        <picklistValues>
+            <masterLabel>GC1000 series</masterLabel>
+            <translation><!-- GC1000 series --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GC3000 series</masterLabel>
+            <translation><!-- GC3000 series --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GC5000 series</masterLabel>
+            <translation><!-- GC5000 series --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Prospect --></label>
+        <name>Prospect__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prospect First Name --></label>
+        <name>Prospect_First_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prospect Last Name --></label>
+        <name>Prospect_Last_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ref Org Code --></label>
+        <name>Ref_Org_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Relationship to Prospect --></label>
+        <name>Relationship_to_Prospect__c</name>
+    </fields>
+    <fields>
+        <label><!-- Relationship to Prospect Filter --></label>
+        <name>Relationship_to_Prospect_Filter__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reporting Community --></label>
+        <name>Reporting_Community__c</name>
+        <relationshipLabel><!-- Leads --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Senior Living --></label>
+        <name>Senior_Living__c</name>
+    </fields>
+    <fields>
+        <label><!-- SIC Code --></label>
+        <name>SICCode__c</name>
+    </fields>
+    <fields>
+        <label><!-- Skilled Nursing --></label>
+        <name>Skilled_Nursing__c</name>
+    </fields>
+    <fields>
+        <label><!-- Web Form --></label>
+        <name>Web_Form__c</name>
+    </fields>
+    <fields>
+        <help><!-- What day was requested for a Tour? --></help>
+        <label><!-- Web Requested Tour Date --></label>
+        <name>Web_Requested_Tour_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- What time of day was requested for a Tour? --></help>
+        <label><!-- Web Requested Tour Time of Day --></label>
+        <name>Web_Requested_Tour_Time_of_Day__c</name>
     </fields>
     <layouts>
         <layout>Lead Layout</layout>

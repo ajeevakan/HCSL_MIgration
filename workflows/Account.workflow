@@ -92,17 +92,13 @@ IF(
 ISPICKVAL(Preferred_Phone__pc, &apos;Mobile&apos;)) &amp;&amp; NOT(ISBLANK(PersonMobilePhone))
 , PersonMobilePhone,
 
-
 IF(
 (ISBLANK(TEXT(Preferred_Phone__pc)) ||
 ISPICKVAL(Preferred_Phone__pc, &apos;Work&apos;)) &amp;&amp; NOT(ISBLANK(Work_Phone__pc))
 , Work_Phone__pc,
-
 if ( NOT(ISBLANK(PersonHomePhone)),
 PersonHomePhone, If (NOT(ISBLANK(PersonMobilePhone)), PersonMobilePhone, IF(NOT(ISBLANK(Work_Phone__pc)),Work_Phone__pc, Phone) ) )
-
 )
-
 )
 )</formula>
         <name>Update Main Phone</name>

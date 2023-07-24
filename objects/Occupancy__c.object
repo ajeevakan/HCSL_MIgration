@@ -388,7 +388,6 @@
         <fullName>Pending_Move_In__c</fullName>
         <externalId>false</externalId>
         <formula>If (ISBLANK( Scheduled_Move_In_Date__c ), false,
-
 IF (ISBLANK( Move_In_Date__c ) , true, false)
 )</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
@@ -612,7 +611,6 @@ IF(OR(ISBLANK(Scheduled_Move_Out_or_Transfer_Date__c),ISNULL(Scheduled_Move_Out_
         <fullName>Opportunity_Out_of_Sync__c</fullName>
         <externalId>false</externalId>
         <formula>if (ISBLANK( Move_Out_Date__c ), false,
-
 if ( Is_Primary__c &amp;&amp; ISBLANK(Source_Opportunity__r.Move_Out_Discharge_Date__c ), true, false)
 )</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
@@ -657,15 +655,11 @@ if ( Is_Primary__c &amp;&amp; ISBLANK(Source_Opportunity__r.Move_Out_Discharge_D
         <fullName>Scheduled_Occupancy_Change__c</fullName>
         <externalId>false</externalId>
         <formula>IF (ISBLANK( Transfer_Apartment__c ),
-
 IF (ISBLANK( Cancel_Scheduled_Move_Out__c ),
-
 IF (ISBLANK( Move_In_Date__c ), &apos;Move In Scheduled for &apos; + TEXT(Scheduled_Move_In_Date__c ),
 If ( Isblank(Move_Out_Date__c), &apos;No Planned Occupancy Changes&apos; , &apos;Prior Resident Moved Out on &apos; + TEXT(Move_Out_Date__c)) )
-
 ,
 If ( Isblank(Move_Out_Date__c), &apos;Move Out Scheduled for &apos; + TEXT(Cancel_Scheduled_Move_Out__c), &apos;Prior Resident Moved Out on &apos; + TEXT(Move_Out_Date__c)) )
-
 , &apos;Transfer Scheduled for &apos; + TEXT(Last_Change_Date__c) + &apos; to &apos; + Transfer_Apartment__r.Name + &apos; &apos; + TEXT( Transfer_Level_of_Care__c) )</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>Scheduled Occupancy Change</label>
@@ -710,7 +704,6 @@ if ( Apartment__c != Source_Opportunity__r.Unit__c , false, true))</formula>
         <fullName>Pending_Scheduled_Move_In_Date__c</fullName>
         <externalId>false</externalId>
         <formula>If (ISnull( Scheduled_Move_In_Date__c ), null ,
-
 IF (ISnull( Move_In_Date__c ) &amp;&amp; ISnull( Move_Out_Date__c ) &amp;&amp; ISnull( Scheduled_Move_Out_or_Transfer_Date__c ) , Scheduled_Move_In_Date__c , null)
 )</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
@@ -734,9 +727,7 @@ IF (ISnull( Move_In_Date__c ) &amp;&amp; ISnull( Move_Out_Date__c ) &amp;&amp; I
         <fullName>Opp_LOC_Different_and_Same_Unit__c</fullName>
         <externalId>false</externalId>
         <formula>if (isblank( Apartment__c ), false,
-
 Source_Opportunity__r.LOC_Different_from_Room__c &amp;&amp; Apartment__c = Source_Opportunity__r.Unit__c
-
 )</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>Opp LOC Different and Same Unit</label>
@@ -747,15 +738,12 @@ Source_Opportunity__r.LOC_Different_from_Room__c &amp;&amp; Apartment__c = Sourc
         <fullName>Potential_Missing_Move_Out_Date__c</fullName>
         <externalId>false</externalId>
         <formula>if (isblank( Resident__c ) || isblank(Apartment__c), false,
-
 if ( ISBLANK( Move_In_Date__c ), false,
 if (ISBLANK( Move_Out_Date__c ),
 if ( Apartment__r.Current_Occupant_Move_In_Date__c &gt; Move_In_Date__c &amp;&amp; ((Apartment__r.Current_Resident_Occupancy_1__c != Id &amp;&amp; Apartment__r.Current_Resident_Occupancy_2__c != Id) ||
 (Apartment__r.Current_Resident_Occupancy_1__c != Id &amp;&amp; Apartment__r.Current_Resident_Occupancy_2__c = null) ||
-
 (Apartment__r.Current_Resident_Occupancy_1__c = null &amp;&amp; Apartment__r.Current_Resident_Occupancy_2__c != Id) )
 , true, false), false)
-
 )
 )</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>

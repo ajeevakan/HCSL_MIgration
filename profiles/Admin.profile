@@ -3142,6 +3142,9 @@
         <layout>BusinessProfile-Business Profile Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>Calendar_for_Community_Users__c-Calendar for Community Users Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>CallRail_Phone_Call__c-CallRail Phone Call Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
@@ -3628,6 +3631,9 @@
     <layoutAssignments>
         <layout>Event-SL Event</layout>
         <recordType>Event.OutreachMarketing</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Event_Member__c-Event Member Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Export_FOI__c-Export_FOI Layout</layout>

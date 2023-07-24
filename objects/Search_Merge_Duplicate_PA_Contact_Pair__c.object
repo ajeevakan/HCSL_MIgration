@@ -236,9 +236,7 @@
         <fullName>Households_Different__c</fullName>
         <externalId>false</externalId>
         <formula>if (Isblank( Household_of_Contact_to_Keep__c ) || Isblank(  Household_of_Contact_to_Merge__c ), false,
-
 if (Household_of_Contact_to_Keep__c = Household_of_Contact_to_Merge__c , false, true)
-
 )</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>Households Different</label>

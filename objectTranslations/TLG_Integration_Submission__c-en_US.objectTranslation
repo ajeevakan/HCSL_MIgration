@@ -9,16 +9,20 @@
         <value>TLG Integration Submissions</value>
     </caseValues>
     <fields>
-        <label><!-- Error Description --></label>
-        <name>Error_Description__c</name>
-    </fields>
-    <fields>
         <label><!-- Error --></label>
         <name>Error__c</name>
     </fields>
     <fields>
+        <label><!-- Error Description --></label>
+        <name>Error_Description__c</name>
+    </fields>
+    <fields>
         <label><!-- Interface Name --></label>
         <name>Interface_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- json --></label>
+        <name>json__c</name>
     </fields>
     <fields>
         <label><!-- Processed --></label>
@@ -27,10 +31,6 @@
     <fields>
         <label><!-- RecordId --></label>
         <name>RecordId__c</name>
-    </fields>
-    <fields>
-        <label><!-- json --></label>
-        <name>json__c</name>
     </fields>
     <startsWith>Consonant</startsWith>
 </CustomObjectTranslation>

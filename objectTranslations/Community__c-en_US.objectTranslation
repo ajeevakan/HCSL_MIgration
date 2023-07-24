@@ -58,12 +58,12 @@
         <name>Navihealth_Id__c</name>
     </fields>
     <fields>
-        <label><!-- PCC Facility Id --></label>
-        <name>PCC_Facility_Id__c</name>
-    </fields>
-    <fields>
         <label><!-- PartnerPropertyId --></label>
         <name>PartnerPropertyId__c</name>
+    </fields>
+    <fields>
+        <label><!-- PCC Facility Id --></label>
+        <name>PCC_Facility_Id__c</name>
     </fields>
     <fields>
         <label><!-- Phone Number --></label>
