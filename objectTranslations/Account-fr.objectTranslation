@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fieldSets>
-        <label><!-- New External Member​ --></label>
-        <name>HealthCloudGA__QuickAddIndividual</name>
-    </fieldSets>
     <fields>
         <label><!-- Active --></label>
         <name>Active__c</name>
@@ -45,6 +41,10 @@
             <translation><!-- Medium --></translation>
         </picklistValues>
     </fields>
+    <fieldSets>
+        <label><!-- New External Member​ --></label>
+        <name>HealthCloudGA__QuickAddIndividual</name>
+    </fieldSets>
     <fields>
         <label><!-- Active --></label>
         <name>HealthCloudGA__Active__c</name>
@@ -161,13 +161,13 @@
         <relationshipLabel><!-- Accounts (Primary Contact) --></relationshipLabel>
     </fields>
     <fields>
-        <label><!-- Source System ID --></label>
-        <name>HealthCloudGA__SourceSystemId__c</name>
-    </fields>
-    <fields>
         <help>Identifie le système qui a créé l&apos;enregistrement et qui détient les droits de mise à jour. Applique par défaut Health1 pour les enregistrements créés manuellement.</help>
         <label><!-- Source System --></label>
         <name>HealthCloudGA__SourceSystem__c</name>
+    </fields>
+    <fields>
+        <label><!-- Source System ID --></label>
+        <name>HealthCloudGA__SourceSystemId__c</name>
     </fields>
     <fields>
         <label><!-- TaxId --></label>
@@ -176,11 +176,6 @@
     <fields>
         <label><!-- Inquiry Date --></label>
         <name>Inquiry_Date__c</name>
-    </fields>
-    <fields>
-        <label><!-- Lead Source Campaign --></label>
-        <name>Lead_Source_Campaign__c</name>
-        <relationshipLabel><!-- Accounts --></relationshipLabel>
     </fields>
     <fields>
         <label><!-- Lead Source --></label>
@@ -283,6 +278,11 @@
         </picklistValues>
     </fields>
     <fields>
+        <label><!-- Lead Source Campaign --></label>
+        <name>Lead_Source_Campaign__c</name>
+        <relationshipLabel><!-- Accounts --></relationshipLabel>
+    </fields>
+    <fields>
         <label><!-- Navihealth eReferral External Id --></label>
         <name>Navihealth_eReferral_External_Id__c</name>
     </fields>
@@ -309,14 +309,6 @@
         <relationshipLabel><!-- Accounts --></relationshipLabel>
     </fields>
     <fields>
-        <label><!-- SLA Expiration Date --></label>
-        <name>SLAExpirationDate__c</name>
-    </fields>
-    <fields>
-        <label><!-- SLA Serial Number --></label>
-        <name>SLASerialNumber__c</name>
-    </fields>
-    <fields>
         <label><!-- SLA --></label>
         <name>SLA__c</name>
         <picklistValues>
@@ -335,6 +327,14 @@
             <masterLabel>Silver</masterLabel>
             <translation><!-- Silver --></translation>
         </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- SLA Expiration Date --></label>
+        <name>SLAExpirationDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- SLA Serial Number --></label>
+        <name>SLASerialNumber__c</name>
     </fields>
     <fields>
         <label><!-- Upsell Opportunity --></label>

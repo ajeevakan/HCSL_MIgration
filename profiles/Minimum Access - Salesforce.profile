@@ -3080,6 +3080,9 @@
         <layout>BusinessBrand-Business Brand Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>Calendar_for_Community_Users__c-Calendar for Community Users Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>CallRail_Phone_Call__c-CallRail Phone Call Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
@@ -3250,6 +3253,9 @@
     <layoutAssignments>
         <layout>Event-SL Event</layout>
         <recordType>Event.OutreachMarketing</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Event_Member__c-Event Member Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>External_Submission_Error__c-External Submission Error Layout</layout>

@@ -9,22 +9,22 @@
         <value>Search/Merge Duplicate Account Pair</value>
     </caseValues>
     <fields>
-        <label><!-- Account to Keep Name --></label>
-        <name>Account_to_Keep_Name__c</name>
-    </fields>
-    <fields>
         <label><!-- Account to Keep --></label>
         <name>Account_to_Keep__c</name>
         <relationshipLabel><!-- Search/Merge Duplicate Account Pair (Account to Keep) --></relationshipLabel>
     </fields>
     <fields>
-        <label><!-- Account to Merge Name --></label>
-        <name>Account_to_Merge_Name__c</name>
+        <label><!-- Account to Keep Name --></label>
+        <name>Account_to_Keep_Name__c</name>
     </fields>
     <fields>
         <label><!-- Account to Merge --></label>
         <name>Account_to_Merge__c</name>
         <relationshipLabel><!-- Search/Merge Duplicate Account Pair (Account to Merge) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Account to Merge Name --></label>
+        <name>Account_to_Merge_Name__c</name>
     </fields>
     <fields>
         <label><!-- Start from Opportunity --></label>

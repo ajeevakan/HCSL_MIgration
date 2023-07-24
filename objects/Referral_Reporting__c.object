@@ -312,7 +312,6 @@
         <externalId>false</externalId>
         <formula>if ( ISBLANK(Related_Referral__r.HealthCloudGA__ReferringOrganization__c ),
    Referral_Contact__r.Account.Name , Related_Referral__r.HealthCloudGA__ReferredToOrganization__r.Name 
-
 )</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>Referring Organization</label>

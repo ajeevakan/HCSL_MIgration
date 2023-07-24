@@ -59,12 +59,12 @@
         <name>Current_Occ_Room_Same_Opp_Room__c</name>
     </fields>
     <fields>
-        <label><!-- Is Primary Calculation Sort Priority --></label>
-        <name>Is_Primary_Calculation_Sort_Priority__c</name>
-    </fields>
-    <fields>
         <label><!-- Is Primary --></label>
         <name>Is_Primary__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Primary Calculation Sort Priority --></label>
+        <name>Is_Primary_Calculation_Sort_Priority__c</name>
     </fields>
     <fields>
         <label><!-- Transfer Date --></label>
@@ -79,24 +79,28 @@
         <name>Level_of_Care__c</name>
     </fields>
     <fields>
-        <label><!-- Move In Date Display --></label>
-        <name>Move_In_Date_Display__c</name>
-    </fields>
-    <fields>
         <label><!-- Move In Date --></label>
         <name>Move_In_Date__c</name>
     </fields>
     <fields>
-        <label><!-- Move In/Transfer Date --></label>
-        <name>Move_In_Transfer_Date__c</name>
+        <label><!-- Move In Date Display --></label>
+        <name>Move_In_Date_Display__c</name>
     </fields>
     <fields>
         <label><!-- Move In or Move Out --></label>
         <name>Move_In_or_Move_Out__c</name>
     </fields>
     <fields>
+        <label><!-- Move In/Transfer Date --></label>
+        <name>Move_In_Transfer_Date__c</name>
+    </fields>
+    <fields>
         <label><!-- Move Out Date --></label>
         <name>Move_Out_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Move Out or Scheduled Move Out Date --></label>
+        <name>Move_Out_or_Scheduled_Move_Out_Date__c</name>
     </fields>
     <fields>
         <label><!-- Move Out Reason --></label>
@@ -195,20 +199,16 @@
         </picklistValues>
     </fields>
     <fields>
-        <label><!-- Move Out or Scheduled Move Out Date --></label>
-        <name>Move_Out_or_Scheduled_Move_Out_Date__c</name>
-    </fields>
-    <fields>
         <label><!-- Net Pending MI/MO --></label>
         <name>Net_Pending_MI_MO__c</name>
     </fields>
     <fields>
-        <label><!-- Occupancy Status Label --></label>
-        <name>Occupancy_Status_Label__c</name>
-    </fields>
-    <fields>
         <label><!-- Occupancy Status --></label>
         <name>Occupancy_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Occupancy Status Label --></label>
+        <name>Occupancy_Status_Label__c</name>
     </fields>
     <fields>
         <label><!-- Opp LOC Different and Same Unit --></label>
@@ -247,13 +247,13 @@
         <name>Primary_Next_Resident_of_Room__c</name>
     </fields>
     <fields>
-        <label><!-- Resident Account Id --></label>
-        <name>Resident_Account_Id__c</name>
-    </fields>
-    <fields>
         <label><!-- Resident --></label>
         <name>Resident__c</name>
         <relationshipLabel><!-- Occupancies --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Resident Account Id --></label>
+        <name>Resident_Account_Id__c</name>
     </fields>
     <fields>
         <label><!-- Resident is not a Prospect --></label>

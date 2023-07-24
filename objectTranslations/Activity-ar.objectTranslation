@@ -153,6 +153,86 @@
         <name>Appointment__c</name>
     </fields>
     <fields>
+        <help><!-- CSS color code for event background color in calendar view --></help>
+        <label><!-- Calendar Background Color --></label>
+        <name>cccalendar__Calendar_Background_Color__c</name>
+    </fields>
+    <fields>
+        <help><!-- CSS color code for event border color in calendar view --></help>
+        <label><!-- Calendar Border Color --></label>
+        <name>cccalendar__Calendar_Border_Color__c</name>
+    </fields>
+    <fields>
+        <help><!-- Mode to render event with on Calendar: The rendering type of this event. Can be empty (normal rendering), &quot;background&quot;, or &quot;inverse-background&quot; --></help>
+        <label><!-- Calendar Rendering --></label>
+        <name>cccalendar__Calendar_Rendering__c</name>
+        <picklistValues>
+            <masterLabel>Background</masterLabel>
+            <translation><!-- Background --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Inverse-Background</masterLabel>
+            <translation><!-- Inverse-Background --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Normal</masterLabel>
+            <translation><!-- Normal --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- CSS color code for event text color in calendar view --></help>
+        <label><!-- Calendar Text Color --></label>
+        <name>cccalendar__Calendar_Text_Color__c</name>
+    </fields>
+    <fields>
+        <help><!-- Check to display event&apos;s local timezone in event details --></help>
+        <label><!-- Display Event&apos;s Local Timezone --></label>
+        <name>cccalendar__Display_Events_Local_Timezone__c</name>
+    </fields>
+    <fields>
+        <help><!-- SLDS icon name for the event, from http://www.lightningdesignsystem.com/icons/. Example: utility:events --></help>
+        <label><!-- Event Icon Name --></label>
+        <name>cccalendar__Event_Icon_Name__c</name>
+    </fields>
+    <fields>
+        <help><!-- Button link on Event --></help>
+        <label><!-- Event URL 2 --></label>
+        <name>cccalendar__Event_URL_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Event URL 2 Open in Same Tab --></label>
+        <name>cccalendar__Event_URL_2_Open_in_Same_Tab__c</name>
+    </fields>
+    <fields>
+        <help><!-- Button link on Event --></help>
+        <label><!-- Event URL --></label>
+        <name>cccalendar__Event_URL__c</name>
+    </fields>
+    <fields>
+        <label><!-- Event URL Open in Same Tab --></label>
+        <name>cccalendar__Event_URL_Open_in_Same_Tab__c</name>
+    </fields>
+    <fields>
+        <help><!-- Text to display on button linking to event URL field --></help>
+        <label><!-- Event URL Text 2 --></label>
+        <name>cccalendar__Event_URL_Text_2__c</name>
+    </fields>
+    <fields>
+        <help><!-- Text to display on button linking to event URL field --></help>
+        <label><!-- Event URL Text --></label>
+        <name>cccalendar__Event_URL_Text__c</name>
+    </fields>
+    <fields>
+        <help><!-- URL for Event Image, to be used for Tile Display --></help>
+        <label><!-- Image URL --></label>
+        <name>cccalendar__Image_URL__c</name>
+    </fields>
+    <fields>
+        <help><!-- Specify event&apos;s local timezone. Required if Display event&apos;s local timezone is checked --></help>
+        <label><!-- Local Timezone --></label>
+        <name>cccalendar__Local_Timezone__c</name>
+    </fields>
+    <fields>
         <label><!-- Community --></label>
         <name>Community__c</name>
     </fields>
@@ -511,85 +591,5 @@
     <fields>
         <label><!-- Tour --></label>
         <name>Tour__c</name>
-    </fields>
-    <fields>
-        <help><!-- CSS color code for event background color in calendar view --></help>
-        <label><!-- Calendar Background Color --></label>
-        <name>cccalendar__Calendar_Background_Color__c</name>
-    </fields>
-    <fields>
-        <help><!-- CSS color code for event border color in calendar view --></help>
-        <label><!-- Calendar Border Color --></label>
-        <name>cccalendar__Calendar_Border_Color__c</name>
-    </fields>
-    <fields>
-        <help><!-- Mode to render event with on Calendar: The rendering type of this event. Can be empty (normal rendering), &quot;background&quot;, or &quot;inverse-background&quot; --></help>
-        <label><!-- Calendar Rendering --></label>
-        <name>cccalendar__Calendar_Rendering__c</name>
-        <picklistValues>
-            <masterLabel>Background</masterLabel>
-            <translation><!-- Background --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Inverse-Background</masterLabel>
-            <translation><!-- Inverse-Background --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Normal</masterLabel>
-            <translation><!-- Normal --></translation>
-        </picklistValues>
-    </fields>
-    <fields>
-        <help><!-- CSS color code for event text color in calendar view --></help>
-        <label><!-- Calendar Text Color --></label>
-        <name>cccalendar__Calendar_Text_Color__c</name>
-    </fields>
-    <fields>
-        <help><!-- Check to display event&apos;s local timezone in event details --></help>
-        <label><!-- Display Event&apos;s Local Timezone --></label>
-        <name>cccalendar__Display_Events_Local_Timezone__c</name>
-    </fields>
-    <fields>
-        <help><!-- SLDS icon name for the event, from http://www.lightningdesignsystem.com/icons/. Example: utility:events --></help>
-        <label><!-- Event Icon Name --></label>
-        <name>cccalendar__Event_Icon_Name__c</name>
-    </fields>
-    <fields>
-        <label><!-- Event URL 2 Open in Same Tab --></label>
-        <name>cccalendar__Event_URL_2_Open_in_Same_Tab__c</name>
-    </fields>
-    <fields>
-        <help><!-- Button link on Event --></help>
-        <label><!-- Event URL 2 --></label>
-        <name>cccalendar__Event_URL_2__c</name>
-    </fields>
-    <fields>
-        <label><!-- Event URL Open in Same Tab --></label>
-        <name>cccalendar__Event_URL_Open_in_Same_Tab__c</name>
-    </fields>
-    <fields>
-        <help><!-- Text to display on button linking to event URL field --></help>
-        <label><!-- Event URL Text 2 --></label>
-        <name>cccalendar__Event_URL_Text_2__c</name>
-    </fields>
-    <fields>
-        <help><!-- Text to display on button linking to event URL field --></help>
-        <label><!-- Event URL Text --></label>
-        <name>cccalendar__Event_URL_Text__c</name>
-    </fields>
-    <fields>
-        <help><!-- Button link on Event --></help>
-        <label><!-- Event URL --></label>
-        <name>cccalendar__Event_URL__c</name>
-    </fields>
-    <fields>
-        <help><!-- URL for Event Image, to be used for Tile Display --></help>
-        <label><!-- Image URL --></label>
-        <name>cccalendar__Image_URL__c</name>
-    </fields>
-    <fields>
-        <help><!-- Specify event&apos;s local timezone. Required if Display event&apos;s local timezone is checked --></help>
-        <label><!-- Local Timezone --></label>
-        <name>cccalendar__Local_Timezone__c</name>
     </fields>
 </CustomObjectTranslation>

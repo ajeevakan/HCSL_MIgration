@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fieldSets>
-        <label><!-- New Individual Contact Fields --></label>
-        <name>HealthCloudGA__NewIndividualContactFields</name>
-    </fieldSets>
     <fields>
         <label><!-- Account Community --></label>
         <name>Account_Community__c</name>
+    </fields>
+    <fields>
+        <label><!-- Created From Opportunity --></label>
+        <name>Created_From_Opportunity__c</name>
+        <relationshipLabel><!-- ContactsCFO --></relationshipLabel>
     </fields>
     <fields>
         <label><!-- Created From Opportunity Action --></label>
@@ -29,11 +30,6 @@
         </picklistValues>
     </fields>
     <fields>
-        <label><!-- Created From Opportunity --></label>
-        <name>Created_From_Opportunity__c</name>
-        <relationshipLabel><!-- ContactsCFO --></relationshipLabel>
-    </fields>
-    <fields>
         <label><!-- Current Active Occupancy --></label>
         <name>Current_Active_Occupancy__c</name>
         <relationshipLabel><!-- Contacts --></relationshipLabel>
@@ -46,6 +42,15 @@
         <label><!-- Do Not Mail --></label>
         <name>Do_Not_Mail__c</name>
     </fields>
+    <fields>
+        <label><!-- Primary Location --></label>
+        <name>emptracing__PrimaryLocation__c</name>
+        <relationshipLabel><!-- Contacts --></relationshipLabel>
+    </fields>
+    <fieldSets>
+        <label><!-- New Individual Contact Fields --></label>
+        <name>HealthCloudGA__NewIndividualContactFields</name>
+    </fieldSets>
     <fields>
         <label><!-- Age --></label>
         <name>HealthCloudGA__Age__c</name>
@@ -164,13 +169,13 @@
         <name>HealthCloudGA__SecondaryLanguage__c</name>
     </fields>
     <fields>
-        <label><!-- Source System ID --></label>
-        <name>HealthCloudGA__SourceSystemId__c</name>
-    </fields>
-    <fields>
         <help>ระบุระบบที่สร้างเร็กคอร์ดและถือสิทธิการอัปเดต ค่าเริ่มต้นใน Health1 สำหรับการสร้างเร็กคอร์ดด้วยมือ</help>
         <label><!-- Source System --></label>
         <name>HealthCloudGA__SourceSystem__c</name>
+    </fields>
+    <fields>
+        <label><!-- Source System ID --></label>
+        <name>HealthCloudGA__SourceSystemId__c</name>
     </fields>
     <fields>
         <label><!-- Status Group --></label>
@@ -258,55 +263,6 @@
         <name>Navihealth_eReferral_External_Id__c</name>
     </fields>
     <fields>
-        <label><!-- Preferred Phone --></label>
-        <name>Preferred_Phone__c</name>
-        <picklistValues>
-            <masterLabel>Home</masterLabel>
-            <translation><!-- Home --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Mobile</masterLabel>
-            <translation><!-- Mobile --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Work</masterLabel>
-            <translation><!-- Work --></translation>
-        </picklistValues>
-    </fields>
-    <fields>
-        <label><!-- Primary Contact --></label>
-        <name>Primary_Contact__c</name>
-    </fields>
-    <fields>
-        <label><!-- Prospect --></label>
-        <name>Prospect__c</name>
-    </fields>
-    <fields>
-        <label><!-- Relationship to Prospect --></label>
-        <name>Relationship_to_Prospect__c</name>
-    </fields>
-    <fields>
-        <label><!-- Temp Home Phone --></label>
-        <name>Temp_Home_Phone__c</name>
-    </fields>
-    <fields>
-        <label><!-- Work Phone --></label>
-        <name>Work_Phone__c</name>
-    </fields>
-    <fields>
-        <label><!-- Primary Location --></label>
-        <name>emptracing__PrimaryLocation__c</name>
-        <relationshipLabel><!-- Contacts --></relationshipLabel>
-    </fields>
-    <fields>
-        <label><!-- Needs Score Synced --></label>
-        <name>pi__Needs_Score_Synced__c</name>
-    </fields>
-    <fields>
-        <label><!-- Account Engagement Last Scored At --></label>
-        <name>pi__Pardot_Last_Scored_At__c</name>
-    </fields>
-    <fields>
         <label><!-- Account Engagement Campaign --></label>
         <name>pi__campaign__c</name>
     </fields>
@@ -355,12 +311,20 @@
         <name>pi__last_activity__c</name>
     </fields>
     <fields>
+        <label><!-- Needs Score Synced --></label>
+        <name>pi__Needs_Score_Synced__c</name>
+    </fields>
+    <fields>
         <label><!-- Account Engagement Notes --></label>
         <name>pi__notes__c</name>
     </fields>
     <fields>
         <label><!-- Account Engagement Hard Bounced --></label>
         <name>pi__pardot_hard_bounced__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Engagement Last Scored At --></label>
+        <name>pi__Pardot_Last_Scored_At__c</name>
     </fields>
     <fields>
         <label><!-- Account Engagement Score --></label>
@@ -389,6 +353,42 @@
     <fields>
         <label><!-- Google Analytics Term --></label>
         <name>pi__utm_term__c</name>
+    </fields>
+    <fields>
+        <label><!-- Preferred Phone --></label>
+        <name>Preferred_Phone__c</name>
+        <picklistValues>
+            <masterLabel>Home</masterLabel>
+            <translation><!-- Home --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mobile</masterLabel>
+            <translation><!-- Mobile --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Work</masterLabel>
+            <translation><!-- Work --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Primary Contact --></label>
+        <name>Primary_Contact__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prospect --></label>
+        <name>Prospect__c</name>
+    </fields>
+    <fields>
+        <label><!-- Relationship to Prospect --></label>
+        <name>Relationship_to_Prospect__c</name>
+    </fields>
+    <fields>
+        <label><!-- Temp Home Phone --></label>
+        <name>Temp_Home_Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Work Phone --></label>
+        <name>Work_Phone__c</name>
     </fields>
     <layouts>
         <layout>Contact Layout</layout>

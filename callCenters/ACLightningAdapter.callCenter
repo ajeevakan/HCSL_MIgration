@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CallCenter xmlns="http://soap.sforce.com/2006/04/metadata">
-    <adapterUrl>https://tlghctf-dev-ed--amazonconnect.visualforce.com/apex/AC_LightningAdapter</adapterUrl>
+    <adapterUrl>https://thelansdalegroup-dev-ed--amazonconnect.vf.force.com/apex/AC_LightningAdapter</adapterUrl>
     <customSettings>{&quot;reqSoftphoneHeight&quot;:&quot;511&quot;,&quot;reqUseApi&quot;:&quot;true&quot;,&quot;reqSoftphoneWidth&quot;:&quot;352&quot;,&quot;reqSalesforceCompatibilityMode&quot;:&quot;Lightning&quot;}</customSettings>
     <displayName>AC Lightning Adapter</displayName>
     <displayNameLabel>Display Name</displayNameLabel>
@@ -9,7 +9,7 @@
         <items>
             <label>CTI Adapter URL</label>
             <name>reqAdapterUrl</name>
-            <value>https://tlghctf-dev-ed--amazonconnect.visualforce.com/apex/AC_LightningAdapter</value>
+            <value>https://thelansdalegroup-dev-ed--amazonconnect.vf.force.com/apex/AC_LightningAdapter</value>
         </items>
         <items>
             <label>Softphone Height</label>

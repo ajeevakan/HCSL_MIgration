@@ -3,4 +3,25 @@
     <container>Default Help Center</container>
     <containerType>Network</containerType>
     <label>Default Navigation</label>
+    <navigationMenuItem>
+        <label>Events Calendar</label>
+        <position>1</position>
+        <publiclyAvailable>false</publiclyAvailable>
+        <target>/events-calendar</target>
+        <type>InternalLink</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>My Event Registrations</label>
+        <position>2</position>
+        <publiclyAvailable>false</publiclyAvailable>
+        <target>/my-event-registrations</target>
+        <type>InternalLink</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Cancel Registrations</label>
+        <position>3</position>
+        <publiclyAvailable>false</publiclyAvailable>
+        <target>/cancel-registrations</target>
+        <type>InternalLink</type>
+    </navigationMenuItem>
 </NavigationMenu>

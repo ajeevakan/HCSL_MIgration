@@ -17,12 +17,12 @@
         <name>Disable_Campaign__c</name>
     </fields>
     <fields>
-        <label><!-- Disable Lead Profiles --></label>
-        <name>Disable_Lead_Profiles__c</name>
-    </fields>
-    <fields>
         <label><!-- Disable Lead --></label>
         <name>Disable_Lead__c</name>
+    </fields>
+    <fields>
+        <label><!-- Disable Lead Profiles --></label>
+        <name>Disable_Lead_Profiles__c</name>
     </fields>
     <fields>
         <label><!-- Disable Opportunity --></label>

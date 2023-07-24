@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fieldSets>
-        <label><!-- HcCareGapList --></label>
-        <name>HealthCloudGA__HcCareGapList</name>
-    </fieldSets>
+    <fields>
+        <label><!-- Amazon Connect Contact Id --></label>
+        <name>amazonconnect__AC_Contact_Id__c</name>
+    </fields>
     <fields>
         <label><!-- Engineering Req Number --></label>
         <name>EngineeringReqNumber__c</name>
     </fields>
+    <fieldSets>
+        <label><!-- HcCareGapList --></label>
+        <name>HealthCloudGA__HcCareGapList</name>
+    </fieldSets>
     <fields>
         <help>התאריך שעד אליו יש לסגור את פער הטיפול.</help>
         <label><!-- Due Date --></label>
@@ -24,6 +28,11 @@
         <name>HealthCloudGA__SortOrder__c</name>
     </fields>
     <fields>
+        <help>הסוכנות שזיהתה את פער הטיפול.</help>
+        <label><!-- Source Agency --></label>
+        <name>HealthCloudGA__SourceAgency__c</name>
+    </fields>
+    <fields>
         <help>המזהה של מדד סוכנות המקור עבור פער טיפול זה.</help>
         <label><!-- Source Agency Measure ID --></label>
         <name>HealthCloudGA__SourceAgencyMeasureID__c</name>
@@ -34,9 +43,9 @@
         <name>HealthCloudGA__SourceAgencyMeasureVersion__c</name>
     </fields>
     <fields>
-        <help>הסוכנות שזיהתה את פער הטיפול.</help>
-        <label><!-- Source Agency --></label>
-        <name>HealthCloudGA__SourceAgency__c</name>
+        <help>שם המערכת שבה פער הטיפול זוהה.</help>
+        <label><!-- Source System --></label>
+        <name>HealthCloudGA__SourceSystem__c</name>
     </fields>
     <fields>
         <help>מזהה הרשומה במערכת המקור.</help>
@@ -47,11 +56,6 @@
         <help>מועד עדכון אחרון.</help>
         <label><!-- Source System Modified --></label>
         <name>HealthCloudGA__SourceSystemModified__c</name>
-    </fields>
-    <fields>
-        <help>שם המערכת שבה פער הטיפול זוהה.</help>
-        <label><!-- Source System --></label>
-        <name>HealthCloudGA__SourceSystem__c</name>
     </fields>
     <fields>
         <label><!-- Potential Liability --></label>
@@ -116,10 +120,6 @@
             <masterLabel>Yes</masterLabel>
             <translation><!-- Yes --></translation>
         </picklistValues>
-    </fields>
-    <fields>
-        <label><!-- Amazon Connect Contact Id --></label>
-        <name>amazonconnect__AC_Contact_Id__c</name>
     </fields>
     <layouts>
         <layout>CareRequest Layout</layout>

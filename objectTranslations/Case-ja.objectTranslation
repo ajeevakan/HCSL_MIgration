@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fieldSets>
-        <label><!-- HcCareGapList --></label>
-        <name>HealthCloudGA__HcCareGapList</name>
-    </fieldSets>
+    <fields>
+        <label><!-- Amazon Connect Contact Id --></label>
+        <name>amazonconnect__AC_Contact_Id__c</name>
+    </fields>
     <fields>
         <label><!-- Engineering Req Number --></label>
         <name>EngineeringReqNumber__c</name>
     </fields>
+    <fieldSets>
+        <label><!-- HcCareGapList --></label>
+        <name>HealthCloudGA__HcCareGapList</name>
+    </fieldSets>
     <fields>
         <help>このケアギャップを解消する期日。</help>
         <label><!-- Due Date --></label>
@@ -24,6 +28,11 @@
         <name>HealthCloudGA__SortOrder__c</name>
     </fields>
     <fields>
+        <help>ケアギャップを特定した機関。</help>
+        <label><!-- Source Agency --></label>
+        <name>HealthCloudGA__SourceAgency__c</name>
+    </fields>
+    <fields>
         <help>ソース機関の基準におけるこのケアギャップの ID。</help>
         <label><!-- Source Agency Measure ID --></label>
         <name>HealthCloudGA__SourceAgencyMeasureID__c</name>
@@ -34,9 +43,9 @@
         <name>HealthCloudGA__SourceAgencyMeasureVersion__c</name>
     </fields>
     <fields>
-        <help>ケアギャップを特定した機関。</help>
-        <label><!-- Source Agency --></label>
-        <name>HealthCloudGA__SourceAgency__c</name>
+        <help>このケアギャップが特定されたシステムの名前。</help>
+        <label><!-- Source System --></label>
+        <name>HealthCloudGA__SourceSystem__c</name>
     </fields>
     <fields>
         <help>ソースシステム内のレコード ID</help>
@@ -47,11 +56,6 @@
         <help>最後に更新された日。</help>
         <label><!-- Source System Modified --></label>
         <name>HealthCloudGA__SourceSystemModified__c</name>
-    </fields>
-    <fields>
-        <help>このケアギャップが特定されたシステムの名前。</help>
-        <label><!-- Source System --></label>
-        <name>HealthCloudGA__SourceSystem__c</name>
     </fields>
     <fields>
         <label><!-- Potential Liability --></label>
@@ -116,10 +120,6 @@
             <masterLabel>Yes</masterLabel>
             <translation><!-- Yes --></translation>
         </picklistValues>
-    </fields>
-    <fields>
-        <label><!-- Amazon Connect Contact Id --></label>
-        <name>amazonconnect__AC_Contact_Id__c</name>
     </fields>
     <layouts>
         <layout>CareRequest Layout</layout>

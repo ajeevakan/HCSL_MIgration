@@ -90,12 +90,12 @@
         <name>Counter_Stage_MI_and_MO__c</name>
     </fields>
     <fields>
-        <label><!-- Create OCR for Account --></label>
-        <name>Create_OCR_for_Account__c</name>
-    </fields>
-    <fields>
         <label><!-- Create Occupancy --></label>
         <name>Create_Occupancy__c</name>
+    </fields>
+    <fields>
+        <label><!-- Create OCR for Account --></label>
+        <name>Create_OCR_for_Account__c</name>
     </fields>
     <fields>
         <label><!-- Current Generator(s) --></label>
@@ -126,16 +126,20 @@
         </picklistValues>
     </fields>
     <fields>
-        <label><!-- Deposit Date --></label>
-        <name>DepositDate__c</name>
-    </fields>
-    <fields>
         <label><!-- Deposit Cancelled Date --></label>
         <name>Deposit_Cancelled_Date__c</name>
     </fields>
     <fields>
         <label><!-- Deposit Date (Transaction) --></label>
         <name>Deposit_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Deposit Date --></label>
+        <name>DepositDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- eReferral Facility Id --></label>
+        <name>eReferral_Facility_Id__c</name>
     </fields>
     <fields>
         <label><!-- Expected Move In Date --></label>
@@ -194,13 +198,13 @@
         <name>HealthCloudGA__IsOutOfNetwork__c</name>
     </fields>
     <fields>
+        <label><!-- Primary Insurance --></label>
+        <name>HealthCloudGA__Primary_Insurance__c</name>
+    </fields>
+    <fields>
         <label><!-- Primary Diagnosis --></label>
         <name>HealthCloudGA__PrimaryDiagnosis__c</name>
         <relationshipLabel><!-- Opportunities (PrimaryDiagnosis) --></relationshipLabel>
-    </fields>
-    <fields>
-        <label><!-- Primary Insurance --></label>
-        <name>HealthCloudGA__Primary_Insurance__c</name>
     </fields>
     <fields>
         <label><!-- Priority --></label>
@@ -217,6 +221,10 @@
             <masterLabel>Urgent</masterLabel>
             <translation>דחוף</translation>
         </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Reason for Referral --></label>
+        <name>HealthCloudGA__Reason_for_Referral__c</name>
     </fields>
     <fields>
         <label><!-- Reason for Out of Network Referral --></label>
@@ -243,10 +251,6 @@
         </picklistValues>
     </fields>
     <fields>
-        <label><!-- Reason for Referral --></label>
-        <name>HealthCloudGA__Reason_for_Referral__c</name>
-    </fields>
-    <fields>
         <label><!-- Referral Received Date --></label>
         <name>HealthCloudGA__ReferralReceivedDate__c</name>
     </fields>
@@ -271,13 +275,13 @@
         <relationshipLabel><!-- Opportunities --></relationshipLabel>
     </fields>
     <fields>
-        <label><!-- Referring Practitioner Score --></label>
-        <name>HealthCloudGA__ReferringPractitionerScore__c</name>
-    </fields>
-    <fields>
         <label><!-- Referring Practitioner --></label>
         <name>HealthCloudGA__ReferringPractitioner__c</name>
         <relationshipLabel><!-- Opportunities --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Referring Practitioner Score --></label>
+        <name>HealthCloudGA__ReferringPractitionerScore__c</name>
     </fields>
     <fields>
         <label><!-- Referring User --></label>
@@ -407,10 +411,6 @@
         <name>Is_Active__c</name>
     </fields>
     <fields>
-        <label><!-- LOC Different from Room --></label>
-        <name>LOC_Different_from_Room__c</name>
-    </fields>
-    <fields>
         <label><!-- Last Appointment Date --></label>
         <name>Last_Appointment_Date__c</name>
     </fields>
@@ -450,6 +450,10 @@
     <fields>
         <label><!-- Lead Status --></label>
         <name>Lead_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- LOC Different from Room --></label>
+        <name>LOC_Different_from_Room__c</name>
     </fields>
     <fields>
         <label><!-- Lost Date --></label>
@@ -549,12 +553,12 @@
         <name>Not_Opened_After_Conversion_Yet__c</name>
     </fields>
     <fields>
-        <label><!-- Number of Completed Activities --></label>
-        <name>Number_Of_Completed_Activities__c</name>
-    </fields>
-    <fields>
         <label><!-- Number of Appointments --></label>
         <name>Number_of_Appointments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number of Completed Activities --></label>
+        <name>Number_Of_Completed_Activities__c</name>
     </fields>
     <fields>
         <label><!-- Inquiry Date --></label>
@@ -573,6 +577,11 @@
         <name>Past_Due_Active_Prospect__c</name>
     </fields>
     <fields>
+        <label><!-- Primary Contact --></label>
+        <name>Primary_Contact__c</name>
+        <relationshipLabel><!-- Opportunities (Primary Contact) --></relationshipLabel>
+    </fields>
+    <fields>
         <label><!-- Primary Contact City --></label>
         <name>Primary_Contact_City__c</name>
     </fields>
@@ -587,11 +596,6 @@
     <fields>
         <label><!-- Primary Contact State --></label>
         <name>Primary_Contact_State__c</name>
-    </fields>
-    <fields>
-        <label><!-- Primary Contact --></label>
-        <name>Primary_Contact__c</name>
-        <relationshipLabel><!-- Opportunities (Primary Contact) --></relationshipLabel>
     </fields>
     <fields>
         <label><!-- Primary Household --></label>
@@ -667,13 +671,13 @@
         </picklistValues>
     </fields>
     <fields>
-        <label><!-- Primary Resident Exists --></label>
-        <name>Primary_Resident_Exists__c</name>
-    </fields>
-    <fields>
         <label><!-- Primary Resident --></label>
         <name>Primary_Resident__c</name>
         <relationshipLabel><!-- Opportunities (Primary Resident) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Primary Resident Exists --></label>
+        <name>Primary_Resident_Exists__c</name>
     </fields>
     <fields>
         <label><!-- Reporting Community --></label>
@@ -689,13 +693,13 @@
         <name>Sales_Enagement_Score__c</name>
     </fields>
     <fields>
-        <label><!-- Second Resident Exists --></label>
-        <name>Second_Resident_Exists__c</name>
-    </fields>
-    <fields>
         <label><!-- Second Resident --></label>
         <name>Second_Resident__c</name>
         <relationshipLabel><!-- Opportunities (Second Resident) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Second Resident Exists --></label>
+        <name>Second_Resident_Exists__c</name>
     </fields>
     <fields>
         <label><!-- Senior Living --></label>
@@ -781,10 +785,6 @@
     <fields>
         <label><!-- Web Req. Tour Time --></label>
         <name>Web_Requested_Tour_Time_of_Day__c</name>
-    </fields>
-    <fields>
-        <label><!-- eReferral Facility Id --></label>
-        <name>eReferral_Facility_Id__c</name>
     </fields>
     <layouts>
         <layout>Opportunity Layout</layout>
