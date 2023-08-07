@@ -25,6 +25,10 @@ public without sharing class ReassignHelperFormParam {
     public string ReassignmentBatchId;
     @AuraEnabled
     public string whereCondition;
+    @AuraEnabled
+    public date activityStartDate;
+    @AuraEnabled
+    public date activityEndDate;
 
     // public class ParamField{
     //     @AuraEnabled

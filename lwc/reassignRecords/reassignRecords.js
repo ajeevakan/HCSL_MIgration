@@ -1,6 +1,7 @@
 import { LightningElement } from 'lwc';
 import GetFormParam from '@salesforce/apex/ReassignHelper.GetFormParam';
 import { NavigationMixin } from 'lightning/navigation';
+import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 
 export default class ReassignRecords extends NavigationMixin(LightningElement) {
 
@@ -48,6 +49,12 @@ export default class ReassignRecords extends NavigationMixin(LightningElement) {
                         });
                         this.paramObj = {step: 99};
                         this.isshowSubmitButton = false;
+                        const evt = new ShowToastEvent({
+                            title: 'Batch Process Started',
+                            message: 'Please refresh the batch page after some time to check the status.',
+                            variant: 'success'
+                        });
+                        this.dispatchEvent(evt);
                     }
                     
                 }).catch((error) => {
@@ -57,9 +64,10 @@ export default class ReassignRecords extends NavigationMixin(LightningElement) {
 
     navigateToHome() {
         this.paramObj = {step: 0};
+        this.isshowSubmitButton = true;
+        this.processing = false;
         this.SubmitForm();
         this[NavigationMixin.Navigate]({
-            // Pass in pageReference
             type: 'standard__namedPage',
             attributes: {
                 pageName: 'home'
