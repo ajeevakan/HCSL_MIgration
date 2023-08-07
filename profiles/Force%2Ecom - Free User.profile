@@ -923,6 +923,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Event.cccalendar__Calendar_Rendering__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Export_FOI__c.ExportDate__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -2710,6 +2715,11 @@
         <editable>false</editable>
         <field>Task.Tour__c</field>
         <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Task.cccalendar__Calendar_Rendering__c</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>

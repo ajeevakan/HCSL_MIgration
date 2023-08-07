@@ -32,9 +32,9 @@ public without sharing class ReassignHelperFormParamParamField {
         if (string.isBlank(fieldType)) isTEXT = true;
         else if (fieldType.equalsIgnoreCase('BOOLEAN')) isPICKLIST = true;
         else if (fieldType.equalsIgnoreCase('PICKLIST')) isPICKLIST = true;
-        else if (fieldType.equalsIgnoreCase('DATE')) isDATE = true;
         else if (fieldType.equalsIgnoreCase('DATETIME')) isDATE = true;
         else if (fieldType.equalsIgnoreCase('NUMBER')) isNUMBER = true;
+        else if (fieldType.equalsIgnoreCase('DATE')) isDATE = true;
         else isTEXT = true;
     }
 }

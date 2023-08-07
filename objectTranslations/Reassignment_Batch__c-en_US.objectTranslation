@@ -9,6 +9,14 @@
         <value>Reassignment Batches</value>
     </caseValues>
     <fields>
+        <label><!-- Activity End Date --></label>
+        <name>Activity_End_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Activity Start Date --></label>
+        <name>Activity_Start_Date__c</name>
+    </fields>
+    <fields>
         <label><!-- Campaign --></label>
         <name>Campaign__c</name>
         <relationshipLabel><!-- Reassignment Batches --></relationshipLabel>
