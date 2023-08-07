@@ -2228,6 +2228,16 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Reassignment_Batch__c.Activity_End_Date__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Reassignment_Batch__c.Activity_Start_Date__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Reassignment_Batch__c.Campaign__c</field>
         <readable>false</readable>
     </fieldPermissions>
