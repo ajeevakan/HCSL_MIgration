@@ -17,9 +17,17 @@
         <name>Activity_Start_Date__c</name>
     </fields>
     <fields>
+        <label><!-- Assign To Default Community User --></label>
+        <name>Assign_To_Default_Community_User__c</name>
+    </fields>
+    <fields>
         <label><!-- Campaign --></label>
         <name>Campaign__c</name>
         <relationshipLabel><!-- Reassignment Batches --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Close Past Due Activities --></label>
+        <name>Close_Past_Due_Activities__c</name>
     </fields>
     <fields>
         <label><!-- Community --></label>

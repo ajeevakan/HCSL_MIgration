@@ -14,6 +14,10 @@ public without sharing class ReassignHelperFormParam {
     @AuraEnabled
     public boolean reassignActivitiesOnly;
     @AuraEnabled
+    public boolean closePastDueActivities;
+    @AuraEnabled
+    public boolean assignToDefaultCommunityUser;
+    @AuraEnabled
     public string reassignToId;
     @AuraEnabled
     public string communityId;

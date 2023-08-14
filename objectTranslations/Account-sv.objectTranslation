@@ -410,6 +410,14 @@
         </sections>
     </layouts>
     <layouts>
+        <layout>SL Person Account Layout</layout>
+        <layoutType>PersonAccount</layoutType>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
         <layout>SL Referral Organization</layout>
         <sections>
             <label><!-- Address Information --></label>

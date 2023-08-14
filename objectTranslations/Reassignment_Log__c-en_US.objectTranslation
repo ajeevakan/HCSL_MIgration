@@ -23,6 +23,10 @@
         <name>Old_Owner_Id__c</name>
     </fields>
     <fields>
+        <label><!-- Old Values --></label>
+        <name>Old_Values__c</name>
+    </fields>
+    <fields>
         <label><!-- Opportunity --></label>
         <name>Opportunity__c</name>
         <relationshipLabel><!-- Reassignment Logs --></relationshipLabel>

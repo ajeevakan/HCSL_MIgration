@@ -357,14 +357,6 @@
         <relatedList>Occupancy__c.Source_Opportunity__c</relatedList>
     </relatedLists>
     <relatedLists>
-        <fields>Name</fields>
-        <fields>LiveChatVisitor</fields>
-        <fields>StartTime</fields>
-        <fields>EndTime</fields>
-        <fields>Status</fields>
-        <relatedList>LiveChatTranscript.Opportunity__c</relatedList>
-    </relatedLists>
-    <relatedLists>
         <fields>NAME</fields>
         <relatedList>Reassignment_Log__c.Opportunity__c</relatedList>
     </relatedLists>
